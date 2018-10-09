@@ -1,4 +1,6 @@
-﻿namespace bigapple
+﻿using System;
+
+namespace bigapple
 {
     partial class ClientReceiptControl
     {
@@ -38,6 +40,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.NYFDQtyMaskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NYFDQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.NYFDQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.NYFDQtyMaskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.NYFDAmount4LBL = new System.Windows.Forms.Label();
             this.NYFDAmount3LBL = new System.Windows.Forms.Label();
             this.NYFDAmount2LBL = new System.Windows.Forms.Label();
@@ -51,6 +59,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.UNMWQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.UNMWQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.UNMWAmount2LBL = new System.Windows.Forms.Label();
             this.UNMWAmount1LBL = new System.Windows.Forms.Label();
             this.UNMWPrice2LBL = new System.Windows.Forms.Label();
@@ -58,6 +68,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MEQtyMaskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.MEQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.MEQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.MEAmount2LBL = new System.Windows.Forms.Label();
             this.MEAmount3LBL = new System.Windows.Forms.Label();
             this.MEAmount1LBL = new System.Windows.Forms.Label();
@@ -70,24 +83,38 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.ATQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.ATAmount2LBL = new System.Windows.Forms.Label();
+            this.ATQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.ATAmount1LBL = new System.Windows.Forms.Label();
             this.ATPrice2LBL = new System.Windows.Forms.Label();
             this.ATPrice1LBL = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.PRPrice1LBL = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.PRQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.PRQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.PRQtyMaskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.PRAmount1LBL = new System.Windows.Forms.Label();
             this.PRAmount2LBL = new System.Windows.Forms.Label();
             this.PRAmount3LBL = new System.Windows.Forms.Label();
             this.PRPrice3LBL = new System.Windows.Forms.Label();
             this.PRPrice2LBL = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
+            this.PRPrice1LBL = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.MDQtyMaskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.MDQtyMaskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.MDQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.MDQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.MDQtyMaskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.MDQtyMaskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.MDAmount1LBL = new System.Windows.Forms.Label();
             this.MDAmount6LBL = new System.Windows.Forms.Label();
             this.MDAmount5LBL = new System.Windows.Forms.Label();
@@ -107,6 +134,10 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.DRTNQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.DRTNQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.DRTNQtyMaskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.DRTNQtyMaskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.DRTNAmount4LBL = new System.Windows.Forms.Label();
             this.DRTNAmount2LBL = new System.Windows.Forms.Label();
             this.DRTNAmount3LBL = new System.Windows.Forms.Label();
@@ -139,48 +170,19 @@
             this.TimeLBL = new System.Windows.Forms.Label();
             this.DateLBL = new System.Windows.Forms.Label();
             this.SeriesNumberLBL = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.CRCTimer = new System.Windows.Forms.Timer(this.components);
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox14 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox15 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox16 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox17 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox18 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox19 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox20 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox21 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox22 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox23 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox24 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.PRPrice1LBL.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -261,10 +263,10 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.maskedTextBox9);
-            this.groupBox4.Controls.Add(this.maskedTextBox6);
-            this.groupBox4.Controls.Add(this.maskedTextBox7);
-            this.groupBox4.Controls.Add(this.maskedTextBox8);
+            this.groupBox4.Controls.Add(this.NYFDQtyMaskedTextBox4);
+            this.groupBox4.Controls.Add(this.NYFDQtyMaskedTextBox1);
+            this.groupBox4.Controls.Add(this.NYFDQtyMaskedTextBox2);
+            this.groupBox4.Controls.Add(this.NYFDQtyMaskedTextBox3);
             this.groupBox4.Controls.Add(this.NYFDAmount4LBL);
             this.groupBox4.Controls.Add(this.NYFDAmount3LBL);
             this.groupBox4.Controls.Add(this.NYFDAmount2LBL);
@@ -284,65 +286,142 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "NY Foot Paradise:";
             // 
+            // NYFDQtyMaskedTextBox4
+            // 
+            this.NYFDQtyMaskedTextBox4.BeepOnError = true;
+            this.NYFDQtyMaskedTextBox4.ContextMenuStrip = this.contextMenuStrip1;
+            this.NYFDQtyMaskedTextBox4.Location = new System.Drawing.Point(378, 115);
+            this.NYFDQtyMaskedTextBox4.Mask = "000";
+            this.NYFDQtyMaskedTextBox4.Name = "NYFDQtyMaskedTextBox4";
+            this.NYFDQtyMaskedTextBox4.PromptChar = ' ';
+            this.NYFDQtyMaskedTextBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NYFDQtyMaskedTextBox4.Size = new System.Drawing.Size(62, 26);
+            this.NYFDQtyMaskedTextBox4.TabIndex = 13;
+            this.NYFDQtyMaskedTextBox4.Text = "0";
+            this.NYFDQtyMaskedTextBox4.ValidatingType = typeof(int);
+            this.NYFDQtyMaskedTextBox4.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.NYFDQtyMaskedTextBox4.TextChanged += new System.EventHandler(this.NYFDQtyMaskedTextBox4_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(251, 26);
+            // 
+            // onlyNumbersAllowedRangingFrom09999ToolStripMenuItem
+            // 
+            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem.Name = "onlyNumbersAllowedRangingFrom09999ToolStripMenuItem";
+            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem.Text = "Must be valid number e.g. 0 - 999";
+            // 
+            // NYFDQtyMaskedTextBox1
+            // 
+            this.NYFDQtyMaskedTextBox1.BeepOnError = true;
+            this.NYFDQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.NYFDQtyMaskedTextBox1.Location = new System.Drawing.Point(379, 19);
+            this.NYFDQtyMaskedTextBox1.Mask = "000";
+            this.NYFDQtyMaskedTextBox1.Name = "NYFDQtyMaskedTextBox1";
+            this.NYFDQtyMaskedTextBox1.PromptChar = ' ';
+            this.NYFDQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NYFDQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.NYFDQtyMaskedTextBox1.TabIndex = 10;
+            this.NYFDQtyMaskedTextBox1.Text = "0";
+            this.NYFDQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.NYFDQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.NYFDQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.NYFDQtyMaskedTextBox1_TextChanged);
+            // 
+            // NYFDQtyMaskedTextBox2
+            // 
+            this.NYFDQtyMaskedTextBox2.BeepOnError = true;
+            this.NYFDQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.NYFDQtyMaskedTextBox2.Location = new System.Drawing.Point(378, 51);
+            this.NYFDQtyMaskedTextBox2.Mask = "000";
+            this.NYFDQtyMaskedTextBox2.Name = "NYFDQtyMaskedTextBox2";
+            this.NYFDQtyMaskedTextBox2.PromptChar = ' ';
+            this.NYFDQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NYFDQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.NYFDQtyMaskedTextBox2.TabIndex = 11;
+            this.NYFDQtyMaskedTextBox2.Text = "0";
+            this.NYFDQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.NYFDQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.NYFDQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.NYFDQtyMaskedTextBox2_TextChanged);
+            // 
+            // NYFDQtyMaskedTextBox3
+            // 
+            this.NYFDQtyMaskedTextBox3.BeepOnError = true;
+            this.NYFDQtyMaskedTextBox3.ContextMenuStrip = this.contextMenuStrip1;
+            this.NYFDQtyMaskedTextBox3.Location = new System.Drawing.Point(378, 83);
+            this.NYFDQtyMaskedTextBox3.Mask = "000";
+            this.NYFDQtyMaskedTextBox3.Name = "NYFDQtyMaskedTextBox3";
+            this.NYFDQtyMaskedTextBox3.PromptChar = ' ';
+            this.NYFDQtyMaskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NYFDQtyMaskedTextBox3.Size = new System.Drawing.Size(62, 26);
+            this.NYFDQtyMaskedTextBox3.TabIndex = 12;
+            this.NYFDQtyMaskedTextBox3.Text = "0";
+            this.NYFDQtyMaskedTextBox3.ValidatingType = typeof(int);
+            this.NYFDQtyMaskedTextBox3.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.NYFDQtyMaskedTextBox3.TextChanged += new System.EventHandler(this.NYFDQtyMaskedTextBox3_TextChanged);
+            // 
             // NYFDAmount4LBL
             // 
             this.NYFDAmount4LBL.AutoSize = true;
-            this.NYFDAmount4LBL.Location = new System.Drawing.Point(480, 118);
+            this.NYFDAmount4LBL.Location = new System.Drawing.Point(482, 119);
             this.NYFDAmount4LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDAmount4LBL.Name = "NYFDAmount4LBL";
-            this.NYFDAmount4LBL.Size = new System.Drawing.Size(33, 18);
+            this.NYFDAmount4LBL.Size = new System.Drawing.Size(15, 18);
             this.NYFDAmount4LBL.TabIndex = 31;
-            this.NYFDAmount4LBL.Text = "0.00";
+            this.NYFDAmount4LBL.Text = "0";
             // 
             // NYFDAmount3LBL
             // 
             this.NYFDAmount3LBL.AutoSize = true;
-            this.NYFDAmount3LBL.Location = new System.Drawing.Point(480, 86);
+            this.NYFDAmount3LBL.Location = new System.Drawing.Point(482, 87);
             this.NYFDAmount3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDAmount3LBL.Name = "NYFDAmount3LBL";
-            this.NYFDAmount3LBL.Size = new System.Drawing.Size(33, 18);
+            this.NYFDAmount3LBL.Size = new System.Drawing.Size(15, 18);
             this.NYFDAmount3LBL.TabIndex = 28;
-            this.NYFDAmount3LBL.Text = "0.00";
+            this.NYFDAmount3LBL.Text = "0";
             // 
             // NYFDAmount2LBL
             // 
             this.NYFDAmount2LBL.AutoSize = true;
-            this.NYFDAmount2LBL.Location = new System.Drawing.Point(480, 54);
+            this.NYFDAmount2LBL.Location = new System.Drawing.Point(482, 55);
             this.NYFDAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDAmount2LBL.Name = "NYFDAmount2LBL";
-            this.NYFDAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.NYFDAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.NYFDAmount2LBL.TabIndex = 27;
-            this.NYFDAmount2LBL.Text = "0.00";
+            this.NYFDAmount2LBL.Text = "0";
             // 
             // NYFDAmount1LBL
             // 
             this.NYFDAmount1LBL.AutoSize = true;
-            this.NYFDAmount1LBL.Location = new System.Drawing.Point(480, 17);
+            this.NYFDAmount1LBL.Location = new System.Drawing.Point(482, 23);
             this.NYFDAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDAmount1LBL.Name = "NYFDAmount1LBL";
-            this.NYFDAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.NYFDAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.NYFDAmount1LBL.TabIndex = 25;
-            this.NYFDAmount1LBL.Text = "0.00";
+            this.NYFDAmount1LBL.Text = "0";
             // 
             // NYFDPrice4LBL
             // 
             this.NYFDPrice4LBL.AutoSize = true;
-            this.NYFDPrice4LBL.Location = new System.Drawing.Point(304, 118);
+            this.NYFDPrice4LBL.Location = new System.Drawing.Point(311, 118);
             this.NYFDPrice4LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDPrice4LBL.Name = "NYFDPrice4LBL";
-            this.NYFDPrice4LBL.Size = new System.Drawing.Size(47, 18);
+            this.NYFDPrice4LBL.Size = new System.Drawing.Size(29, 18);
             this.NYFDPrice4LBL.TabIndex = 19;
-            this.NYFDPrice4LBL.Text = "100.00";
+            this.NYFDPrice4LBL.Text = "100";
             // 
             // NYFDPrice3LBL
             // 
             this.NYFDPrice3LBL.AutoSize = true;
-            this.NYFDPrice3LBL.Location = new System.Drawing.Point(304, 86);
+            this.NYFDPrice3LBL.Location = new System.Drawing.Point(311, 86);
             this.NYFDPrice3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDPrice3LBL.Name = "NYFDPrice3LBL";
-            this.NYFDPrice3LBL.Size = new System.Drawing.Size(40, 18);
+            this.NYFDPrice3LBL.Size = new System.Drawing.Size(22, 18);
             this.NYFDPrice3LBL.TabIndex = 18;
-            this.NYFDPrice3LBL.Text = "50.00";
+            this.NYFDPrice3LBL.Text = "50";
             // 
             // label40
             // 
@@ -367,22 +446,22 @@
             // NYFDPrice2LBL
             // 
             this.NYFDPrice2LBL.AutoSize = true;
-            this.NYFDPrice2LBL.Location = new System.Drawing.Point(304, 54);
+            this.NYFDPrice2LBL.Location = new System.Drawing.Point(311, 54);
             this.NYFDPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDPrice2LBL.Name = "NYFDPrice2LBL";
-            this.NYFDPrice2LBL.Size = new System.Drawing.Size(47, 18);
+            this.NYFDPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.NYFDPrice2LBL.TabIndex = 15;
-            this.NYFDPrice2LBL.Text = "399.00";
+            this.NYFDPrice2LBL.Text = "399";
             // 
             // NYFDPrice1LBL
             // 
             this.NYFDPrice1LBL.AutoSize = true;
-            this.NYFDPrice1LBL.Location = new System.Drawing.Point(304, 22);
+            this.NYFDPrice1LBL.Location = new System.Drawing.Point(311, 22);
             this.NYFDPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDPrice1LBL.Name = "NYFDPrice1LBL";
-            this.NYFDPrice1LBL.Size = new System.Drawing.Size(47, 18);
+            this.NYFDPrice1LBL.Size = new System.Drawing.Size(29, 18);
             this.NYFDPrice1LBL.TabIndex = 14;
-            this.NYFDPrice1LBL.Text = "299.00";
+            this.NYFDPrice1LBL.Text = "299";
             // 
             // label12
             // 
@@ -406,8 +485,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.maskedTextBox4);
-            this.groupBox3.Controls.Add(this.maskedTextBox5);
+            this.groupBox3.Controls.Add(this.UNMWQtyMaskedTextBox1);
+            this.groupBox3.Controls.Add(this.UNMWQtyMaskedTextBox2);
             this.groupBox3.Controls.Add(this.UNMWAmount2LBL);
             this.groupBox3.Controls.Add(this.UNMWAmount1LBL);
             this.groupBox3.Controls.Add(this.UNMWPrice2LBL);
@@ -421,45 +500,77 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "UN Massages of the World:";
             // 
+            // UNMWQtyMaskedTextBox1
+            // 
+            this.UNMWQtyMaskedTextBox1.BeepOnError = true;
+            this.UNMWQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.UNMWQtyMaskedTextBox1.Location = new System.Drawing.Point(378, 23);
+            this.UNMWQtyMaskedTextBox1.Mask = "000";
+            this.UNMWQtyMaskedTextBox1.Name = "UNMWQtyMaskedTextBox1";
+            this.UNMWQtyMaskedTextBox1.PromptChar = ' ';
+            this.UNMWQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.UNMWQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.UNMWQtyMaskedTextBox1.TabIndex = 8;
+            this.UNMWQtyMaskedTextBox1.Text = "0";
+            this.UNMWQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.UNMWQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.UNMWQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.UNMWQtyMaskedTextBox1_TextChanged);
+            // 
+            // UNMWQtyMaskedTextBox2
+            // 
+            this.UNMWQtyMaskedTextBox2.BeepOnError = true;
+            this.UNMWQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.UNMWQtyMaskedTextBox2.Location = new System.Drawing.Point(378, 55);
+            this.UNMWQtyMaskedTextBox2.Mask = "000";
+            this.UNMWQtyMaskedTextBox2.Name = "UNMWQtyMaskedTextBox2";
+            this.UNMWQtyMaskedTextBox2.PromptChar = ' ';
+            this.UNMWQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.UNMWQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.UNMWQtyMaskedTextBox2.TabIndex = 9;
+            this.UNMWQtyMaskedTextBox2.Text = "0";
+            this.UNMWQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.UNMWQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.UNMWQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.UNMWQtyMaskedTextBox2_TextChanged);
+            // 
             // UNMWAmount2LBL
             // 
             this.UNMWAmount2LBL.AutoSize = true;
-            this.UNMWAmount2LBL.Location = new System.Drawing.Point(480, 59);
+            this.UNMWAmount2LBL.Location = new System.Drawing.Point(482, 59);
             this.UNMWAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UNMWAmount2LBL.Name = "UNMWAmount2LBL";
-            this.UNMWAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.UNMWAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.UNMWAmount2LBL.TabIndex = 24;
-            this.UNMWAmount2LBL.Text = "0.00";
+            this.UNMWAmount2LBL.Text = "0";
             // 
             // UNMWAmount1LBL
             // 
             this.UNMWAmount1LBL.AutoSize = true;
-            this.UNMWAmount1LBL.Location = new System.Drawing.Point(480, 27);
+            this.UNMWAmount1LBL.Location = new System.Drawing.Point(482, 27);
             this.UNMWAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UNMWAmount1LBL.Name = "UNMWAmount1LBL";
-            this.UNMWAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.UNMWAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.UNMWAmount1LBL.TabIndex = 23;
-            this.UNMWAmount1LBL.Text = "0.00";
+            this.UNMWAmount1LBL.Text = "0";
             // 
             // UNMWPrice2LBL
             // 
             this.UNMWPrice2LBL.AutoSize = true;
-            this.UNMWPrice2LBL.Location = new System.Drawing.Point(304, 59);
+            this.UNMWPrice2LBL.Location = new System.Drawing.Point(311, 59);
             this.UNMWPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UNMWPrice2LBL.Name = "UNMWPrice2LBL";
-            this.UNMWPrice2LBL.Size = new System.Drawing.Size(47, 18);
+            this.UNMWPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.UNMWPrice2LBL.TabIndex = 14;
-            this.UNMWPrice2LBL.Text = "599.00";
+            this.UNMWPrice2LBL.Text = "599";
             // 
             // UNMWPrice1LBL
             // 
             this.UNMWPrice1LBL.AutoSize = true;
-            this.UNMWPrice1LBL.Location = new System.Drawing.Point(304, 27);
+            this.UNMWPrice1LBL.Location = new System.Drawing.Point(311, 27);
             this.UNMWPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UNMWPrice1LBL.Name = "UNMWPrice1LBL";
-            this.UNMWPrice1LBL.Size = new System.Drawing.Size(47, 18);
+            this.UNMWPrice1LBL.Size = new System.Drawing.Size(29, 18);
             this.UNMWPrice1LBL.TabIndex = 13;
-            this.UNMWPrice1LBL.Text = "499.00";
+            this.UNMWPrice1LBL.Text = "499";
             // 
             // label13
             // 
@@ -483,9 +594,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.maskedTextBox3);
-            this.groupBox2.Controls.Add(this.maskedTextBox2);
-            this.groupBox2.Controls.Add(this.maskedTextBox1);
+            this.groupBox2.Controls.Add(this.MEQtyMaskedTextBox3);
+            this.groupBox2.Controls.Add(this.MEQtyMaskedTextBox2);
+            this.groupBox2.Controls.Add(this.MEQtyMaskedTextBox1);
             this.groupBox2.Controls.Add(this.MEAmount2LBL);
             this.groupBox2.Controls.Add(this.MEAmount3LBL);
             this.groupBox2.Controls.Add(this.MEAmount1LBL);
@@ -502,65 +613,113 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Manhanttan Experience:";
             // 
+            // MEQtyMaskedTextBox3
+            // 
+            this.MEQtyMaskedTextBox3.BeepOnError = true;
+            this.MEQtyMaskedTextBox3.ContextMenuStrip = this.contextMenuStrip1;
+            this.MEQtyMaskedTextBox3.Location = new System.Drawing.Point(378, 82);
+            this.MEQtyMaskedTextBox3.Mask = "000";
+            this.MEQtyMaskedTextBox3.Name = "MEQtyMaskedTextBox3";
+            this.MEQtyMaskedTextBox3.PromptChar = ' ';
+            this.MEQtyMaskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MEQtyMaskedTextBox3.Size = new System.Drawing.Size(62, 26);
+            this.MEQtyMaskedTextBox3.TabIndex = 7;
+            this.MEQtyMaskedTextBox3.Text = "0";
+            this.MEQtyMaskedTextBox3.ValidatingType = typeof(int);
+            this.MEQtyMaskedTextBox3.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MEQtyMaskedTextBox3.TextChanged += new System.EventHandler(this.MEQtyMaskedTextBox3_TextChanged);
+            // 
+            // MEQtyMaskedTextBox2
+            // 
+            this.MEQtyMaskedTextBox2.BeepOnError = true;
+            this.MEQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.MEQtyMaskedTextBox2.Location = new System.Drawing.Point(378, 50);
+            this.MEQtyMaskedTextBox2.Mask = "000";
+            this.MEQtyMaskedTextBox2.Name = "MEQtyMaskedTextBox2";
+            this.MEQtyMaskedTextBox2.PromptChar = ' ';
+            this.MEQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MEQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.MEQtyMaskedTextBox2.TabIndex = 6;
+            this.MEQtyMaskedTextBox2.Text = "0";
+            this.MEQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.MEQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MEQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.MEQtyMaskedTextBox2_TextChanged);
+            // 
+            // MEQtyMaskedTextBox1
+            // 
+            this.MEQtyMaskedTextBox1.BeepOnError = true;
+            this.MEQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.MEQtyMaskedTextBox1.Location = new System.Drawing.Point(378, 18);
+            this.MEQtyMaskedTextBox1.Mask = "000";
+            this.MEQtyMaskedTextBox1.Name = "MEQtyMaskedTextBox1";
+            this.MEQtyMaskedTextBox1.PromptChar = ' ';
+            this.MEQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MEQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.MEQtyMaskedTextBox1.TabIndex = 5;
+            this.MEQtyMaskedTextBox1.Text = "0";
+            this.MEQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.MEQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MEQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.MEQtyMaskedTextBox1_TextChanged);
+            // 
             // MEAmount2LBL
             // 
             this.MEAmount2LBL.AutoSize = true;
-            this.MEAmount2LBL.Location = new System.Drawing.Point(480, 54);
+            this.MEAmount2LBL.Location = new System.Drawing.Point(482, 54);
             this.MEAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MEAmount2LBL.Name = "MEAmount2LBL";
-            this.MEAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.MEAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.MEAmount2LBL.TabIndex = 20;
-            this.MEAmount2LBL.Text = "0.00";
+            this.MEAmount2LBL.Text = "0";
             // 
             // MEAmount3LBL
             // 
             this.MEAmount3LBL.AutoSize = true;
-            this.MEAmount3LBL.Location = new System.Drawing.Point(480, 86);
+            this.MEAmount3LBL.Location = new System.Drawing.Point(482, 86);
             this.MEAmount3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MEAmount3LBL.Name = "MEAmount3LBL";
-            this.MEAmount3LBL.Size = new System.Drawing.Size(33, 18);
+            this.MEAmount3LBL.Size = new System.Drawing.Size(15, 18);
             this.MEAmount3LBL.TabIndex = 19;
-            this.MEAmount3LBL.Text = "0.00";
+            this.MEAmount3LBL.Text = "0";
             // 
             // MEAmount1LBL
             // 
             this.MEAmount1LBL.AutoSize = true;
-            this.MEAmount1LBL.Location = new System.Drawing.Point(480, 22);
+            this.MEAmount1LBL.Location = new System.Drawing.Point(482, 22);
             this.MEAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MEAmount1LBL.Name = "MEAmount1LBL";
-            this.MEAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.MEAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.MEAmount1LBL.TabIndex = 18;
-            this.MEAmount1LBL.Text = "0.00";
+            this.MEAmount1LBL.Text = "0";
             // 
             // MEPrice3LBL
             // 
             this.MEPrice3LBL.AutoSize = true;
-            this.MEPrice3LBL.Location = new System.Drawing.Point(304, 86);
+            this.MEPrice3LBL.Location = new System.Drawing.Point(311, 86);
             this.MEPrice3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MEPrice3LBL.Name = "MEPrice3LBL";
-            this.MEPrice3LBL.Size = new System.Drawing.Size(47, 18);
+            this.MEPrice3LBL.Size = new System.Drawing.Size(29, 18);
             this.MEPrice3LBL.TabIndex = 14;
-            this.MEPrice3LBL.Text = "499.00";
+            this.MEPrice3LBL.Text = "499";
             // 
             // MEPrice2LBL
             // 
             this.MEPrice2LBL.AutoSize = true;
-            this.MEPrice2LBL.Location = new System.Drawing.Point(304, 54);
+            this.MEPrice2LBL.Location = new System.Drawing.Point(311, 54);
             this.MEPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MEPrice2LBL.Name = "MEPrice2LBL";
-            this.MEPrice2LBL.Size = new System.Drawing.Size(47, 18);
+            this.MEPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.MEPrice2LBL.TabIndex = 13;
-            this.MEPrice2LBL.Text = "299.00";
+            this.MEPrice2LBL.Text = "299";
             // 
             // MEPrice1LBL
             // 
             this.MEPrice1LBL.AutoSize = true;
-            this.MEPrice1LBL.Location = new System.Drawing.Point(304, 22);
+            this.MEPrice1LBL.Location = new System.Drawing.Point(311, 22);
             this.MEPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MEPrice1LBL.Name = "MEPrice1LBL";
-            this.MEPrice1LBL.Size = new System.Drawing.Size(47, 18);
+            this.MEPrice1LBL.Size = new System.Drawing.Size(29, 18);
             this.MEPrice1LBL.TabIndex = 12;
-            this.MEPrice1LBL.Text = "195.00";
+            this.MEPrice1LBL.Text = "195";
             // 
             // label11
             // 
@@ -617,7 +776,7 @@
             this.groupBox5.Controls.Add(this.label32);
             this.groupBox5.Controls.Add(this.label33);
             this.groupBox5.Controls.Add(this.groupBox9);
-            this.groupBox5.Controls.Add(this.PRPrice1LBL);
+            this.groupBox5.Controls.Add(this.groupBox8);
             this.groupBox5.Controls.Add(this.label34);
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Controls.Add(this.groupBox6);
@@ -628,11 +787,31 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Personalized:";
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(310, 11);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(43, 18);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Price:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(382, 11);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(65, 18);
+            this.label33.TabIndex = 13;
+            this.label33.Text = "Quantity:";
+            // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.maskedTextBox23);
+            this.groupBox9.Controls.Add(this.ATQtyMaskedTextBox1);
             this.groupBox9.Controls.Add(this.ATAmount2LBL);
-            this.groupBox9.Controls.Add(this.maskedTextBox24);
+            this.groupBox9.Controls.Add(this.ATQtyMaskedTextBox2);
             this.groupBox9.Controls.Add(this.ATAmount1LBL);
             this.groupBox9.Controls.Add(this.ATPrice2LBL);
             this.groupBox9.Controls.Add(this.ATPrice1LBL);
@@ -645,45 +824,77 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Additional Time:";
             // 
+            // ATQtyMaskedTextBox1
+            // 
+            this.ATQtyMaskedTextBox1.BeepOnError = true;
+            this.ATQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.ATQtyMaskedTextBox1.Location = new System.Drawing.Point(372, 21);
+            this.ATQtyMaskedTextBox1.Mask = "000";
+            this.ATQtyMaskedTextBox1.Name = "ATQtyMaskedTextBox1";
+            this.ATQtyMaskedTextBox1.PromptChar = ' ';
+            this.ATQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ATQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.ATQtyMaskedTextBox1.TabIndex = 27;
+            this.ATQtyMaskedTextBox1.Text = "0";
+            this.ATQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.ATQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.ATQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.ATQtyMaskedTextBox1_TextChanged);
+            // 
             // ATAmount2LBL
             // 
             this.ATAmount2LBL.AutoSize = true;
-            this.ATAmount2LBL.Location = new System.Drawing.Point(476, 59);
+            this.ATAmount2LBL.Location = new System.Drawing.Point(477, 59);
             this.ATAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ATAmount2LBL.Name = "ATAmount2LBL";
-            this.ATAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.ATAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.ATAmount2LBL.TabIndex = 42;
-            this.ATAmount2LBL.Text = "0.00";
+            this.ATAmount2LBL.Text = "0";
+            // 
+            // ATQtyMaskedTextBox2
+            // 
+            this.ATQtyMaskedTextBox2.BeepOnError = true;
+            this.ATQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.ATQtyMaskedTextBox2.Location = new System.Drawing.Point(372, 53);
+            this.ATQtyMaskedTextBox2.Mask = "000";
+            this.ATQtyMaskedTextBox2.Name = "ATQtyMaskedTextBox2";
+            this.ATQtyMaskedTextBox2.PromptChar = ' ';
+            this.ATQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ATQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.ATQtyMaskedTextBox2.TabIndex = 28;
+            this.ATQtyMaskedTextBox2.Text = "0";
+            this.ATQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.ATQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.ATQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.ATQtyMaskedTextBox2_TextChanged);
             // 
             // ATAmount1LBL
             // 
             this.ATAmount1LBL.AutoSize = true;
-            this.ATAmount1LBL.Location = new System.Drawing.Point(476, 27);
+            this.ATAmount1LBL.Location = new System.Drawing.Point(477, 27);
             this.ATAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ATAmount1LBL.Name = "ATAmount1LBL";
-            this.ATAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.ATAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.ATAmount1LBL.TabIndex = 43;
-            this.ATAmount1LBL.Text = "0.00";
+            this.ATAmount1LBL.Text = "0";
             // 
             // ATPrice2LBL
             // 
             this.ATPrice2LBL.AutoSize = true;
-            this.ATPrice2LBL.Location = new System.Drawing.Point(299, 59);
+            this.ATPrice2LBL.Location = new System.Drawing.Point(308, 59);
             this.ATPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ATPrice2LBL.Name = "ATPrice2LBL";
-            this.ATPrice2LBL.Size = new System.Drawing.Size(47, 18);
+            this.ATPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.ATPrice2LBL.TabIndex = 32;
-            this.ATPrice2LBL.Text = "200.00";
+            this.ATPrice2LBL.Text = "200";
             // 
             // ATPrice1LBL
             // 
             this.ATPrice1LBL.AutoSize = true;
-            this.ATPrice1LBL.Location = new System.Drawing.Point(299, 27);
+            this.ATPrice1LBL.Location = new System.Drawing.Point(308, 27);
             this.ATPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ATPrice1LBL.Name = "ATPrice1LBL";
-            this.ATPrice1LBL.Size = new System.Drawing.Size(47, 18);
+            this.ATPrice1LBL.Size = new System.Drawing.Size(29, 18);
             this.ATPrice1LBL.TabIndex = 31;
-            this.ATPrice1LBL.Text = "100.00";
+            this.ATPrice1LBL.Text = "100";
             // 
             // label30
             // 
@@ -705,86 +916,132 @@
             this.label31.TabIndex = 11;
             this.label31.Text = "10 Minutes";
             // 
-            // PRPrice1LBL
+            // groupBox8
             // 
-            this.PRPrice1LBL.Controls.Add(this.maskedTextBox20);
-            this.PRPrice1LBL.Controls.Add(this.maskedTextBox21);
-            this.PRPrice1LBL.Controls.Add(this.maskedTextBox22);
-            this.PRPrice1LBL.Controls.Add(this.PRAmount1LBL);
-            this.PRPrice1LBL.Controls.Add(this.PRAmount2LBL);
-            this.PRPrice1LBL.Controls.Add(this.PRAmount3LBL);
-            this.PRPrice1LBL.Controls.Add(this.PRPrice3LBL);
-            this.PRPrice1LBL.Controls.Add(this.PRPrice2LBL);
-            this.PRPrice1LBL.Controls.Add(this.label53);
-            this.PRPrice1LBL.Controls.Add(this.label26);
-            this.PRPrice1LBL.Controls.Add(this.label28);
-            this.PRPrice1LBL.Controls.Add(this.label29);
-            this.PRPrice1LBL.Location = new System.Drawing.Point(10, 408);
-            this.PRPrice1LBL.Name = "PRPrice1LBL";
-            this.PRPrice1LBL.Size = new System.Drawing.Size(550, 113);
-            this.PRPrice1LBL.TabIndex = 15;
-            this.PRPrice1LBL.TabStop = false;
-            this.PRPrice1LBL.Text = "Pressure:";
+            this.groupBox8.Controls.Add(this.PRQtyMaskedTextBox1);
+            this.groupBox8.Controls.Add(this.PRQtyMaskedTextBox2);
+            this.groupBox8.Controls.Add(this.PRQtyMaskedTextBox3);
+            this.groupBox8.Controls.Add(this.PRAmount1LBL);
+            this.groupBox8.Controls.Add(this.PRAmount2LBL);
+            this.groupBox8.Controls.Add(this.PRAmount3LBL);
+            this.groupBox8.Controls.Add(this.PRPrice3LBL);
+            this.groupBox8.Controls.Add(this.PRPrice2LBL);
+            this.groupBox8.Controls.Add(this.PRPrice1LBL);
+            this.groupBox8.Controls.Add(this.label26);
+            this.groupBox8.Controls.Add(this.label28);
+            this.groupBox8.Controls.Add(this.label29);
+            this.groupBox8.Location = new System.Drawing.Point(10, 408);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(550, 113);
+            this.groupBox8.TabIndex = 15;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Pressure:";
+            // 
+            // PRQtyMaskedTextBox1
+            // 
+            this.PRQtyMaskedTextBox1.BeepOnError = true;
+            this.PRQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.PRQtyMaskedTextBox1.Enabled = false;
+            this.PRQtyMaskedTextBox1.Location = new System.Drawing.Point(372, 16);
+            this.PRQtyMaskedTextBox1.Mask = "000";
+            this.PRQtyMaskedTextBox1.Name = "PRQtyMaskedTextBox1";
+            this.PRQtyMaskedTextBox1.PromptChar = ' ';
+            this.PRQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PRQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.PRQtyMaskedTextBox1.TabIndex = 24;
+            this.PRQtyMaskedTextBox1.Text = "0";
+            this.PRQtyMaskedTextBox1.ValidatingType = typeof(int);
+            // 
+            // PRQtyMaskedTextBox2
+            // 
+            this.PRQtyMaskedTextBox2.BeepOnError = true;
+            this.PRQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.PRQtyMaskedTextBox2.Enabled = false;
+            this.PRQtyMaskedTextBox2.Location = new System.Drawing.Point(372, 48);
+            this.PRQtyMaskedTextBox2.Mask = "000";
+            this.PRQtyMaskedTextBox2.Name = "PRQtyMaskedTextBox2";
+            this.PRQtyMaskedTextBox2.PromptChar = ' ';
+            this.PRQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PRQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.PRQtyMaskedTextBox2.TabIndex = 25;
+            this.PRQtyMaskedTextBox2.Text = "0";
+            this.PRQtyMaskedTextBox2.ValidatingType = typeof(int);
+            // 
+            // PRQtyMaskedTextBox3
+            // 
+            this.PRQtyMaskedTextBox3.BeepOnError = true;
+            this.PRQtyMaskedTextBox3.ContextMenuStrip = this.contextMenuStrip1;
+            this.PRQtyMaskedTextBox3.Location = new System.Drawing.Point(372, 80);
+            this.PRQtyMaskedTextBox3.Mask = "000";
+            this.PRQtyMaskedTextBox3.Name = "PRQtyMaskedTextBox3";
+            this.PRQtyMaskedTextBox3.PromptChar = ' ';
+            this.PRQtyMaskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PRQtyMaskedTextBox3.Size = new System.Drawing.Size(62, 26);
+            this.PRQtyMaskedTextBox3.TabIndex = 26;
+            this.PRQtyMaskedTextBox3.Text = "0";
+            this.PRQtyMaskedTextBox3.ValidatingType = typeof(int);
+            this.PRQtyMaskedTextBox3.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.PRQtyMaskedTextBox3.TextChanged += new System.EventHandler(this.PRQtyMaskedTextBox3_TextChanged);
             // 
             // PRAmount1LBL
             // 
             this.PRAmount1LBL.AutoSize = true;
-            this.PRAmount1LBL.Location = new System.Drawing.Point(476, 22);
+            this.PRAmount1LBL.Location = new System.Drawing.Point(477, 22);
             this.PRAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PRAmount1LBL.Name = "PRAmount1LBL";
-            this.PRAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.PRAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.PRAmount1LBL.TabIndex = 39;
-            this.PRAmount1LBL.Text = "0.00";
+            this.PRAmount1LBL.Text = "0";
             // 
             // PRAmount2LBL
             // 
             this.PRAmount2LBL.AutoSize = true;
-            this.PRAmount2LBL.Location = new System.Drawing.Point(476, 52);
+            this.PRAmount2LBL.Location = new System.Drawing.Point(477, 52);
             this.PRAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PRAmount2LBL.Name = "PRAmount2LBL";
-            this.PRAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.PRAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.PRAmount2LBL.TabIndex = 40;
-            this.PRAmount2LBL.Text = "0.00";
+            this.PRAmount2LBL.Text = "0";
             // 
             // PRAmount3LBL
             // 
             this.PRAmount3LBL.AutoSize = true;
-            this.PRAmount3LBL.Location = new System.Drawing.Point(476, 83);
+            this.PRAmount3LBL.Location = new System.Drawing.Point(477, 83);
             this.PRAmount3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PRAmount3LBL.Name = "PRAmount3LBL";
-            this.PRAmount3LBL.Size = new System.Drawing.Size(33, 18);
+            this.PRAmount3LBL.Size = new System.Drawing.Size(15, 18);
             this.PRAmount3LBL.TabIndex = 41;
-            this.PRAmount3LBL.Text = "0.00";
+            this.PRAmount3LBL.Text = "0";
             // 
             // PRPrice3LBL
             // 
             this.PRPrice3LBL.AutoSize = true;
-            this.PRPrice3LBL.Location = new System.Drawing.Point(299, 81);
+            this.PRPrice3LBL.Location = new System.Drawing.Point(308, 81);
             this.PRPrice3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PRPrice3LBL.Name = "PRPrice3LBL";
-            this.PRPrice3LBL.Size = new System.Drawing.Size(47, 18);
+            this.PRPrice3LBL.Size = new System.Drawing.Size(29, 18);
             this.PRPrice3LBL.TabIndex = 30;
-            this.PRPrice3LBL.Text = "100.00";
+            this.PRPrice3LBL.Text = "100";
             // 
             // PRPrice2LBL
             // 
             this.PRPrice2LBL.AutoSize = true;
-            this.PRPrice2LBL.Location = new System.Drawing.Point(299, 49);
+            this.PRPrice2LBL.Location = new System.Drawing.Point(308, 49);
             this.PRPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PRPrice2LBL.Name = "PRPrice2LBL";
             this.PRPrice2LBL.Size = new System.Drawing.Size(36, 18);
             this.PRPrice2LBL.TabIndex = 31;
             this.PRPrice2LBL.Text = "Free";
             // 
-            // label53
+            // PRPrice1LBL
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(299, 22);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(36, 18);
-            this.label53.TabIndex = 30;
-            this.label53.Text = "Free";
+            this.PRPrice1LBL.AutoSize = true;
+            this.PRPrice1LBL.Location = new System.Drawing.Point(308, 22);
+            this.PRPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PRPrice1LBL.Name = "PRPrice1LBL";
+            this.PRPrice1LBL.Size = new System.Drawing.Size(36, 18);
+            this.PRPrice1LBL.TabIndex = 30;
+            this.PRPrice1LBL.Text = "Free";
             // 
             // label26
             // 
@@ -816,14 +1073,24 @@
             this.label29.TabIndex = 11;
             this.label29.Text = "Gentle";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(474, 11);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(62, 18);
+            this.label34.TabIndex = 12;
+            this.label34.Text = "Amount:";
+            // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.maskedTextBox18);
-            this.groupBox7.Controls.Add(this.maskedTextBox19);
-            this.groupBox7.Controls.Add(this.maskedTextBox14);
-            this.groupBox7.Controls.Add(this.maskedTextBox15);
-            this.groupBox7.Controls.Add(this.maskedTextBox16);
-            this.groupBox7.Controls.Add(this.maskedTextBox17);
+            this.groupBox7.Controls.Add(this.MDQtyMaskedTextBox5);
+            this.groupBox7.Controls.Add(this.MDQtyMaskedTextBox6);
+            this.groupBox7.Controls.Add(this.MDQtyMaskedTextBox1);
+            this.groupBox7.Controls.Add(this.MDQtyMaskedTextBox2);
+            this.groupBox7.Controls.Add(this.MDQtyMaskedTextBox3);
+            this.groupBox7.Controls.Add(this.MDQtyMaskedTextBox4);
             this.groupBox7.Controls.Add(this.MDAmount1LBL);
             this.groupBox7.Controls.Add(this.MDAmount6LBL);
             this.groupBox7.Controls.Add(this.MDAmount5LBL);
@@ -849,110 +1116,204 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Medium:";
             // 
+            // MDQtyMaskedTextBox5
+            // 
+            this.MDQtyMaskedTextBox5.BeepOnError = true;
+            this.MDQtyMaskedTextBox5.ContextMenuStrip = this.contextMenuStrip1;
+            this.MDQtyMaskedTextBox5.Location = new System.Drawing.Point(372, 148);
+            this.MDQtyMaskedTextBox5.Mask = "000";
+            this.MDQtyMaskedTextBox5.Name = "MDQtyMaskedTextBox5";
+            this.MDQtyMaskedTextBox5.PromptChar = ' ';
+            this.MDQtyMaskedTextBox5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MDQtyMaskedTextBox5.Size = new System.Drawing.Size(62, 26);
+            this.MDQtyMaskedTextBox5.TabIndex = 22;
+            this.MDQtyMaskedTextBox5.Text = "0";
+            this.MDQtyMaskedTextBox5.ValidatingType = typeof(int);
+            this.MDQtyMaskedTextBox5.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MDQtyMaskedTextBox5.TextChanged += new System.EventHandler(this.MDQtyMaskedTextBox5_TextChanged);
+            // 
+            // MDQtyMaskedTextBox6
+            // 
+            this.MDQtyMaskedTextBox6.BeepOnError = true;
+            this.MDQtyMaskedTextBox6.ContextMenuStrip = this.contextMenuStrip1;
+            this.MDQtyMaskedTextBox6.Location = new System.Drawing.Point(372, 180);
+            this.MDQtyMaskedTextBox6.Mask = "000";
+            this.MDQtyMaskedTextBox6.Name = "MDQtyMaskedTextBox6";
+            this.MDQtyMaskedTextBox6.PromptChar = ' ';
+            this.MDQtyMaskedTextBox6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MDQtyMaskedTextBox6.Size = new System.Drawing.Size(62, 26);
+            this.MDQtyMaskedTextBox6.TabIndex = 23;
+            this.MDQtyMaskedTextBox6.Text = "0";
+            this.MDQtyMaskedTextBox6.ValidatingType = typeof(int);
+            this.MDQtyMaskedTextBox6.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MDQtyMaskedTextBox6.TextChanged += new System.EventHandler(this.MDQtyMaskedTextBox6_TextChanged);
+            // 
+            // MDQtyMaskedTextBox1
+            // 
+            this.MDQtyMaskedTextBox1.BeepOnError = true;
+            this.MDQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.MDQtyMaskedTextBox1.Enabled = false;
+            this.MDQtyMaskedTextBox1.Location = new System.Drawing.Point(372, 20);
+            this.MDQtyMaskedTextBox1.Mask = "000";
+            this.MDQtyMaskedTextBox1.Name = "MDQtyMaskedTextBox1";
+            this.MDQtyMaskedTextBox1.PromptChar = ' ';
+            this.MDQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MDQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.MDQtyMaskedTextBox1.TabIndex = 18;
+            this.MDQtyMaskedTextBox1.Text = "0";
+            this.MDQtyMaskedTextBox1.ValidatingType = typeof(int);
+            // 
+            // MDQtyMaskedTextBox2
+            // 
+            this.MDQtyMaskedTextBox2.BeepOnError = true;
+            this.MDQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.MDQtyMaskedTextBox2.Enabled = false;
+            this.MDQtyMaskedTextBox2.Location = new System.Drawing.Point(372, 52);
+            this.MDQtyMaskedTextBox2.Mask = "000";
+            this.MDQtyMaskedTextBox2.Name = "MDQtyMaskedTextBox2";
+            this.MDQtyMaskedTextBox2.PromptChar = ' ';
+            this.MDQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MDQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.MDQtyMaskedTextBox2.TabIndex = 19;
+            this.MDQtyMaskedTextBox2.Text = "0";
+            this.MDQtyMaskedTextBox2.ValidatingType = typeof(int);
+            // 
+            // MDQtyMaskedTextBox3
+            // 
+            this.MDQtyMaskedTextBox3.BeepOnError = true;
+            this.MDQtyMaskedTextBox3.ContextMenuStrip = this.contextMenuStrip1;
+            this.MDQtyMaskedTextBox3.Location = new System.Drawing.Point(372, 84);
+            this.MDQtyMaskedTextBox3.Mask = "000";
+            this.MDQtyMaskedTextBox3.Name = "MDQtyMaskedTextBox3";
+            this.MDQtyMaskedTextBox3.PromptChar = ' ';
+            this.MDQtyMaskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MDQtyMaskedTextBox3.Size = new System.Drawing.Size(62, 26);
+            this.MDQtyMaskedTextBox3.TabIndex = 20;
+            this.MDQtyMaskedTextBox3.Text = "0";
+            this.MDQtyMaskedTextBox3.ValidatingType = typeof(int);
+            this.MDQtyMaskedTextBox3.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MDQtyMaskedTextBox3.TextChanged += new System.EventHandler(this.MDQtyMaskedTextBox3_TextChanged);
+            // 
+            // MDQtyMaskedTextBox4
+            // 
+            this.MDQtyMaskedTextBox4.BeepOnError = true;
+            this.MDQtyMaskedTextBox4.ContextMenuStrip = this.contextMenuStrip1;
+            this.MDQtyMaskedTextBox4.Location = new System.Drawing.Point(372, 116);
+            this.MDQtyMaskedTextBox4.Mask = "000";
+            this.MDQtyMaskedTextBox4.Name = "MDQtyMaskedTextBox4";
+            this.MDQtyMaskedTextBox4.PromptChar = ' ';
+            this.MDQtyMaskedTextBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MDQtyMaskedTextBox4.Size = new System.Drawing.Size(62, 26);
+            this.MDQtyMaskedTextBox4.TabIndex = 21;
+            this.MDQtyMaskedTextBox4.Text = "0";
+            this.MDQtyMaskedTextBox4.ValidatingType = typeof(int);
+            this.MDQtyMaskedTextBox4.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.MDQtyMaskedTextBox4.TextChanged += new System.EventHandler(this.MDQtyMaskedTextBox4_TextChanged);
+            // 
             // MDAmount1LBL
             // 
             this.MDAmount1LBL.AutoSize = true;
-            this.MDAmount1LBL.Location = new System.Drawing.Point(476, 23);
+            this.MDAmount1LBL.Location = new System.Drawing.Point(477, 23);
             this.MDAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDAmount1LBL.Name = "MDAmount1LBL";
-            this.MDAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.MDAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.MDAmount1LBL.TabIndex = 38;
-            this.MDAmount1LBL.Text = "0.00";
+            this.MDAmount1LBL.Text = "0";
             // 
             // MDAmount6LBL
             // 
             this.MDAmount6LBL.AutoSize = true;
-            this.MDAmount6LBL.Location = new System.Drawing.Point(476, 183);
+            this.MDAmount6LBL.Location = new System.Drawing.Point(477, 183);
             this.MDAmount6LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDAmount6LBL.Name = "MDAmount6LBL";
-            this.MDAmount6LBL.Size = new System.Drawing.Size(33, 18);
+            this.MDAmount6LBL.Size = new System.Drawing.Size(15, 18);
             this.MDAmount6LBL.TabIndex = 37;
-            this.MDAmount6LBL.Text = "0.00";
+            this.MDAmount6LBL.Text = "0";
             // 
             // MDAmount5LBL
             // 
             this.MDAmount5LBL.AutoSize = true;
-            this.MDAmount5LBL.Location = new System.Drawing.Point(476, 150);
+            this.MDAmount5LBL.Location = new System.Drawing.Point(477, 150);
             this.MDAmount5LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDAmount5LBL.Name = "MDAmount5LBL";
-            this.MDAmount5LBL.Size = new System.Drawing.Size(33, 18);
+            this.MDAmount5LBL.Size = new System.Drawing.Size(15, 18);
             this.MDAmount5LBL.TabIndex = 36;
-            this.MDAmount5LBL.Text = "0.00";
+            this.MDAmount5LBL.Text = "0";
             // 
             // MDAmount4LBL
             // 
             this.MDAmount4LBL.AutoSize = true;
-            this.MDAmount4LBL.Location = new System.Drawing.Point(476, 121);
+            this.MDAmount4LBL.Location = new System.Drawing.Point(477, 121);
             this.MDAmount4LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDAmount4LBL.Name = "MDAmount4LBL";
-            this.MDAmount4LBL.Size = new System.Drawing.Size(33, 18);
+            this.MDAmount4LBL.Size = new System.Drawing.Size(15, 18);
             this.MDAmount4LBL.TabIndex = 35;
-            this.MDAmount4LBL.Text = "0.00";
+            this.MDAmount4LBL.Text = "0";
             // 
             // MDAmount3LBL
             // 
             this.MDAmount3LBL.AutoSize = true;
-            this.MDAmount3LBL.Location = new System.Drawing.Point(476, 87);
+            this.MDAmount3LBL.Location = new System.Drawing.Point(477, 87);
             this.MDAmount3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDAmount3LBL.Name = "MDAmount3LBL";
-            this.MDAmount3LBL.Size = new System.Drawing.Size(33, 18);
+            this.MDAmount3LBL.Size = new System.Drawing.Size(15, 18);
             this.MDAmount3LBL.TabIndex = 34;
-            this.MDAmount3LBL.Text = "0.00";
+            this.MDAmount3LBL.Text = "0";
             // 
             // MDAmount2LBL
             // 
             this.MDAmount2LBL.AutoSize = true;
-            this.MDAmount2LBL.Location = new System.Drawing.Point(476, 55);
+            this.MDAmount2LBL.Location = new System.Drawing.Point(477, 55);
             this.MDAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDAmount2LBL.Name = "MDAmount2LBL";
-            this.MDAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.MDAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.MDAmount2LBL.TabIndex = 33;
-            this.MDAmount2LBL.Text = "0.00";
+            this.MDAmount2LBL.Text = "0";
             // 
             // MDPrice6LBL
             // 
             this.MDPrice6LBL.AutoSize = true;
-            this.MDPrice6LBL.Location = new System.Drawing.Point(299, 183);
+            this.MDPrice6LBL.Location = new System.Drawing.Point(308, 183);
             this.MDPrice6LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDPrice6LBL.Name = "MDPrice6LBL";
-            this.MDPrice6LBL.Size = new System.Drawing.Size(47, 18);
+            this.MDPrice6LBL.Size = new System.Drawing.Size(29, 18);
             this.MDPrice6LBL.TabIndex = 29;
-            this.MDPrice6LBL.Text = "100.00";
+            this.MDPrice6LBL.Text = "100";
             // 
             // MDPrice5LBL
             // 
             this.MDPrice5LBL.AutoSize = true;
-            this.MDPrice5LBL.Location = new System.Drawing.Point(299, 150);
+            this.MDPrice5LBL.Location = new System.Drawing.Point(308, 150);
             this.MDPrice5LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDPrice5LBL.Name = "MDPrice5LBL";
-            this.MDPrice5LBL.Size = new System.Drawing.Size(47, 18);
+            this.MDPrice5LBL.Size = new System.Drawing.Size(29, 18);
             this.MDPrice5LBL.TabIndex = 28;
-            this.MDPrice5LBL.Text = "100.00";
+            this.MDPrice5LBL.Text = "100";
             // 
             // MDPrice4LBL
             // 
             this.MDPrice4LBL.AutoSize = true;
-            this.MDPrice4LBL.Location = new System.Drawing.Point(299, 121);
+            this.MDPrice4LBL.Location = new System.Drawing.Point(308, 121);
             this.MDPrice4LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDPrice4LBL.Name = "MDPrice4LBL";
-            this.MDPrice4LBL.Size = new System.Drawing.Size(47, 18);
+            this.MDPrice4LBL.Size = new System.Drawing.Size(29, 18);
             this.MDPrice4LBL.TabIndex = 27;
-            this.MDPrice4LBL.Text = "100.00";
+            this.MDPrice4LBL.Text = "100";
             // 
             // MDPrice3LBL
             // 
             this.MDPrice3LBL.AutoSize = true;
-            this.MDPrice3LBL.Location = new System.Drawing.Point(299, 87);
+            this.MDPrice3LBL.Location = new System.Drawing.Point(308, 87);
             this.MDPrice3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDPrice3LBL.Name = "MDPrice3LBL";
-            this.MDPrice3LBL.Size = new System.Drawing.Size(40, 18);
+            this.MDPrice3LBL.Size = new System.Drawing.Size(22, 18);
             this.MDPrice3LBL.TabIndex = 26;
-            this.MDPrice3LBL.Text = "50.00";
+            this.MDPrice3LBL.Text = "50";
             // 
             // MDPrice2LBL
             // 
             this.MDPrice2LBL.AutoSize = true;
-            this.MDPrice2LBL.Location = new System.Drawing.Point(299, 55);
+            this.MDPrice2LBL.Location = new System.Drawing.Point(308, 55);
             this.MDPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDPrice2LBL.Name = "MDPrice2LBL";
             this.MDPrice2LBL.Size = new System.Drawing.Size(36, 18);
@@ -962,7 +1323,7 @@
             // MDPrice1LBL
             // 
             this.MDPrice1LBL.AutoSize = true;
-            this.MDPrice1LBL.Location = new System.Drawing.Point(299, 23);
+            this.MDPrice1LBL.Location = new System.Drawing.Point(308, 23);
             this.MDPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MDPrice1LBL.Name = "MDPrice1LBL";
             this.MDPrice1LBL.Size = new System.Drawing.Size(36, 18);
@@ -1031,10 +1392,10 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.maskedTextBox10);
-            this.groupBox6.Controls.Add(this.maskedTextBox11);
-            this.groupBox6.Controls.Add(this.maskedTextBox12);
-            this.groupBox6.Controls.Add(this.maskedTextBox13);
+            this.groupBox6.Controls.Add(this.DRTNQtyMaskedTextBox1);
+            this.groupBox6.Controls.Add(this.DRTNQtyMaskedTextBox2);
+            this.groupBox6.Controls.Add(this.DRTNQtyMaskedTextBox3);
+            this.groupBox6.Controls.Add(this.DRTNQtyMaskedTextBox4);
             this.groupBox6.Controls.Add(this.DRTNAmount4LBL);
             this.groupBox6.Controls.Add(this.DRTNAmount2LBL);
             this.groupBox6.Controls.Add(this.DRTNAmount3LBL);
@@ -1047,92 +1408,156 @@
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Location = new System.Drawing.Point(10, 32);
+            this.groupBox6.Location = new System.Drawing.Point(10, 34);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(550, 145);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Duration:";
             // 
+            // DRTNQtyMaskedTextBox1
+            // 
+            this.DRTNQtyMaskedTextBox1.BeepOnError = true;
+            this.DRTNQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.DRTNQtyMaskedTextBox1.Location = new System.Drawing.Point(372, 18);
+            this.DRTNQtyMaskedTextBox1.Mask = "000";
+            this.DRTNQtyMaskedTextBox1.Name = "DRTNQtyMaskedTextBox1";
+            this.DRTNQtyMaskedTextBox1.PromptChar = ' ';
+            this.DRTNQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DRTNQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.DRTNQtyMaskedTextBox1.TabIndex = 14;
+            this.DRTNQtyMaskedTextBox1.Text = "0";
+            this.DRTNQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.DRTNQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.DRTNQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.DRTNQtyMaskedTextBox1_TextChanged);
+            // 
+            // DRTNQtyMaskedTextBox2
+            // 
+            this.DRTNQtyMaskedTextBox2.BeepOnError = true;
+            this.DRTNQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.DRTNQtyMaskedTextBox2.Location = new System.Drawing.Point(372, 50);
+            this.DRTNQtyMaskedTextBox2.Mask = "000";
+            this.DRTNQtyMaskedTextBox2.Name = "DRTNQtyMaskedTextBox2";
+            this.DRTNQtyMaskedTextBox2.PromptChar = ' ';
+            this.DRTNQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DRTNQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.DRTNQtyMaskedTextBox2.TabIndex = 15;
+            this.DRTNQtyMaskedTextBox2.Text = "0";
+            this.DRTNQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.DRTNQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.DRTNQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.DRTNQtyMaskedTextBox2_TextChanged);
+            // 
+            // DRTNQtyMaskedTextBox3
+            // 
+            this.DRTNQtyMaskedTextBox3.BeepOnError = true;
+            this.DRTNQtyMaskedTextBox3.ContextMenuStrip = this.contextMenuStrip1;
+            this.DRTNQtyMaskedTextBox3.Location = new System.Drawing.Point(372, 82);
+            this.DRTNQtyMaskedTextBox3.Mask = "000";
+            this.DRTNQtyMaskedTextBox3.Name = "DRTNQtyMaskedTextBox3";
+            this.DRTNQtyMaskedTextBox3.PromptChar = ' ';
+            this.DRTNQtyMaskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DRTNQtyMaskedTextBox3.Size = new System.Drawing.Size(62, 26);
+            this.DRTNQtyMaskedTextBox3.TabIndex = 16;
+            this.DRTNQtyMaskedTextBox3.Text = "0";
+            this.DRTNQtyMaskedTextBox3.ValidatingType = typeof(int);
+            this.DRTNQtyMaskedTextBox3.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.DRTNQtyMaskedTextBox3.TextChanged += new System.EventHandler(this.DRTNQtyMaskedTextBox3_TextChanged);
+            // 
+            // DRTNQtyMaskedTextBox4
+            // 
+            this.DRTNQtyMaskedTextBox4.BeepOnError = true;
+            this.DRTNQtyMaskedTextBox4.ContextMenuStrip = this.contextMenuStrip1;
+            this.DRTNQtyMaskedTextBox4.Location = new System.Drawing.Point(372, 114);
+            this.DRTNQtyMaskedTextBox4.Mask = "000";
+            this.DRTNQtyMaskedTextBox4.Name = "DRTNQtyMaskedTextBox4";
+            this.DRTNQtyMaskedTextBox4.PromptChar = ' ';
+            this.DRTNQtyMaskedTextBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DRTNQtyMaskedTextBox4.Size = new System.Drawing.Size(62, 26);
+            this.DRTNQtyMaskedTextBox4.TabIndex = 17;
+            this.DRTNQtyMaskedTextBox4.Text = "0";
+            this.DRTNQtyMaskedTextBox4.ValidatingType = typeof(int);
+            this.DRTNQtyMaskedTextBox4.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.DRTNQtyMaskedTextBox4.TextChanged += new System.EventHandler(this.DRTNQtyMaskedTextBox4_TextChanged);
+            // 
             // DRTNAmount4LBL
             // 
             this.DRTNAmount4LBL.AutoSize = true;
-            this.DRTNAmount4LBL.Location = new System.Drawing.Point(476, 118);
+            this.DRTNAmount4LBL.Location = new System.Drawing.Point(477, 118);
             this.DRTNAmount4LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNAmount4LBL.Name = "DRTNAmount4LBL";
-            this.DRTNAmount4LBL.Size = new System.Drawing.Size(33, 18);
+            this.DRTNAmount4LBL.Size = new System.Drawing.Size(15, 18);
             this.DRTNAmount4LBL.TabIndex = 31;
-            this.DRTNAmount4LBL.Text = "0.00";
+            this.DRTNAmount4LBL.Text = "0";
             // 
             // DRTNAmount2LBL
             // 
             this.DRTNAmount2LBL.AutoSize = true;
-            this.DRTNAmount2LBL.Location = new System.Drawing.Point(476, 54);
+            this.DRTNAmount2LBL.Location = new System.Drawing.Point(477, 54);
             this.DRTNAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNAmount2LBL.Name = "DRTNAmount2LBL";
-            this.DRTNAmount2LBL.Size = new System.Drawing.Size(33, 18);
+            this.DRTNAmount2LBL.Size = new System.Drawing.Size(15, 18);
             this.DRTNAmount2LBL.TabIndex = 30;
-            this.DRTNAmount2LBL.Text = "0.00";
+            this.DRTNAmount2LBL.Text = "0";
             // 
             // DRTNAmount3LBL
             // 
             this.DRTNAmount3LBL.AutoSize = true;
-            this.DRTNAmount3LBL.Location = new System.Drawing.Point(476, 86);
+            this.DRTNAmount3LBL.Location = new System.Drawing.Point(477, 86);
             this.DRTNAmount3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNAmount3LBL.Name = "DRTNAmount3LBL";
-            this.DRTNAmount3LBL.Size = new System.Drawing.Size(33, 18);
+            this.DRTNAmount3LBL.Size = new System.Drawing.Size(15, 18);
             this.DRTNAmount3LBL.TabIndex = 29;
-            this.DRTNAmount3LBL.Text = "0.00";
+            this.DRTNAmount3LBL.Text = "0";
             // 
             // DRTNAmount1LBL
             // 
             this.DRTNAmount1LBL.AutoSize = true;
-            this.DRTNAmount1LBL.Location = new System.Drawing.Point(476, 22);
+            this.DRTNAmount1LBL.Location = new System.Drawing.Point(477, 22);
             this.DRTNAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNAmount1LBL.Name = "DRTNAmount1LBL";
-            this.DRTNAmount1LBL.Size = new System.Drawing.Size(33, 18);
+            this.DRTNAmount1LBL.Size = new System.Drawing.Size(15, 18);
             this.DRTNAmount1LBL.TabIndex = 28;
-            this.DRTNAmount1LBL.Text = "0.00";
+            this.DRTNAmount1LBL.Text = "0";
             // 
             // DRTNPrice4LBL
             // 
             this.DRTNPrice4LBL.AutoSize = true;
-            this.DRTNPrice4LBL.Location = new System.Drawing.Point(300, 118);
+            this.DRTNPrice4LBL.Location = new System.Drawing.Point(309, 118);
             this.DRTNPrice4LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNPrice4LBL.Name = "DRTNPrice4LBL";
-            this.DRTNPrice4LBL.Size = new System.Drawing.Size(47, 18);
+            this.DRTNPrice4LBL.Size = new System.Drawing.Size(29, 18);
             this.DRTNPrice4LBL.TabIndex = 23;
-            this.DRTNPrice4LBL.Text = "399.00";
+            this.DRTNPrice4LBL.Text = "399";
             // 
             // DRTNPrice3LBL
             // 
             this.DRTNPrice3LBL.AutoSize = true;
-            this.DRTNPrice3LBL.Location = new System.Drawing.Point(300, 86);
+            this.DRTNPrice3LBL.Location = new System.Drawing.Point(309, 86);
             this.DRTNPrice3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNPrice3LBL.Name = "DRTNPrice3LBL";
-            this.DRTNPrice3LBL.Size = new System.Drawing.Size(47, 18);
+            this.DRTNPrice3LBL.Size = new System.Drawing.Size(29, 18);
             this.DRTNPrice3LBL.TabIndex = 22;
-            this.DRTNPrice3LBL.Text = "249.00";
+            this.DRTNPrice3LBL.Text = "249";
             // 
             // DRTNPrice2LBL
             // 
             this.DRTNPrice2LBL.AutoSize = true;
-            this.DRTNPrice2LBL.Location = new System.Drawing.Point(300, 54);
+            this.DRTNPrice2LBL.Location = new System.Drawing.Point(309, 54);
             this.DRTNPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNPrice2LBL.Name = "DRTNPrice2LBL";
-            this.DRTNPrice2LBL.Size = new System.Drawing.Size(47, 18);
+            this.DRTNPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.DRTNPrice2LBL.TabIndex = 21;
-            this.DRTNPrice2LBL.Text = "149.00";
+            this.DRTNPrice2LBL.Text = "149";
             // 
             // DRTNPrice1LBL
             // 
             this.DRTNPrice1LBL.AutoSize = true;
-            this.DRTNPrice1LBL.Location = new System.Drawing.Point(300, 22);
+            this.DRTNPrice1LBL.Location = new System.Drawing.Point(309, 22);
             this.DRTNPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DRTNPrice1LBL.Name = "DRTNPrice1LBL";
-            this.DRTNPrice1LBL.Size = new System.Drawing.Size(40, 18);
+            this.DRTNPrice1LBL.Size = new System.Drawing.Size(22, 18);
             this.DRTNPrice1LBL.TabIndex = 20;
-            this.DRTNPrice1LBL.Text = "49.00";
+            this.DRTNPrice1LBL.Text = "49";
             // 
             // label19
             // 
@@ -1204,7 +1629,7 @@
             this.CalculateDataOKBTN.Location = new System.Drawing.Point(29, 171);
             this.CalculateDataOKBTN.Name = "CalculateDataOKBTN";
             this.CalculateDataOKBTN.Size = new System.Drawing.Size(531, 58);
-            this.CalculateDataOKBTN.TabIndex = 18;
+            this.CalculateDataOKBTN.TabIndex = 29;
             this.CalculateDataOKBTN.Text = "OK";
             this.CalculateDataOKBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CalculateDataOKBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1221,42 +1646,42 @@
             // TotalAmountDLBL
             // 
             this.TotalAmountDLBL.AutoSize = true;
-            this.TotalAmountDLBL.Location = new System.Drawing.Point(486, 130);
+            this.TotalAmountDLBL.Location = new System.Drawing.Point(488, 130);
             this.TotalAmountDLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmountDLBL.Name = "TotalAmountDLBL";
-            this.TotalAmountDLBL.Size = new System.Drawing.Size(33, 18);
+            this.TotalAmountDLBL.Size = new System.Drawing.Size(15, 18);
             this.TotalAmountDLBL.TabIndex = 17;
-            this.TotalAmountDLBL.Text = "0.00";
+            this.TotalAmountDLBL.Text = "0";
             // 
             // VatLBL
             // 
             this.VatLBL.AutoSize = true;
-            this.VatLBL.Location = new System.Drawing.Point(486, 95);
+            this.VatLBL.Location = new System.Drawing.Point(488, 95);
             this.VatLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VatLBL.Name = "VatLBL";
-            this.VatLBL.Size = new System.Drawing.Size(33, 18);
+            this.VatLBL.Size = new System.Drawing.Size(15, 18);
             this.VatLBL.TabIndex = 16;
-            this.VatLBL.Text = "0.00";
+            this.VatLBL.Text = "0";
             // 
             // SeniorCDiscountLBL
             // 
             this.SeniorCDiscountLBL.AutoSize = true;
-            this.SeniorCDiscountLBL.Location = new System.Drawing.Point(486, 64);
+            this.SeniorCDiscountLBL.Location = new System.Drawing.Point(488, 64);
             this.SeniorCDiscountLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeniorCDiscountLBL.Name = "SeniorCDiscountLBL";
-            this.SeniorCDiscountLBL.Size = new System.Drawing.Size(33, 18);
+            this.SeniorCDiscountLBL.Size = new System.Drawing.Size(15, 18);
             this.SeniorCDiscountLBL.TabIndex = 15;
-            this.SeniorCDiscountLBL.Text = "0.00";
+            this.SeniorCDiscountLBL.Text = "0";
             // 
             // NetOfVATLBL
             // 
             this.NetOfVATLBL.AutoSize = true;
-            this.NetOfVATLBL.Location = new System.Drawing.Point(486, 32);
+            this.NetOfVATLBL.Location = new System.Drawing.Point(488, 32);
             this.NetOfVATLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NetOfVATLBL.Name = "NetOfVATLBL";
-            this.NetOfVATLBL.Size = new System.Drawing.Size(33, 18);
+            this.NetOfVATLBL.Size = new System.Drawing.Size(15, 18);
             this.NetOfVATLBL.TabIndex = 14;
-            this.NetOfVATLBL.Text = "0.00";
+            this.NetOfVATLBL.Text = "0";
             // 
             // label83
             // 
@@ -1397,390 +1822,11 @@
             this.SeriesNumberLBL.TabIndex = 29;
             this.SeriesNumberLBL.Text = "000-000-001";
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(310, 11);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(43, 18);
-            this.label32.TabIndex = 14;
-            this.label32.Text = "Price:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(382, 11);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(65, 18);
-            this.label33.TabIndex = 13;
-            this.label33.Text = "Quantity:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(474, 11);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(62, 18);
-            this.label34.TabIndex = 12;
-            this.label34.Text = "Amount:";
-            // 
             // CRCTimer
             // 
             this.CRCTimer.Enabled = true;
             this.CRCTimer.Interval = 1000;
             this.CRCTimer.Tick += new System.EventHandler(this.CRCTimer_Tick);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BeepOnError = true;
-            this.maskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox1.Location = new System.Drawing.Point(378, 14);
-            this.maskedTextBox1.Mask = "0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PromptChar = ' ';
-            this.maskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox1.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox1.TabIndex = 32;
-            this.maskedTextBox1.Text = "0";
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(311, 26);
-            // 
-            // onlyNumbersAllowedRangingFrom09999ToolStripMenuItem
-            // 
-            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem.Name = "onlyNumbersAllowedRangingFrom09999ToolStripMenuItem";
-            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
-            this.onlyNumbersAllowedRangingFrom09999ToolStripMenuItem.Text = "Only numbers allowed ranging from 0 - 9999";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.BeepOnError = true;
-            this.maskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox2.Location = new System.Drawing.Point(378, 46);
-            this.maskedTextBox2.Mask = "0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.PromptChar = ' ';
-            this.maskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox2.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox2.TabIndex = 33;
-            this.maskedTextBox2.Text = "0";
-            this.maskedTextBox2.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.BeepOnError = true;
-            this.maskedTextBox3.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox3.Location = new System.Drawing.Point(378, 78);
-            this.maskedTextBox3.Mask = "0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.PromptChar = ' ';
-            this.maskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox3.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox3.TabIndex = 34;
-            this.maskedTextBox3.Text = "0";
-            this.maskedTextBox3.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.BeepOnError = true;
-            this.maskedTextBox4.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox4.Location = new System.Drawing.Point(378, 19);
-            this.maskedTextBox4.Mask = "0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.PromptChar = ' ';
-            this.maskedTextBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox4.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox4.TabIndex = 35;
-            this.maskedTextBox4.Text = "0";
-            this.maskedTextBox4.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox5
-            // 
-            this.maskedTextBox5.BeepOnError = true;
-            this.maskedTextBox5.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox5.Location = new System.Drawing.Point(378, 51);
-            this.maskedTextBox5.Mask = "0000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.PromptChar = ' ';
-            this.maskedTextBox5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox5.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox5.TabIndex = 34;
-            this.maskedTextBox5.Text = "0";
-            this.maskedTextBox5.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.BeepOnError = true;
-            this.maskedTextBox6.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox6.Location = new System.Drawing.Point(379, 15);
-            this.maskedTextBox6.Mask = "0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.PromptChar = ' ';
-            this.maskedTextBox6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox6.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox6.TabIndex = 37;
-            this.maskedTextBox6.Text = "0";
-            this.maskedTextBox6.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox7
-            // 
-            this.maskedTextBox7.BeepOnError = true;
-            this.maskedTextBox7.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox7.Location = new System.Drawing.Point(378, 47);
-            this.maskedTextBox7.Mask = "0000";
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.PromptChar = ' ';
-            this.maskedTextBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox7.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox7.TabIndex = 36;
-            this.maskedTextBox7.Text = "0";
-            this.maskedTextBox7.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox8
-            // 
-            this.maskedTextBox8.BeepOnError = true;
-            this.maskedTextBox8.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox8.Location = new System.Drawing.Point(378, 79);
-            this.maskedTextBox8.Mask = "0000";
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.PromptChar = ' ';
-            this.maskedTextBox8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox8.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox8.TabIndex = 35;
-            this.maskedTextBox8.Text = "0";
-            this.maskedTextBox8.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox9
-            // 
-            this.maskedTextBox9.BeepOnError = true;
-            this.maskedTextBox9.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox9.Location = new System.Drawing.Point(378, 111);
-            this.maskedTextBox9.Mask = "0000";
-            this.maskedTextBox9.Name = "maskedTextBox9";
-            this.maskedTextBox9.PromptChar = ' ';
-            this.maskedTextBox9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox9.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox9.TabIndex = 38;
-            this.maskedTextBox9.Text = "0";
-            this.maskedTextBox9.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox10
-            // 
-            this.maskedTextBox10.BeepOnError = true;
-            this.maskedTextBox10.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox10.Location = new System.Drawing.Point(372, 14);
-            this.maskedTextBox10.Mask = "0000";
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.PromptChar = ' ';
-            this.maskedTextBox10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox10.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox10.TabIndex = 42;
-            this.maskedTextBox10.Text = "0";
-            this.maskedTextBox10.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox11
-            // 
-            this.maskedTextBox11.BeepOnError = true;
-            this.maskedTextBox11.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox11.Location = new System.Drawing.Point(372, 46);
-            this.maskedTextBox11.Mask = "0000";
-            this.maskedTextBox11.Name = "maskedTextBox11";
-            this.maskedTextBox11.PromptChar = ' ';
-            this.maskedTextBox11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox11.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox11.TabIndex = 41;
-            this.maskedTextBox11.Text = "0";
-            this.maskedTextBox11.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox12
-            // 
-            this.maskedTextBox12.BeepOnError = true;
-            this.maskedTextBox12.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox12.Location = new System.Drawing.Point(372, 78);
-            this.maskedTextBox12.Mask = "0000";
-            this.maskedTextBox12.Name = "maskedTextBox12";
-            this.maskedTextBox12.PromptChar = ' ';
-            this.maskedTextBox12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox12.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox12.TabIndex = 40;
-            this.maskedTextBox12.Text = "0";
-            this.maskedTextBox12.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox13
-            // 
-            this.maskedTextBox13.BeepOnError = true;
-            this.maskedTextBox13.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox13.Location = new System.Drawing.Point(372, 110);
-            this.maskedTextBox13.Mask = "0000";
-            this.maskedTextBox13.Name = "maskedTextBox13";
-            this.maskedTextBox13.PromptChar = ' ';
-            this.maskedTextBox13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox13.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox13.TabIndex = 39;
-            this.maskedTextBox13.Text = "0";
-            this.maskedTextBox13.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox14
-            // 
-            this.maskedTextBox14.BeepOnError = true;
-            this.maskedTextBox14.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox14.Location = new System.Drawing.Point(372, 20);
-            this.maskedTextBox14.Mask = "0000";
-            this.maskedTextBox14.Name = "maskedTextBox14";
-            this.maskedTextBox14.PromptChar = ' ';
-            this.maskedTextBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox14.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox14.TabIndex = 42;
-            this.maskedTextBox14.Text = "0";
-            this.maskedTextBox14.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox15
-            // 
-            this.maskedTextBox15.BeepOnError = true;
-            this.maskedTextBox15.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox15.Location = new System.Drawing.Point(372, 52);
-            this.maskedTextBox15.Mask = "0000";
-            this.maskedTextBox15.Name = "maskedTextBox15";
-            this.maskedTextBox15.PromptChar = ' ';
-            this.maskedTextBox15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox15.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox15.TabIndex = 41;
-            this.maskedTextBox15.Text = "0";
-            this.maskedTextBox15.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox16
-            // 
-            this.maskedTextBox16.BeepOnError = true;
-            this.maskedTextBox16.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox16.Location = new System.Drawing.Point(372, 84);
-            this.maskedTextBox16.Mask = "0000";
-            this.maskedTextBox16.Name = "maskedTextBox16";
-            this.maskedTextBox16.PromptChar = ' ';
-            this.maskedTextBox16.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox16.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox16.TabIndex = 40;
-            this.maskedTextBox16.Text = "0";
-            this.maskedTextBox16.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox17
-            // 
-            this.maskedTextBox17.BeepOnError = true;
-            this.maskedTextBox17.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox17.Location = new System.Drawing.Point(372, 116);
-            this.maskedTextBox17.Mask = "0000";
-            this.maskedTextBox17.Name = "maskedTextBox17";
-            this.maskedTextBox17.PromptChar = ' ';
-            this.maskedTextBox17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox17.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox17.TabIndex = 39;
-            this.maskedTextBox17.Text = "0";
-            this.maskedTextBox17.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox18
-            // 
-            this.maskedTextBox18.BeepOnError = true;
-            this.maskedTextBox18.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox18.Location = new System.Drawing.Point(372, 148);
-            this.maskedTextBox18.Mask = "0000";
-            this.maskedTextBox18.Name = "maskedTextBox18";
-            this.maskedTextBox18.PromptChar = ' ';
-            this.maskedTextBox18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox18.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox18.TabIndex = 44;
-            this.maskedTextBox18.Text = "0";
-            this.maskedTextBox18.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox19
-            // 
-            this.maskedTextBox19.BeepOnError = true;
-            this.maskedTextBox19.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox19.Location = new System.Drawing.Point(372, 180);
-            this.maskedTextBox19.Mask = "0000";
-            this.maskedTextBox19.Name = "maskedTextBox19";
-            this.maskedTextBox19.PromptChar = ' ';
-            this.maskedTextBox19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox19.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox19.TabIndex = 43;
-            this.maskedTextBox19.Text = "0";
-            this.maskedTextBox19.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox20
-            // 
-            this.maskedTextBox20.BeepOnError = true;
-            this.maskedTextBox20.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox20.Location = new System.Drawing.Point(372, 14);
-            this.maskedTextBox20.Mask = "0000";
-            this.maskedTextBox20.Name = "maskedTextBox20";
-            this.maskedTextBox20.PromptChar = ' ';
-            this.maskedTextBox20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox20.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox20.TabIndex = 44;
-            this.maskedTextBox20.Text = "0";
-            this.maskedTextBox20.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox21
-            // 
-            this.maskedTextBox21.BeepOnError = true;
-            this.maskedTextBox21.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox21.Location = new System.Drawing.Point(372, 46);
-            this.maskedTextBox21.Mask = "0000";
-            this.maskedTextBox21.Name = "maskedTextBox21";
-            this.maskedTextBox21.PromptChar = ' ';
-            this.maskedTextBox21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox21.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox21.TabIndex = 43;
-            this.maskedTextBox21.Text = "0";
-            this.maskedTextBox21.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox22
-            // 
-            this.maskedTextBox22.BeepOnError = true;
-            this.maskedTextBox22.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox22.Location = new System.Drawing.Point(372, 78);
-            this.maskedTextBox22.Mask = "0000";
-            this.maskedTextBox22.Name = "maskedTextBox22";
-            this.maskedTextBox22.PromptChar = ' ';
-            this.maskedTextBox22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox22.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox22.TabIndex = 42;
-            this.maskedTextBox22.Text = "0";
-            this.maskedTextBox22.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox23
-            // 
-            this.maskedTextBox23.BeepOnError = true;
-            this.maskedTextBox23.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox23.Location = new System.Drawing.Point(372, 19);
-            this.maskedTextBox23.Mask = "0000";
-            this.maskedTextBox23.Name = "maskedTextBox23";
-            this.maskedTextBox23.PromptChar = ' ';
-            this.maskedTextBox23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox23.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox23.TabIndex = 46;
-            this.maskedTextBox23.Text = "0";
-            this.maskedTextBox23.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox24
-            // 
-            this.maskedTextBox24.BeepOnError = true;
-            this.maskedTextBox24.ContextMenuStrip = this.contextMenuStrip1;
-            this.maskedTextBox24.Location = new System.Drawing.Point(372, 51);
-            this.maskedTextBox24.Mask = "0000";
-            this.maskedTextBox24.Name = "maskedTextBox24";
-            this.maskedTextBox24.PromptChar = ' ';
-            this.maskedTextBox24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBox24.Size = new System.Drawing.Size(62, 26);
-            this.maskedTextBox24.TabIndex = 45;
-            this.maskedTextBox24.Text = "0";
-            this.maskedTextBox24.ValidatingType = typeof(int);
             // 
             // ClientReceiptControl
             // 
@@ -1795,10 +1841,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientReceiptControl";
             this.Size = new System.Drawing.Size(1174, 840);
+            this.Load += new System.EventHandler(this.ClientReceiptControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1807,8 +1855,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.PRPrice1LBL.ResumeLayout(false);
-            this.PRPrice1LBL.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1817,11 +1865,10 @@
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
-
+        
         #endregion
 
         private System.Windows.Forms.Label label1;
@@ -1849,10 +1896,10 @@
         private System.Windows.Forms.Label ATPrice1LBL;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.GroupBox PRPrice1LBL;
+        private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label PRPrice3LBL;
         private System.Windows.Forms.Label PRPrice2LBL;
-        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label PRPrice1LBL;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
@@ -1937,31 +1984,31 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Timer CRCTimer;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox MEQtyMaskedTextBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem onlyNumbersAllowedRangingFrom09999ToolStripMenuItem;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox23;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox24;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox20;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox21;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox22;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox18;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox19;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox14;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox15;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox17;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox12;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox13;
+        private System.Windows.Forms.MaskedTextBox MEQtyMaskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox MEQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox NYFDQtyMaskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox NYFDQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox NYFDQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox NYFDQtyMaskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox UNMWQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox UNMWQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox ATQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox ATQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox PRQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox PRQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox PRQtyMaskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox MDQtyMaskedTextBox5;
+        private System.Windows.Forms.MaskedTextBox MDQtyMaskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox MDQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox MDQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox MDQtyMaskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox MDQtyMaskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox4;
     }
 }
