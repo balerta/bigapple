@@ -151,14 +151,16 @@ namespace bigapple
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.TotalLBL = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.CalculateDataOKBTN = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.TotalAmountDLBL = new System.Windows.Forms.Label();
-            this.VatLBL = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.SeniorCDiscountLBL = new System.Windows.Forms.Label();
+            this.VatLBL = new System.Windows.Forms.Label();
             this.NetOfVATLBL = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -1601,22 +1603,44 @@ namespace bigapple
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.TotalLBL);
+            this.groupBox10.Controls.Add(this.label36);
             this.groupBox10.Controls.Add(this.CalculateDataOKBTN);
             this.groupBox10.Controls.Add(this.SidePanel);
             this.groupBox10.Controls.Add(this.TotalAmountDLBL);
-            this.groupBox10.Controls.Add(this.VatLBL);
+            this.groupBox10.Controls.Add(this.label64);
             this.groupBox10.Controls.Add(this.SeniorCDiscountLBL);
+            this.groupBox10.Controls.Add(this.VatLBL);
             this.groupBox10.Controls.Add(this.NetOfVATLBL);
             this.groupBox10.Controls.Add(this.label83);
-            this.groupBox10.Controls.Add(this.label64);
             this.groupBox10.Controls.Add(this.label63);
             this.groupBox10.Controls.Add(this.label62);
             this.groupBox10.Location = new System.Drawing.Point(7, 538);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(566, 241);
+            this.groupBox10.Size = new System.Drawing.Size(566, 281);
             this.groupBox10.TabIndex = 6;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Total Amount Due:";
+            // 
+            // TotalLBL
+            // 
+            this.TotalLBL.AutoSize = true;
+            this.TotalLBL.Location = new System.Drawing.Point(488, 24);
+            this.TotalLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalLBL.Name = "TotalLBL";
+            this.TotalLBL.Size = new System.Drawing.Size(15, 18);
+            this.TotalLBL.TabIndex = 31;
+            this.TotalLBL.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(7, 24);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(42, 18);
+            this.label36.TabIndex = 30;
+            this.label36.Text = "Total:";
             // 
             // CalculateDataOKBTN
             // 
@@ -1626,7 +1650,7 @@ namespace bigapple
             this.CalculateDataOKBTN.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateDataOKBTN.ForeColor = System.Drawing.Color.White;
             this.CalculateDataOKBTN.Image = ((System.Drawing.Image)(resources.GetObject("CalculateDataOKBTN.Image")));
-            this.CalculateDataOKBTN.Location = new System.Drawing.Point(29, 171);
+            this.CalculateDataOKBTN.Location = new System.Drawing.Point(29, 211);
             this.CalculateDataOKBTN.Name = "CalculateDataOKBTN";
             this.CalculateDataOKBTN.Size = new System.Drawing.Size(531, 58);
             this.CalculateDataOKBTN.TabIndex = 29;
@@ -1634,11 +1658,12 @@ namespace bigapple
             this.CalculateDataOKBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CalculateDataOKBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CalculateDataOKBTN.UseVisualStyleBackColor = false;
+            this.CalculateDataOKBTN.Click += new System.EventHandler(this.CalculateDataOKBTN_Click);
             // 
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(10, 171);
+            this.SidePanel.Location = new System.Drawing.Point(10, 211);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(26, 58);
             this.SidePanel.TabIndex = 19;
@@ -1646,37 +1671,50 @@ namespace bigapple
             // TotalAmountDLBL
             // 
             this.TotalAmountDLBL.AutoSize = true;
-            this.TotalAmountDLBL.Location = new System.Drawing.Point(488, 130);
+            this.TotalAmountDLBL.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmountDLBL.Location = new System.Drawing.Point(488, 154);
             this.TotalAmountDLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmountDLBL.Name = "TotalAmountDLBL";
             this.TotalAmountDLBL.Size = new System.Drawing.Size(15, 18);
             this.TotalAmountDLBL.TabIndex = 17;
             this.TotalAmountDLBL.Text = "0";
             // 
-            // VatLBL
+            // label64
             // 
-            this.VatLBL.AutoSize = true;
-            this.VatLBL.Location = new System.Drawing.Point(488, 95);
-            this.VatLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.VatLBL.Name = "VatLBL";
-            this.VatLBL.Size = new System.Drawing.Size(15, 18);
-            this.VatLBL.TabIndex = 16;
-            this.VatLBL.Text = "0";
+            this.label64.AutoSize = true;
+            this.label64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label64.Location = new System.Drawing.Point(7, 119);
+            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(154, 18);
+            this.label64.TabIndex = 12;
+            this.label64.Text = "Senior Citizen Discount:";
             // 
             // SeniorCDiscountLBL
             // 
             this.SeniorCDiscountLBL.AutoSize = true;
-            this.SeniorCDiscountLBL.Location = new System.Drawing.Point(488, 64);
+            this.SeniorCDiscountLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.SeniorCDiscountLBL.Location = new System.Drawing.Point(488, 119);
             this.SeniorCDiscountLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeniorCDiscountLBL.Name = "SeniorCDiscountLBL";
             this.SeniorCDiscountLBL.Size = new System.Drawing.Size(15, 18);
             this.SeniorCDiscountLBL.TabIndex = 15;
             this.SeniorCDiscountLBL.Text = "0";
             // 
+            // VatLBL
+            // 
+            this.VatLBL.AutoSize = true;
+            this.VatLBL.Location = new System.Drawing.Point(488, 87);
+            this.VatLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.VatLBL.Name = "VatLBL";
+            this.VatLBL.Size = new System.Drawing.Size(15, 18);
+            this.VatLBL.TabIndex = 16;
+            this.VatLBL.Text = "0";
+            // 
             // NetOfVATLBL
             // 
             this.NetOfVATLBL.AutoSize = true;
-            this.NetOfVATLBL.Location = new System.Drawing.Point(488, 32);
+            this.NetOfVATLBL.Location = new System.Drawing.Point(488, 56);
             this.NetOfVATLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NetOfVATLBL.Name = "NetOfVATLBL";
             this.NetOfVATLBL.Size = new System.Drawing.Size(15, 18);
@@ -1686,27 +1724,17 @@ namespace bigapple
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(7, 96);
+            this.label83.Location = new System.Drawing.Point(7, 88);
             this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(34, 18);
             this.label83.TabIndex = 13;
             this.label83.Text = "VAT:";
             // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(7, 64);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(154, 18);
-            this.label64.TabIndex = 12;
-            this.label64.Text = "Senior Citizen Discount:";
-            // 
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(7, 32);
+            this.label63.Location = new System.Drawing.Point(7, 56);
             this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(76, 18);
@@ -1716,7 +1744,8 @@ namespace bigapple
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(7, 130);
+            this.label62.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(7, 154);
             this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(123, 18);
@@ -1750,6 +1779,7 @@ namespace bigapple
             this.SCYesRB.TabStop = true;
             this.SCYesRB.Text = "Yes";
             this.SCYesRB.UseVisualStyleBackColor = true;
+            this.SCYesRB.CheckedChanged += new System.EventHandler(this.SCYesRB_CheckedChanged);
             // 
             // SCNoRB
             // 
@@ -1761,6 +1791,7 @@ namespace bigapple
             this.SCNoRB.TabStop = true;
             this.SCNoRB.Text = "No";
             this.SCNoRB.UseVisualStyleBackColor = true;
+            this.SCNoRB.CheckedChanged += new System.EventHandler(this.SCNoRB_CheckedChanged);
             // 
             // TherapistListCB
             // 
@@ -1840,7 +1871,7 @@ namespace bigapple
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientReceiptControl";
-            this.Size = new System.Drawing.Size(1174, 840);
+            this.Size = new System.Drawing.Size(1174, 827);
             this.Load += new System.EventHandler(this.ClientReceiptControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1969,10 +2000,8 @@ namespace bigapple
         private System.Windows.Forms.Label PRAmount3LBL;
         private System.Windows.Forms.Label TotalAmountDLBL;
         private System.Windows.Forms.Label VatLBL;
-        private System.Windows.Forms.Label SeniorCDiscountLBL;
         private System.Windows.Forms.Label NetOfVATLBL;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label TimeLBL;
@@ -2010,5 +2039,9 @@ namespace bigapple
         private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox2;
         private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox3;
         private System.Windows.Forms.MaskedTextBox DRTNQtyMaskedTextBox4;
+        private System.Windows.Forms.Label TotalLBL;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label SeniorCDiscountLBL;
     }
 }

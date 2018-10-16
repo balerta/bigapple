@@ -15,9 +15,9 @@ namespace bigapple
         public Menu()
         {
             InitializeComponent();
-
             SidePanel.Height = HomeBtn.Height;
             SidePanel.Top = HomeBtn.Top;
+            recordControl1.Visible = true;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
         }
@@ -26,6 +26,7 @@ namespace bigapple
         {
             SidePanel.Height = HomeBtn.Height;
             SidePanel.Top = HomeBtn.Top;
+            recordControl1.Visible = true;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
         }
@@ -34,6 +35,7 @@ namespace bigapple
         {
             SidePanel.Height = CRBtn.Height;
             SidePanel.Top = CRBtn.Top;
+            recordControl1.Visible = true;
             clientReceiptControl1.Visible = true;
             dailySalesReportControl1.Visible = false;
         }
@@ -42,6 +44,7 @@ namespace bigapple
         {
             SidePanel.Height = DSRBtn.Height;
             SidePanel.Top = DSRBtn.Top;
+            recordControl1.Visible = false;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = true;
         }
@@ -50,8 +53,15 @@ namespace bigapple
         {
             SidePanel.Height = TSRBtn.Height;
             SidePanel.Top = TSRBtn.Top;
+            recordControl1.Visible = false;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

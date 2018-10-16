@@ -37,10 +37,13 @@
             this.HomeBtn = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.clientReceiptControl1 = new bigapple.ClientReceiptControl();
-            this.dailySalesReportControl1 = new bigapple.DailySalesReportControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bigAppleDataSet = new bigapple.BigAppleDataSet();
+            this.dailySalesReportControl1 = new bigapple.DailySalesReportControl();
+            this.clientReceiptControl1 = new bigapple.ClientReceiptControl();
+            this.recordControl1 = new bigapple.RecordControl();
             this.LeftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bigAppleDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // LeftPanel
@@ -140,15 +143,10 @@
             this.TopPanel.Size = new System.Drawing.Size(1285, 22);
             this.TopPanel.TabIndex = 1;
             // 
-            // clientReceiptControl1
+            // bigAppleDataSet
             // 
-            this.clientReceiptControl1.AutoScroll = true;
-            this.clientReceiptControl1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clientReceiptControl1.Location = new System.Drawing.Point(299, 25);
-            this.clientReceiptControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.clientReceiptControl1.Name = "clientReceiptControl1";
-            this.clientReceiptControl1.Size = new System.Drawing.Size(1174, 840);
-            this.clientReceiptControl1.TabIndex = 2;
+            this.bigAppleDataSet.DataSetName = "BigAppleDataSet";
+            this.bigAppleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dailySalesReportControl1
             // 
@@ -158,6 +156,27 @@
             this.dailySalesReportControl1.Name = "dailySalesReportControl1";
             this.dailySalesReportControl1.Size = new System.Drawing.Size(680, 240);
             this.dailySalesReportControl1.TabIndex = 3;
+            this.dailySalesReportControl1.Visible = false;
+            // 
+            // clientReceiptControl1
+            // 
+            this.clientReceiptControl1.AutoScroll = true;
+            this.clientReceiptControl1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientReceiptControl1.Location = new System.Drawing.Point(299, 25);
+            this.clientReceiptControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.clientReceiptControl1.Name = "clientReceiptControl1";
+            this.clientReceiptControl1.Size = new System.Drawing.Size(1174, 840);
+            this.clientReceiptControl1.TabIndex = 2;
+            this.clientReceiptControl1.Visible = false;
+            // 
+            // recordControl1
+            // 
+            this.recordControl1.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.recordControl1.Location = new System.Drawing.Point(299, 25);
+            this.recordControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.recordControl1.Name = "recordControl1";
+            this.recordControl1.Size = new System.Drawing.Size(887, 403);
+            this.recordControl1.TabIndex = 4;
             // 
             // Menu
             // 
@@ -165,15 +184,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.Controls.Add(this.dailySalesReportControl1);
-            this.Controls.Add(this.clientReceiptControl1);
+            this.Controls.Add(this.recordControl1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftPanel);
+            this.Controls.Add(this.dailySalesReportControl1);
+            this.Controls.Add(this.clientReceiptControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Big Apple Express Spa";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.LeftPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bigAppleDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +213,8 @@
         private ClientReceiptControl clientReceiptControl1;
         private DailySalesReportControl dailySalesReportControl1;
         private System.Windows.Forms.Timer timer1;
+        private BigAppleDataSet bigAppleDataSet;
+        private RecordControl recordControl1;
     }
 }
 
