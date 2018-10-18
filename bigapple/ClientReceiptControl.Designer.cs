@@ -613,7 +613,7 @@ namespace bigapple
             this.groupBox2.Size = new System.Drawing.Size(554, 114);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Manhanttan Experience:";
+            this.groupBox2.Text = "Manhattan Experience:";
             // 
             // MEQtyMaskedTextBox3
             // 
@@ -1796,6 +1796,13 @@ namespace bigapple
             // TherapistListCB
             // 
             this.TherapistListCB.FormattingEnabled = true;
+            this.TherapistListCB.Items.AddRange(new object[] {
+            "Beth",
+            "Jannette",
+            "Nilda",
+            "Jennifer",
+            "MJ",
+            "Fe"});
             this.TherapistListCB.Location = new System.Drawing.Point(143, 72);
             this.TherapistListCB.Name = "TherapistListCB";
             this.TherapistListCB.Size = new System.Drawing.Size(430, 26);

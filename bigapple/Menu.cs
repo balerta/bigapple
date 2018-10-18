@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bigapplelib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,45 +18,45 @@ namespace bigapple
             InitializeComponent();
             SidePanel.Height = HomeBtn.Height;
             SidePanel.Top = HomeBtn.Top;
-            recordControl1.Visible = true;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
+            therapistReport1.Visible = false;
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
             SidePanel.Height = HomeBtn.Height;
             SidePanel.Top = HomeBtn.Top;
-            recordControl1.Visible = true;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
+            therapistReport1.Visible = false;
         }
 
         private void CRBtn_Click(object sender, EventArgs e)
         {
             SidePanel.Height = CRBtn.Height;
             SidePanel.Top = CRBtn.Top;
-            recordControl1.Visible = true;
             clientReceiptControl1.Visible = true;
             dailySalesReportControl1.Visible = false;
+            therapistReport1.Visible = false;
         }
 
         private void DSRBtn_Click(object sender, EventArgs e)
         {
             SidePanel.Height = DSRBtn.Height;
             SidePanel.Top = DSRBtn.Top;
-            recordControl1.Visible = false;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = true;
+            therapistReport1.Visible = false;
         }
 
         private void TSRBtn_Click(object sender, EventArgs e)
         {
             SidePanel.Height = TSRBtn.Height;
             SidePanel.Top = TSRBtn.Top;
-            recordControl1.Visible = false;
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
+            therapistReport1.Visible = true;
         }
 
         private void Menu_Load(object sender, EventArgs e)

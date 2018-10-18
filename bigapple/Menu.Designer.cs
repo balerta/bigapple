@@ -38,12 +38,10 @@
             this.SidePanel = new System.Windows.Forms.Panel();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bigAppleDataSet = new bigapple.BigAppleDataSet();
             this.dailySalesReportControl1 = new bigapple.DailySalesReportControl();
             this.clientReceiptControl1 = new bigapple.ClientReceiptControl();
-            this.recordControl1 = new bigapple.RecordControl();
+            this.therapistReport1 = new bigapple.TherapistReport();
             this.LeftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bigAppleDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // LeftPanel
@@ -143,11 +141,6 @@
             this.TopPanel.Size = new System.Drawing.Size(1285, 22);
             this.TopPanel.TabIndex = 1;
             // 
-            // bigAppleDataSet
-            // 
-            this.bigAppleDataSet.DataSetName = "BigAppleDataSet";
-            this.bigAppleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dailySalesReportControl1
             // 
             this.dailySalesReportControl1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,14 +162,14 @@
             this.clientReceiptControl1.TabIndex = 2;
             this.clientReceiptControl1.Visible = false;
             // 
-            // recordControl1
+            // therapistReport1
             // 
-            this.recordControl1.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.recordControl1.Location = new System.Drawing.Point(299, 25);
-            this.recordControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.recordControl1.Name = "recordControl1";
-            this.recordControl1.Size = new System.Drawing.Size(887, 403);
-            this.recordControl1.TabIndex = 4;
+            this.therapistReport1.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.therapistReport1.Location = new System.Drawing.Point(299, 25);
+            this.therapistReport1.Margin = new System.Windows.Forms.Padding(4);
+            this.therapistReport1.Name = "therapistReport1";
+            this.therapistReport1.Size = new System.Drawing.Size(678, 251);
+            this.therapistReport1.TabIndex = 4;
             // 
             // Menu
             // 
@@ -184,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.Controls.Add(this.recordControl1);
+            this.Controls.Add(this.therapistReport1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.dailySalesReportControl1);
@@ -195,7 +188,6 @@
             this.Text = "Big Apple Express Spa";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.LeftPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bigAppleDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,8 +205,7 @@
         private ClientReceiptControl clientReceiptControl1;
         private DailySalesReportControl dailySalesReportControl1;
         private System.Windows.Forms.Timer timer1;
-        private BigAppleDataSet bigAppleDataSet;
-        private RecordControl recordControl1;
+        private TherapistReport therapistReport1;
     }
 }
 

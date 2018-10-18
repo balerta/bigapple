@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using bigapplelib;
 
 namespace bigapple
 {
@@ -60,8 +61,47 @@ namespace bigapple
 
         private void ClientReceiptControl_Load(object sender, EventArgs e)
         {
+            RefreshClient();
+        }
+
+        private void RefreshClient()
+        {
+            string date = DateTime.Now.ToString("yyyyMMdd");
+            string id = DatabaseClass.ClientEntryPlusOne();
+            SeriesNumberLBL.Text = date + id;
             NameOfClientTXT.Focus();
+            NameOfClientTXT.Text = "";
             SCNoRB.Select();
+            TherapistListCB.Text = "";
+            MEQtyMaskedTextBox1.Text = "0";
+            MEQtyMaskedTextBox2.Text = "0";
+            MEQtyMaskedTextBox3.Text = "0";
+            UNMWQtyMaskedTextBox1.Text = "0";
+            UNMWQtyMaskedTextBox2.Text = "0";
+            NYFDQtyMaskedTextBox1.Text = "0";
+            NYFDQtyMaskedTextBox2.Text = "0";
+            NYFDQtyMaskedTextBox3.Text = "0";
+            NYFDQtyMaskedTextBox4.Text = "0";
+            DRTNQtyMaskedTextBox1.Text = "0";
+            DRTNQtyMaskedTextBox2.Text = "0";
+            DRTNQtyMaskedTextBox3.Text = "0";
+            DRTNQtyMaskedTextBox4.Text = "0";
+            MDQtyMaskedTextBox1.Text = "0";
+            MDQtyMaskedTextBox2.Text = "0";
+            MDQtyMaskedTextBox3.Text = "0";
+            MDQtyMaskedTextBox4.Text = "0";
+            MDQtyMaskedTextBox5.Text = "0";
+            MDQtyMaskedTextBox6.Text = "0";
+            PRQtyMaskedTextBox1.Text = "0";
+            PRQtyMaskedTextBox2.Text = "0";
+            PRQtyMaskedTextBox3.Text = "0";
+            ATQtyMaskedTextBox1.Text = "0";
+            ATQtyMaskedTextBox2.Text = "0";
+            TotalLBL.Text = "0";
+            NetOfVATLBL.Text = "0";
+            VatLBL.Text = "0";
+            SeniorCDiscountLBL.Text = "0";
+            TotalAmountDLBL.Text = "0";
         }
         
         private static int Calculate_Amount(int Amount, MaskedTextBox maskedTextBoxQuantity, Label labelPrice, Label labelAmount)
@@ -158,7 +198,6 @@ namespace bigapple
         {
             TimeLBL.Text = DateTime.Now.ToString("hh:mm tt");
             DateLBL.Text = DateTime.Now.ToString("MM/dd/yyyy");
-            SeriesNumberLBL.Text = DateTime.Now.ToString("yyyyMMdd");
         }
 
         private void MEQtyMaskedTextBox1_TextChanged(object sender, EventArgs e)
@@ -295,7 +334,103 @@ namespace bigapple
 
         private void CalculateDataOKBTN_Click(object sender, EventArgs e)
         {
+            if (NameOfClientTXT.Text == "")
+            {
 
+                MessageBox.Show("Please enter a name.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (TherapistListCB.Text == "")
+            {
+                MessageBox.Show("Please assign a therapist.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            ClientRecordModel client = new ClientRecordModel
+            {
+                // Client Info
+                SeriesNumber = SeriesNumberLBL.Text,
+                NameOfClient = NameOfClientTXT.Text,
+                TherapistAssigned = TherapistListCB.Text,
+                Date = DateLBL.Text,
+                Time = TimeLBL.Text,
+                // Manhattan Experience
+                MEQty1 = MEQtyMaskedTextBox1.Text,
+                MEAmount1 = MEAmount1LBL.Text,
+                MEQty2 = MEQtyMaskedTextBox2.Text,
+                MEAmount2 = MEAmount2LBL.Text,
+                MEQty3 = MEQtyMaskedTextBox3.Text,
+                MEAmount3 = MEAmount3LBL.Text,
+                // UN
+                UNMWQty1 = UNMWQtyMaskedTextBox1.Text,
+                UNMWAmount1 = UNMWQtyMaskedTextBox1.Text,
+                UNMWQty2 = UNMWQtyMaskedTextBox2.Text,
+                UNMWAmount2 = UNMWQtyMaskedTextBox2.Text,
+                // NY
+                NYFPQty1 = NYFDQtyMaskedTextBox1.Text,
+                NYFPAmount1 = NYFDAmount1LBL.Text,
+                NYFPQty2 = NYFDQtyMaskedTextBox2.Text,
+                NYFPAmount2 = NYFDAmount2LBL.Text,
+                NYFPQty3 = NYFDQtyMaskedTextBox3.Text,
+                NYFPAmount3 = NYFDAmount3LBL.Text,
+                NYFPQty4 = NYFDQtyMaskedTextBox4.Text,
+                NYFPAmount4 = NYFDAmount4LBL.Text,
+                // Duration
+                DRTNQty1 = DRTNQtyMaskedTextBox1.Text,
+                DRTNAmount1 = DRTNAmount1LBL.Text,
+                DRTNQty2 = DRTNQtyMaskedTextBox2.Text,
+                DRTNAmount2 = DRTNAmount2LBL.Text,
+                DRTNQty3 = DRTNQtyMaskedTextBox3.Text,
+                DRTNAmount3 = DRTNAmount3LBL.Text,
+                DRTNQty4 = DRTNQtyMaskedTextBox4.Text,
+                DRTNAmount4 = DRTNAmount4LBL.Text,
+                // Medium
+                MDQty1 = MDQtyMaskedTextBox1.Text,
+                MDAmount1 = MDAmount1LBL.Text,
+                MDQty2 = MDQtyMaskedTextBox2.Text,
+                MDAmount2 = MDAmount2LBL.Text,
+                MDQty3 = MDQtyMaskedTextBox3.Text,
+                MDAmount3 = MDAmount3LBL.Text,
+                MDQty4 = MDQtyMaskedTextBox4.Text,
+                MDAmount4 = MDAmount4LBL.Text,
+                MDQty5 = MDQtyMaskedTextBox5.Text,
+                MDAmount5 = MDAmount5LBL.Text,
+                MDQty6 = MDQtyMaskedTextBox6.Text,
+                MDAmount6 = MDAmount6LBL.Text,
+                // Pressure
+                PRQty1 = PRQtyMaskedTextBox1.Text,
+                PRAmount1 = PRAmount1LBL.Text,
+                PRQty2 = PRQtyMaskedTextBox2.Text,
+                PRAmount2 = PRAmount2LBL.Text,
+                PRQty3 = PRQtyMaskedTextBox3.Text,
+                PRAmount3 = PRAmount3LBL.Text,
+                // Additional Time
+                ATQty1 = ATQtyMaskedTextBox1.Text,
+                ATAmount1 = ATAmount1LBL.Text,
+                ATQty2 = ATQtyMaskedTextBox2.Text,
+                ATAmount2 = ATAmount2LBL.Text,
+                // Total
+                Total = TotalLBL.Text,
+                NetOfVAT = NetOfVATLBL.Text,
+                VAT = VatLBL.Text,
+                SeniorCitizenDiscount = SeniorCDiscountLBL.Text,
+                TotalAmountDue = TotalAmountDLBL.Text
+            };
+
+            if (SCYesRB.Checked == true)
+            {
+                client.SeniorCitizen = SCYesRB.Checked.ToString();
+                return;
+            }
+            else
+            {
+                client.SeniorCitizen = SCNoRB.Checked.ToString();
+            }
+
+            DatabaseClass.SaveClientRecord(client);
+            MessageBox.Show("Client Name '" + NameOfClientTXT.Text + "' with Series Number '" + SeriesNumberLBL.Text + "' was successfully saved.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            RefreshClient();
         }
     }
 }
