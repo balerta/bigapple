@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientRecordModel.cs" />
+    <Compile Include="DailySalesClientModel.cs" />
     <Compile Include="DatabaseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

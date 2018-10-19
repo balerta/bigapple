@@ -355,7 +355,8 @@ namespace bigapple
                 TherapistAssigned = TherapistListCB.Text,
                 Date = DateLBL.Text,
                 Time = TimeLBL.Text,
-                // Manhattan Experience
+                SeniorCitizen = SCYesRB.Checked == true ? SCYesRB.Checked.ToString() : SCYesRB.Checked.ToString(),
+            // Manhattan Experience
                 MEQty1 = MEQtyMaskedTextBox1.Text,
                 MEAmount1 = MEAmount1LBL.Text,
                 MEQty2 = MEQtyMaskedTextBox2.Text,
@@ -416,17 +417,9 @@ namespace bigapple
                 VAT = VatLBL.Text,
                 SeniorCitizenDiscount = SeniorCDiscountLBL.Text,
                 TotalAmountDue = TotalAmountDLBL.Text
-            };
+        };
 
-            if (SCYesRB.Checked == true)
-            {
-                client.SeniorCitizen = SCYesRB.Checked.ToString();
-                return;
-            }
-            else
-            {
-                client.SeniorCitizen = SCNoRB.Checked.ToString();
-            }
+            
 
             DatabaseClass.SaveClientRecord(client);
             MessageBox.Show("Client Name '" + NameOfClientTXT.Text + "' with Series Number '" + SeriesNumberLBL.Text + "' was successfully saved.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);

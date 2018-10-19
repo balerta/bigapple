@@ -11,14 +11,86 @@ using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using bigapplelib;
 
 namespace bigapple
 {
     public partial class DailySalesReportControl : UserControl
     {
+        List<DailySalesClientModel> dailySales = new List<DailySalesClientModel>();
+        int TotalAmount = 0;
         public DailySalesReportControl()
         {
             InitializeComponent();
+        }
+
+        // Quantity
+        private string MEQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MEQty1);
+            }
+            return total.ToString();
+        }
+  
+        private string MEQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MEQty2);
+            }
+            return total.ToString();
+        }
+        private string MEQty3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MEQty3);
+            }
+            return total.ToString();
+        }
+
+        // Amount
+        private string MEAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MEAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+
+        private string MEAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MEAmount2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MEAmount3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MEAmount3);
+            }
+            TotalAmount += total;
+            return total.ToString();
         }
 
         private void BtnPDF_Click(object sender, EventArgs e)
@@ -55,16 +127,27 @@ namespace bigapple
                 table.AddCell("");
                 table.AddCell("");
                 table.AddCell("");
+                // ME1
                 table.AddCell(new PdfPCell(new Phrase("NYC Exp full body 30 mins", font)));
                 table.AddCell(new PdfPCell(new Phrase("195", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase(MEQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MEAmount1(), font)));
+                // ME2
+                table.AddCell(new PdfPCell(new Phrase("Manhattan full body 60 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("299", font)));
+                table.AddCell(new PdfPCell(new Phrase(MEQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MEAmount2(), font)));
+                // ME3
+                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus 60 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
 
                 // Total
                 table.AddCell("");
                 table.AddCell("");
                 table.AddCell("");
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase(TotalAmount.ToString(), font)));
 
                 // Blank
                 table.AddCell("");

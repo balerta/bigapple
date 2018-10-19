@@ -147,7 +147,7 @@
             this.dailySalesReportControl1.Location = new System.Drawing.Point(299, 25);
             this.dailySalesReportControl1.Margin = new System.Windows.Forms.Padding(4);
             this.dailySalesReportControl1.Name = "dailySalesReportControl1";
-            this.dailySalesReportControl1.Size = new System.Drawing.Size(680, 240);
+            this.dailySalesReportControl1.Size = new System.Drawing.Size(680, 549);
             this.dailySalesReportControl1.TabIndex = 3;
             this.dailySalesReportControl1.Visible = false;
             // 
@@ -177,11 +177,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.Controls.Add(this.therapistReport1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.dailySalesReportControl1);
             this.Controls.Add(this.clientReceiptControl1);
+            this.Controls.Add(this.therapistReport1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
