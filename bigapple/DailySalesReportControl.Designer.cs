@@ -156,6 +156,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Location = new System.Drawing.Point(292, 45);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -169,6 +170,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 10, 19, 20, 33, 8, 0);
             // 
             // DailySalesReportControl
             // 
@@ -178,7 +180,7 @@
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DailySalesReportControl";
-            this.Size = new System.Drawing.Size(680, 550);
+            this.Size = new System.Drawing.Size(591, 208);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

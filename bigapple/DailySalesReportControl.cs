@@ -28,7 +28,7 @@ namespace bigapple
         private string MEQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEQty1);
@@ -39,7 +39,7 @@ namespace bigapple
         private string MEQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEQty2);
@@ -49,19 +49,251 @@ namespace bigapple
         private string MEQty3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEQty3);
             }
             return total.ToString();
         }
+        private string UNMWQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.UNMWQty1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string UNMWQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.UNMWQty2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPQty1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPQty2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPQty3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPQty3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPQty4()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPQty4);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNQty1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNQty2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNQty3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNQty3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNQty4()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNQty4);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDQty1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDQty2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDQty3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDQty3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDQty4()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDQty4);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDQty5()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDQty5);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDQty6()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDQty6);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string PRQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.PRQty1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string PRQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.PRQty2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string PRQty3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.PRQty3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string ATQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.ATQty1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string ATQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.ATQty2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+
 
         // Amount
         private string MEAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEAmount1);
@@ -73,7 +305,7 @@ namespace bigapple
         private string MEAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEAmount2);
@@ -84,10 +316,241 @@ namespace bigapple
         private string MEAmount3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(DateTime.Now.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEAmount3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string UNMWAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.UNMWAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string UNMWAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.UNMWAmount2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPAmount2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPAmount3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPAmount3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string NYFPAmount4()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.NYFPAmount4);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNAmount2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNAmount3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNAmount3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string DRTNAmount4()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.DRTNAmount4);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDAmount2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDAmount3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDAmount3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDAmount4()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDAmount4);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDAmount5()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDAmount5);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string MDAmount6()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.MDAmount6);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string PRAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.PRAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string PRAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.PRAmount2);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string PRAmount3()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.PRAmount3);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string ATAmount1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.ATAmount1);
+            }
+            TotalAmount += total;
+            return total.ToString();
+        }
+        private string ATAmount2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.ATAmount2);
             }
             TotalAmount += total;
             return total.ToString();
