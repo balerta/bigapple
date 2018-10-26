@@ -18,17 +18,19 @@ namespace bigapple
     public partial class DailySalesReportControl : UserControl
     {
         List<DailySalesClientModel> dailySales = new List<DailySalesClientModel>();
-        int TotalAmount = 0;
+        List<TotalSalesClientModel> totalSales = new List<TotalSalesClientModel>();
         public DailySalesReportControl()
         {
             InitializeComponent();
         }
 
+        // // // // // 
         // Quantity
+        // // // // //
         private string MEQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEQty1);
@@ -39,7 +41,7 @@ namespace bigapple
         private string MEQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEQty2);
@@ -49,7 +51,7 @@ namespace bigapple
         private string MEQty3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEQty3);
@@ -59,500 +61,575 @@ namespace bigapple
         private string UNMWQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.UNMWQty1);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string UNMWQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.UNMWQty2);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string NYFPQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPQty1);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string NYFPQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPQty2);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string NYFPQty3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPQty3);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string NYFPQty4()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPQty4);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string DRTNQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNQty1);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string DRTNQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNQty2);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string DRTNQty3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNQty3);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string DRTNQty4()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNQty4);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string MDQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDQty1);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string MDQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDQty2);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string MDQty3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDQty3);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string MDQty4()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDQty4);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string MDQty5()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDQty5);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string MDQty6()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDQty6);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string PRQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.PRQty1);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string PRQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.PRQty2);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string PRQty3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.PRQty3);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string ATQty1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.ATQty1);
             }
-            TotalAmount += total;
             return total.ToString();
         }
         private string ATQty2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.ATQty2);
             }
-            TotalAmount += total;
             return total.ToString();
         }
 
-
+        // // // // // 
         // Amount
+        // // // // //
         private string MEAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
 
         private string MEAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEAmount2);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MEAmount3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MEAmount3);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string UNMWAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.UNMWAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string UNMWAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.UNMWAmount2);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string NYFPAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string NYFPAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPAmount2);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string NYFPAmount3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPAmount3);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string NYFPAmount4()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.NYFPAmount4);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string DRTNAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string DRTNAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNAmount2);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string DRTNAmount3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNAmount3);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string DRTNAmount4()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.DRTNAmount4);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MDAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MDAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDAmount2);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MDAmount3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDAmount3);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MDAmount4()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDAmount4);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MDAmount5()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDAmount5);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string MDAmount6()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.MDAmount6);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string PRAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.PRAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string PRAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.PRAmount2);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string PRAmount3()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.PRAmount3);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string ATAmount1()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.ATAmount1);
             }
-            TotalAmount += total;
+            
             return total.ToString();
         }
         private string ATAmount2()
         {
             int total = 0;
-            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"));
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
                 total += Int32.Parse(dSales.ATAmount2);
             }
-            TotalAmount += total;
+            
+            return total.ToString();
+        }
+
+        private void ToDateValidation(object sender, EventArgs e)
+        {
+            if (dateTimePicker1.Value > dateTimePicker2.Value)
+            {
+                MessageBox.Show("Date To should not be less than Date From", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dateTimePicker2.Value = DateTime.Today;
+                return;
+            }
+        }
+
+        private void FromDateValidation(object sender, EventArgs e)
+        {
+            if (dateTimePicker1.Value > dateTimePicker2.Value)
+            {
+                MessageBox.Show("Date From should not be greater than Date To", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dateTimePicker1.Value = DateTime.Today;
+                return;
+            }
+        }
+
+        private string DateMessage()
+        {
+            string message = "";
+            if (dateTimePicker1.Value.Date.ToString("MM/dd/yyyy") == dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"))
+            {
+                message = dateTimePicker1.Value.Date.ToString("MM/dd/yyyy");
+            }
+            else
+            {
+                message = "From " + dateTimePicker1.Value.Date.ToString("MM/dd/yyyy") + " To " + dateTimePicker2.Value.Date.ToString("MM/dd/yyyy");
+            }
+            return message;
+        }
+
+        private string FirstShift()
+        {
+            string message = DatabaseClass.NumberSeries("10:00 AM", "12:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            return message;
+        }
+
+        private string SecondShift()
+        {
+            string message = DatabaseClass.NumberSeries("01:00 PM", "04:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            return message;
+        }
+
+        private string ThirdShift()
+        {
+            string message = DatabaseClass.NumberSeries("05:00 PM", "09:00 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            return message;
+        }
+        private string FirstShiftTotal()
+        {
+            int total = 0;
+            totalSales = DatabaseClass.TotalSalesClientModels("10:00 AM", "12:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var tSales in totalSales)
+            {
+                total += Int32.Parse(tSales.Total);
+            }
+            return total.ToString();
+        }
+
+        private string SecondShiftTotal()
+        {
+            int total = 0;
+            totalSales = DatabaseClass.TotalSalesClientModels("01:00 PM", "04:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var tSales in totalSales)
+            {
+                total += Int32.Parse(tSales.Total);
+            }
+            return total.ToString();
+        }
+
+        private string ThirdShiftTotal()
+        {
+            int total = 0;
+            totalSales = DatabaseClass.TotalSalesClientModels("05:01 PM", "09:00 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var tSales in totalSales)
+            {
+                total += Int32.Parse(tSales.Total);
+            }
+            return total.ToString();
+        }
+
+        private string TotalAmount()
+        {
+            int total = 0;
+            totalSales = DatabaseClass.TotalSalesClientModel(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var tSales in totalSales)
+            {
+                total += Int32.Parse(tSales.Total);
+            }
             return total.ToString();
         }
 
@@ -561,7 +638,7 @@ namespace bigapple
             SaveFileDialog saveFile = new SaveFileDialog
             {
                 Title = "Save Daily Sales Report as PDF",
-                FileName = "BigApple_DailySalesReport_" + DateTime.Now.ToString("yyyyMMdd"),
+                FileName = "BigApple_DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
                 Filter = "PDF (*.pdf)|*.pdf"
@@ -573,23 +650,76 @@ namespace bigapple
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, false);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 9);
                 document.Open();
-                PdfPCell cell = new PdfPCell(new Phrase("Big Apple Daily Sales Report " + DateTime.Now.ToString("MM/dd/yyyy"), font))
+                PdfPCell header = new PdfPCell(new Phrase("Big Apple Daily Sales Report - " + DateMessage(), font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 1,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell manhattan = new PdfPCell(new Phrase("Manhattan Experience:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell unmessage = new PdfPCell(new Phrase("UN Message to the world:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell nyfoot = new PdfPCell(new Phrase("NY Foot paradise:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell duration = new PdfPCell(new Phrase("Duration:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell medium = new PdfPCell(new Phrase("Medium:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell pressure = new PdfPCell(new Phrase("Pressure:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell additional = new PdfPCell(new Phrase("Additional time:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
+                PdfPCell blank = new PdfPCell(new Phrase(" ", font))
                 {
                     Colspan = 4,
                     HorizontalAlignment = 1
                 };
 
                 PdfPTable table = new PdfPTable(4);
-                table.AddCell(cell);
-                // Manhattan
-                table.AddCell("");
+                table.AddCell(header);
+                table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Price", font)));
                 table.AddCell(new PdfPCell(new Phrase("Quantity", font)));
                 table.AddCell(new PdfPCell(new Phrase("Amount", font)));
-                table.AddCell(new PdfPCell(new Phrase("Manhattan Experience:", font)));
-                table.AddCell("");
-                table.AddCell("");
-                table.AddCell("");
+                // Manhattan
+                table.AddCell(manhattan);
                 // ME1
                 table.AddCell(new PdfPCell(new Phrase("NYC Exp full body 30 mins", font)));
                 table.AddCell(new PdfPCell(new Phrase("195", font)));
@@ -605,32 +735,155 @@ namespace bigapple
                 table.AddCell(new PdfPCell(new Phrase("499", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
+                // ME3
+                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus 60 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
+                // UN Message to the world
+                table.AddCell(unmessage);
+                // UNMW1 
+                table.AddCell(new PdfPCell(new Phrase("Balinese full body massage 75 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase(UNMWQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(UNMWAmount1(), font)));
+                // UNMW2
+                table.AddCell(new PdfPCell(new Phrase("Brazilian deep tissue 75 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("599", font)));
+                table.AddCell(new PdfPCell(new Phrase(UNMWQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(UNMWAmount2(), font)));
+                // NY Foot paradise
+                table.AddCell(nyfoot);
+                // NYFP1
+                table.AddCell(new PdfPCell(new Phrase("Oriental foot relax 30 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("299", font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPAmount1(), font)));
+                // NYFP2
+                table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 30 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("399", font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPAmount2(), font)));
+                // NYFP3
+                table.AddCell(new PdfPCell(new Phrase("Addtl: NY Foot soak", font)));
+                table.AddCell(new PdfPCell(new Phrase("50", font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPQty3(), font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPAmount3(), font)));
+                // NYFP4
+                table.AddCell(new PdfPCell(new Phrase("Addtl: NY Foot scrub", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPQty4(), font)));
+                table.AddCell(new PdfPCell(new Phrase(NYFPAmount4(), font)));
+                // Duration
+                table.AddCell(duration);
+                // DRTN1
+                table.AddCell(new PdfPCell(new Phrase("5 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("49", font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNAmount1(), font)));
+                // DRTN2
+                table.AddCell(new PdfPCell(new Phrase("15 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("149", font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNAmount2(), font)));
+                // DRTN3
+                table.AddCell(new PdfPCell(new Phrase("30 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("249", font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNQty3(), font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNAmount3(), font)));
+                // DRTN4
+                table.AddCell(new PdfPCell(new Phrase("60 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("399", font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNQty4(), font)));
+                table.AddCell(new PdfPCell(new Phrase(DRTNAmount4(), font)));
+                // Medium
+                table.AddCell(medium);
+                // MD1
+                table.AddCell(new PdfPCell(new Phrase("Dry oil", font)));
+                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase(MDQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MDAmount1(), font)));
+                // MD2
+                table.AddCell(new PdfPCell(new Phrase("Unscented", font)));
+                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase(MDQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MDAmount2(), font)));
+                // MD3
+                table.AddCell(new PdfPCell(new Phrase("Aromatherapy oil", font)));
+                table.AddCell(new PdfPCell(new Phrase("50", font)));
+                table.AddCell(new PdfPCell(new Phrase(MDQty3(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MDAmount3(), font)));
+                // MD4
+                table.AddCell(new PdfPCell(new Phrase("Glutawhite lotion", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(MDQty4(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MDAmount4(), font)));
+                // MD5
+                table.AddCell(new PdfPCell(new Phrase("Total moisture", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(MDQty5(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MDAmount5(), font)));
+
+                // MD6
+                table.AddCell(new PdfPCell(new Phrase("Nutralce lotion", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(MDQty6(), font)));
+                table.AddCell(new PdfPCell(new Phrase(MDAmount6(), font)));
+                // Pressure
+                table.AddCell(pressure);
+                // PR1
+                table.AddCell(new PdfPCell(new Phrase("Gentle", font)));
+                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase(PRQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(PRAmount1(), font)));
+                // PR2
+                table.AddCell(new PdfPCell(new Phrase("Regular", font)));
+                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase(PRQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(PRAmount2(), font)));
+                // PR3
+                table.AddCell(new PdfPCell(new Phrase("Strong", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(PRQty3(), font)));
+                table.AddCell(new PdfPCell(new Phrase(PRAmount3(), font)));
+                // Additional time
+                table.AddCell(additional);
+                // AT1
+                table.AddCell(new PdfPCell(new Phrase("10 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(ATQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(ATAmount1(), font)));
+                // AT2
+                table.AddCell(new PdfPCell(new Phrase("30 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("200", font)));
+                table.AddCell(new PdfPCell(new Phrase(ATQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(ATAmount2(), font)));
+
+                // Blank
+                table.AddCell(blank);
 
                 // Total
                 table.AddCell("");
                 table.AddCell("");
                 table.AddCell("");
-                table.AddCell(new PdfPCell(new Phrase(TotalAmount.ToString(), font)));
+                table.AddCell(new PdfPCell(new Phrase("Total: " + TotalAmount(), font)));
 
                 // Blank
-                table.AddCell("");
-                table.AddCell("");
-                table.AddCell("");
-                table.AddCell("");
+                table.AddCell(blank);
 
                 // Tabulation
-                table.AddCell(new PdfPCell(new Phrase("10:00 AM to 01:00 PM", font)));
-                table.AddCell(new PdfPCell(new Phrase("Number of Series: 0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
-                table.AddCell(new PdfPCell(new Phrase("01:01 PM to 05:00 PM", font)));
-                table.AddCell(new PdfPCell(new Phrase("Number of Series: 0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
-                table.AddCell(new PdfPCell(new Phrase("05:01 PM to 09:00 PM", font)));
-                table.AddCell(new PdfPCell(new Phrase("Number of Series: 0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
-                table.AddCell(new PdfPCell(new Phrase("0", font)));
+                table.AddCell(new PdfPCell(new Phrase("10:00 AM - 12:59 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("No. of Series: " + FirstShift(), font)));
+                table.AddCell(new PdfPCell(new Phrase("", font)));
+                table.AddCell(new PdfPCell(new Phrase("Total: " + FirstShiftTotal(), font)));
+                table.AddCell(new PdfPCell(new Phrase("01:00 PM - 04:59 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("No. of Series: " + SecondShift(), font)));
+                table.AddCell(new PdfPCell(new Phrase("", font)));
+                table.AddCell(new PdfPCell(new Phrase("Total: " + SecondShiftTotal(), font)));
+                table.AddCell(new PdfPCell(new Phrase("05:00 PM - 09:00 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("No. of Series: " + ThirdShift(), font)));
+                table.AddCell(new PdfPCell(new Phrase("", font)));
+                table.AddCell(new PdfPCell(new Phrase("Total: " + ThirdShiftTotal(), font)));
 
                 document.Add(table);
                 document.Close();

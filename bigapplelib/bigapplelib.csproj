@@ -54,6 +54,7 @@
     <Compile Include="DailySalesClientModel.cs" />
     <Compile Include="DatabaseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TotalSalesClientModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

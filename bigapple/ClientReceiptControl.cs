@@ -356,7 +356,7 @@ namespace bigapple
                 Date = DateLBL.Text,
                 Time = TimeLBL.Text,
                 SeniorCitizen = SCYesRB.Checked == true ? SCYesRB.Checked.ToString() : SCYesRB.Checked.ToString(),
-            // Manhattan Experience
+                // Manhattan Experience
                 MEQty1 = MEQtyMaskedTextBox1.Text,
                 MEAmount1 = MEAmount1LBL.Text,
                 MEQty2 = MEQtyMaskedTextBox2.Text,
@@ -365,9 +365,9 @@ namespace bigapple
                 MEAmount3 = MEAmount3LBL.Text,
                 // UN
                 UNMWQty1 = UNMWQtyMaskedTextBox1.Text,
-                UNMWAmount1 = UNMWQtyMaskedTextBox1.Text,
+                UNMWAmount1 = UNMWAmount1LBL.Text,
                 UNMWQty2 = UNMWQtyMaskedTextBox2.Text,
-                UNMWAmount2 = UNMWQtyMaskedTextBox2.Text,
+                UNMWAmount2 = UNMWAmount2LBL.Text,
                 // NY
                 NYFPQty1 = NYFDQtyMaskedTextBox1.Text,
                 NYFPAmount1 = NYFDAmount1LBL.Text,
@@ -418,8 +418,6 @@ namespace bigapple
                 SeniorCitizenDiscount = SeniorCDiscountLBL.Text,
                 TotalAmountDue = TotalAmountDLBL.Text
         };
-
-            
 
             DatabaseClass.SaveClientRecord(client);
             MessageBox.Show("Client Name '" + NameOfClientTXT.Text + "' with Series Number '" + SeriesNumberLBL.Text + "' was successfully saved.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);

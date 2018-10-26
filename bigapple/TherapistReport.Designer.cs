@@ -30,27 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TherapistReport));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPDF = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TherapistListCB = new System.Windows.Forms.ComboBox();
+            this.btnPDF = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.TherapistListCB = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -60,6 +60,25 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(292, 23);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 18);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "To:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(295, 45);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 26);
+            this.dateTimePicker2.TabIndex = 9;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.ToDateValidation);
             // 
             // groupBox2
             // 
@@ -73,6 +92,31 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Generate Reports";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 18);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Therapist Assigned:";
+            // 
+            // TherapistListCB
+            // 
+            this.TherapistListCB.FormattingEnabled = true;
+            this.TherapistListCB.Items.AddRange(new object[] {
+            "Beth",
+            "Jannette",
+            "Nilda",
+            "Jennifer",
+            "MJ",
+            "Fe"});
+            this.TherapistListCB.Location = new System.Drawing.Point(145, 22);
+            this.TherapistListCB.Name = "TherapistListCB";
+            this.TherapistListCB.Size = new System.Drawing.Size(408, 26);
+            this.TherapistListCB.TabIndex = 8;
             // 
             // btnPDF
             // 
@@ -91,15 +135,13 @@
             this.btnPDF.UseVisualStyleBackColor = false;
             this.btnPDF.Click += new System.EventHandler(this.BtnPDF_Click);
             // 
-            // label3
+            // panel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(289, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 18);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "To:";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel1.Location = new System.Drawing.Point(146, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(26, 65);
+            this.panel1.TabIndex = 5;
             // 
             // label2
             // 
@@ -120,14 +162,6 @@
             this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 3;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(292, 45);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(265, 26);
-            this.dateTimePicker2.TabIndex = 1;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(19, 45);
@@ -135,39 +169,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel1.Location = new System.Drawing.Point(146, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(26, 65);
-            this.panel1.TabIndex = 5;
-            // 
-            // TherapistListCB
-            // 
-            this.TherapistListCB.FormattingEnabled = true;
-            this.TherapistListCB.Items.AddRange(new object[] {
-            "Beth",
-            "Jannette",
-            "Nilda",
-            "Jennifer",
-            "MJ",
-            "Fe"});
-            this.TherapistListCB.Location = new System.Drawing.Point(145, 22);
-            this.TherapistListCB.Name = "TherapistListCB";
-            this.TherapistListCB.Size = new System.Drawing.Size(405, 26);
-            this.TherapistListCB.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 25);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 18);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Therapist Assigned:";
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.FromDateValidation);
             // 
             // TherapistReport
             // 
@@ -191,13 +193,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnPDF;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox TherapistListCB;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
