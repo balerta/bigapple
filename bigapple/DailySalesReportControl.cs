@@ -942,6 +942,7 @@ namespace bigapple
 
                 loadClientRecord = DatabaseClass.LoadClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
 
+
                 Excel.Application application;
                 Excel.Worksheet worksheet;
                 Excel.Workbook workbook;
@@ -957,6 +958,7 @@ namespace bigapple
                 {
                     worksheet.Cells[1, x] = clientRecord.SeriesNumber;
                     worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
+
                     
                     x += 2;
                     xx += 2;
@@ -968,11 +970,6 @@ namespace bigapple
 
                 MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
         }
     }
 }
