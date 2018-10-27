@@ -11,6 +11,7 @@ using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using Excel = Microsoft.Office.Interop.Excel;
 using bigapplelib;
 
 namespace bigapple
@@ -19,6 +20,7 @@ namespace bigapple
     {
         List<DailySalesClientModel> dailySales = new List<DailySalesClientModel>();
         List<TotalSalesClientModel> totalSales = new List<TotalSalesClientModel>();
+        List<ClientRecordModel> loadClientRecord = new List<ClientRecordModel>();
         public DailySalesReportControl()
         {
             InitializeComponent();
@@ -635,18 +637,35 @@ namespace bigapple
 
         private void BtnPDF_Click(object sender, EventArgs e)
         {
+            int count = 1;
             SaveFileDialog saveFile = new SaveFileDialog
             {
                 Title = "Save Daily Sales Report as PDF",
                 FileName = "BigApple_DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
-                Filter = "PDF (*.pdf)|*.pdf"
+                Filter = "PDF (*.pdf)|*.pdf",
+                OverwritePrompt = false
+
             };
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
+                string fullPath = saveFile.FileName;
+                string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                string extension = Path.GetExtension(fullPath);
+                string path = Path.GetDirectoryName(fullPath);
+                string newFullPath = fullPath;
+
+                while (File.Exists(newFullPath))
+                {
+                    string lastFullPath = newFullPath;
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    MessageBox.Show(lastFullPath + " already exist. Renaming to " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 Document document = new Document(PageSize.A4, 20f, 20f, 30f, 30f);
-                PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(saveFile.FileName, FileMode.Create));
+                PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(newFullPath, FileMode.Create));
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, false);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 9);
                 document.Open();
@@ -888,24 +907,72 @@ namespace bigapple
                 document.Add(table);
                 document.Close();
 
-                MessageBox.Show("Daily Sales Report created in " + saveFile.FileName, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void BtnExcel_Click(object sender, EventArgs e)
         {
+            int count = 1;
             SaveFileDialog saveFile = new SaveFileDialog
             {
-                Title = "Save Daily Sales Report as Microsoft Excel",
-                FileName = "BigApple_DailySalesReport_" + DateTime.Now.ToString("yyyyMMdd"),
-                DefaultExt = "xlsx",
+                Title = "Save Daily Sales Report as Excel",
+                FileName = "BigApple_DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
+                DefaultExt = "pdf",
                 AddExtension = true,
-                Filter = "Microsoft Excel (*.xlsx )|*.xlsx"
+                Filter = "Excel (*.xlsx)|*.xlsx",
+                OverwritePrompt = false
+
             };
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Daily Sales Report created in " + saveFile.FileName, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string fullPath = saveFile.FileName;
+                string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                string extension = Path.GetExtension(fullPath);
+                string path = Path.GetDirectoryName(fullPath);
+                string newFullPath = fullPath;
+
+                while (File.Exists(newFullPath))
+                {
+                    string lastFullPath = newFullPath;
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    MessageBox.Show(lastFullPath + " already exist. Renaming to " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                loadClientRecord = DatabaseClass.LoadClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+
+                Excel.Application application;
+                Excel.Worksheet worksheet;
+                Excel.Workbook workbook;
+
+                application = new Excel.Application();
+                workbook = application.Workbooks.Add();
+                worksheet = (Excel.Worksheet)workbook.Worksheets.get_Item(1);
+
+                int x = 1;
+                int xx = 2;
+
+                foreach (var clientRecord in loadClientRecord)
+                {
+                    worksheet.Cells[1, x] = clientRecord.SeriesNumber;
+                    worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
+                    
+                    x += 2;
+                    xx += 2;
+                }
+
+                workbook.SaveAs(newFullPath);
+                workbook.Close();
+                application.Quit();
+
+                MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

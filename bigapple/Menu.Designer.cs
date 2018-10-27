@@ -147,7 +147,7 @@
             this.dailySalesReportControl1.Location = new System.Drawing.Point(299, 25);
             this.dailySalesReportControl1.Margin = new System.Windows.Forms.Padding(4);
             this.dailySalesReportControl1.Name = "dailySalesReportControl1";
-            this.dailySalesReportControl1.Size = new System.Drawing.Size(680, 549);
+            this.dailySalesReportControl1.Size = new System.Drawing.Size(594, 203);
             this.dailySalesReportControl1.TabIndex = 3;
             this.dailySalesReportControl1.Visible = false;
             // 

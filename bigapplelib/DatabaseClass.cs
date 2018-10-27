@@ -12,11 +12,11 @@ namespace bigapplelib
 {
     public class DatabaseClass
     {
-        public static List<ClientRecordModel> LoadClientRecord()
+        public static List<ClientRecordModel> LoadClientRecord(string fromdate, string todate)
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = connection.Query<ClientRecordModel>("SELECT * FROM ClientTable", new DynamicParameters());
+                var output = connection.Query<ClientRecordModel>("SELECT * FROM ClientTable WHERE DATE BETWEEN '" + fromdate + "' AND '" + todate + "'", new DynamicParameters());
                 return output.ToList();
             }
         }
@@ -129,7 +129,6 @@ namespace bigapplelib
             }
         }
 
-
         public static void SaveClientRecord(ClientRecordModel clientRecordModel)
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
@@ -155,6 +154,7 @@ namespace bigapplelib
                     "@Total,@NetOfVAT,@VAT,@SeniorCitizenDiscount,@TotalAmountDue)", clientRecordModel);
             }
         }
+
         private static string LoadConnectionString(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;   

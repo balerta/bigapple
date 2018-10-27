@@ -655,6 +655,7 @@ namespace bigapple
 
         private void BtnPDF_Click(object sender, EventArgs e)
         {
+            int count = 1;
             if (TherapistListCB.Text == "")
             {
                 MessageBox.Show("Please select a Therapist to generate a report.", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -666,12 +667,27 @@ namespace bigapple
                 FileName = "BigApple_TherapistSalesReport_" + TherapistListCB.Text + "_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
-                Filter = "PDF (*.pdf)|*.pdf"
+                Filter = "PDF (*.pdf)|*.pdf",
+                OverwritePrompt = false
             };
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
+                string fullPath = saveFile.FileName;
+                string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                string extension = Path.GetExtension(fullPath);
+                string path = Path.GetDirectoryName(fullPath);
+                string newFullPath = fullPath;
+
+                while (File.Exists(newFullPath))
+                {
+                    string lastFullPath = newFullPath;
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    MessageBox.Show(lastFullPath + " already exist. Renaming to " + newFullPath, "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 Document document = new Document(PageSize.A4, 20f, 20f, 30f, 30f);
-                PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(saveFile.FileName, FileMode.Create));
+                PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(newFullPath, FileMode.Create));
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, false);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 9);
                 document.Open();
@@ -911,7 +927,7 @@ namespace bigapple
                 document.Add(table);
                 document.Close();
 
-                MessageBox.Show("Therapist Sales Report created in " + saveFile.FileName, "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Therapist Sales Report created in " + newFullPath, "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
