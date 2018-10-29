@@ -33,8 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnExcel = new System.Windows.Forms.Button();
             this.btnPDF = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker2.TabIndex = 9;
-            this.dateTimePicker2.Value = new System.DateTime(2018, 10, 26, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2018, 10, 29, 16, 10, 0, 0);
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.ToDateValidation);
             // 
             // groupBox2
@@ -94,23 +94,6 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Generate Reports";
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.btnExcel.FlatAppearance.BorderSize = 0;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
-            this.btnExcel.Location = new System.Drawing.Point(300, 25);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(250, 65);
-            this.btnExcel.TabIndex = 0;
-            this.btnExcel.Text = "Excel Report";
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
             // 
             // btnPDF
             // 
@@ -128,6 +111,23 @@
             this.btnPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPDF.UseVisualStyleBackColor = false;
             this.btnPDF.Click += new System.EventHandler(this.BtnPDF_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.Location = new System.Drawing.Point(300, 25);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(250, 65);
+            this.btnExcel.TabIndex = 0;
+            this.btnExcel.Text = "Excel Report";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
             // 
             // SidePanel
             // 
@@ -171,7 +171,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker1.TabIndex = 0;
-            this.dateTimePicker1.Value = new System.DateTime(2018, 10, 26, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2018, 10, 29, 16, 10, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.FromDateValidation);
             // 
             // DailySalesReportControl
@@ -182,7 +182,7 @@
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DailySalesReportControl";
-            this.Size = new System.Drawing.Size(592, 198);
+            this.Size = new System.Drawing.Size(593, 199);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

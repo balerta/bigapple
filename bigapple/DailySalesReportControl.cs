@@ -951,15 +951,107 @@ namespace bigapple
                 workbook = application.Workbooks.Add();
                 worksheet = (Excel.Worksheet)workbook.Worksheets.get_Item(1);
 
-                int x = 1;
-                int xx = 2;
+                int x = 3;
+                int xx = 4;
+
+                worksheet.Cells[3, 1] = "Manhattan exp:";
+                worksheet.Cells[4, 1] = "NYC Exp full body 30 mins";
+                worksheet.Cells[5, 1] = "Manhattan full body 60 mins";
+                worksheet.Cells[6, 1] = "Manhattan skin plus 60 mins";
+
+                worksheet.Cells[4, 2] = "195";
+                worksheet.Cells[5, 2] = "299";
+                worksheet.Cells[6, 2] = "499";
+
+                worksheet.Cells[8, 1] = "UN Massages of the world:";
+                worksheet.Cells[9, 1] = "Balinese full body massage 75 mins";
+                worksheet.Cells[10, 1] = "Brazilian deep tissue 75 mins";
+
+                worksheet.Cells[9, 2] = "499";
+                worksheet.Cells[10, 2] = "599";
+
+                worksheet.Cells[12, 1] = "NY Foot paradise:";
+                worksheet.Cells[13, 1] = "Oriental foot relax 30 mins";
+                worksheet.Cells[14, 1] = "Bangkok foot theraoy 30 mins";
+                worksheet.Cells[15, 1] = "Addtl: NY Foot soak";
+                worksheet.Cells[16, 1] = "Addtl: NY Foot scrub";
+
+                worksheet.Cells[13, 2] = "299";
+                worksheet.Cells[14, 2] = "399";
+                worksheet.Cells[15, 2] = "50";
+                worksheet.Cells[16, 2] = "100";
+
+                worksheet.Cells[18, 1] = "Duration:";
+                worksheet.Cells[19, 1] = "5 mins";
+                worksheet.Cells[20, 1] = "15 mins";
+                worksheet.Cells[21, 1] = "30 mins";
+                worksheet.Cells[22, 1] = "60 mins";
+
+                worksheet.Cells[19, 2] = "299";
+                worksheet.Cells[20, 2] = "399";
+                worksheet.Cells[21, 2] = "50";
+                worksheet.Cells[22, 2] = "100";
+
+                worksheet.Cells[24, 1] = "Medium:";
+                worksheet.Cells[25, 1] = "Dry oil";
+                worksheet.Cells[26, 1] = "Unscented";
+                worksheet.Cells[27, 1] = "Aromatherapy oil";
+                worksheet.Cells[28, 1] = "Glutawhite lotion";
+                worksheet.Cells[29, 1] = "Total moisture";
+                worksheet.Cells[30, 1] = "Nutralce lotion";
+
+                worksheet.Cells[25, 2] = "299";
+                worksheet.Cells[26, 2] = "399";
+                worksheet.Cells[27, 2] = "50";
+                worksheet.Cells[28, 2] = "100";
+                worksheet.Cells[29, 2] = "50";
+                worksheet.Cells[30, 2] = "100";
+
+                worksheet.Cells[32, 1] = "Pressure:";
+                worksheet.Cells[33, 1] = "Gentle";
+                worksheet.Cells[34, 1] = "Regular";
+                worksheet.Cells[35, 1] = "Strong";
+
+                worksheet.Cells[33, 2] = "299";
+                worksheet.Cells[34, 2] = "399";
+                worksheet.Cells[35, 2] = "50";
+
+                worksheet.Cells[37, 1] = "Additional time:";
+                worksheet.Cells[38, 1] = "10 mins";
+                worksheet.Cells[39, 1] = "30 mins";
+
+                worksheet.Cells[38, 2] = "299";
+                worksheet.Cells[39, 2] = "399";
+
+                worksheet.Cells[42, 1] = "10:00 AM - 12:59 PM";
+                worksheet.Cells[43, 1] = "01:00 PM - 04:59 PM";
+                worksheet.Cells[44, 1] = "05:00 PM - 09:00 PM";
+
+                worksheet.Cells[42, 2] = "0";
+                worksheet.Cells[43, 2] = "0";
+                worksheet.Cells[44, 2] = "0";
 
                 foreach (var clientRecord in loadClientRecord)
                 {
                     worksheet.Cells[1, x] = clientRecord.SeriesNumber;
                     worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
+                    worksheet.Cells[2, x] = "Qty";
+                    worksheet.Cells[2, xx] = "Amount";
 
-                    
+                    worksheet.Cells[4, x] = clientRecord.MEQty1;
+                    worksheet.Cells[4, xx] = clientRecord.MEAmount1;
+                    worksheet.Cells[5, x] = clientRecord.MEQty2;
+                    worksheet.Cells[5, xx] = clientRecord.MEAmount2;
+                    worksheet.Cells[6, x] = clientRecord.MEQty3;
+                    worksheet.Cells[6, xx] = clientRecord.MEAmount3;
+
+                    worksheet.Cells[9, x] = clientRecord.UNMWQty1;
+                    worksheet.Cells[9, xx] = clientRecord.UNMWAmount1;
+                    worksheet.Cells[10, x] = clientRecord.UNMWQty2;
+                    worksheet.Cells[10, xx] = clientRecord.UNMWAmount2;
+
+
+
                     x += 2;
                     xx += 2;
                 }

@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAAd0SU1FB+IKBQoELcYS5B0AAAEGSURBVEhL7ZFbCsJADEWrgopURD98LMD9FHfm
+        +rqQfrSgyXCmZDqldqofgh4ISW4yuZRmnsdEeD4O3ox6xGoL8mvYn2SiMBqG3SQTWytuOAR7ySYKrQOp
+        H3YmmShIDqQY5kkmQ7Aawux7TIbgzN9kHJxJNlmTFVt7Ao0zSSZzsmUhoYdnEgcVLJwZZyLlqq7rS1VV
+        W99LnCR20qpRVpblRndEO0sc2XNoHcHMmnQpyJ6rRKDZd+5IF2aRiandQfq91oI3ySWWZjfNRLiTvUnu
+        503T3DRDYd9pHcGsz8RpkuyX6D9QWs3jVIE2hFlkQtuaGNToPZOpcOZXTD4FZ0OYfQzOCln2BBQ/iW46
+        c+lxAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -128,17 +139,6 @@
         wix27O7lG1YE4HJQ2YEMa0ARidhpwtUGChf+k8jtcZ2clx/Jsc2UO//hn2Aj+3Sl7b2MHdjY6WMN+NqT
         rIxcIqL976i6LiYSVTNDGFa+XQr34TANoeVvmGN5tXwPzCzCWnrgOH4ASQSwRc/tbusAAAAASUVORK5C
         YII=
-</value>
-  </data>
-  <data name="btnPDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAAd0SU1FB+IKBQoELcYS5B0AAAEGSURBVEhL7ZFbCsJADEWrgopURD98LMD9FHfm
-        +rqQfrSgyXCmZDqldqofgh4ISW4yuZRmnsdEeD4O3ox6xGoL8mvYn2SiMBqG3SQTWytuOAR7ySYKrQOp
-        H3YmmShIDqQY5kkmQ7Aawux7TIbgzN9kHJxJNlmTFVt7Ao0zSSZzsmUhoYdnEgcVLJwZZyLlqq7rS1VV
-        W99LnCR20qpRVpblRndEO0sc2XNoHcHMmnQpyJ6rRKDZd+5IF2aRiandQfq91oI3ySWWZjfNRLiTvUnu
-        503T3DRDYd9pHcGsz8RpkuyX6D9QWs3jVIE2hFlkQtuaGNToPZOpcOZXTD4FZ0OYfQzOCln2BBQ/iW46
-        c+lxAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
