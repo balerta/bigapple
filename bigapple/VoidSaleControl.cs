@@ -23,6 +23,12 @@ namespace bigapple
         {
             dataGridView1.DataSource = DatabaseClass.LoadVoidModelRecord();
             dataGridView1.ClearSelection();
+            lblSeriesNumber.Text = "";
+            lblName.Text = "";
+            lblTherapistAssigned.Text = "";
+            lblDate.Text = "";
+            lblTime.Text = "";
+            lblTotalAmountDue.Text = "";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
