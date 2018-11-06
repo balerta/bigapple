@@ -1617,7 +1617,7 @@ namespace bigapple
             this.groupBox10.Controls.Add(this.label62);
             this.groupBox10.Location = new System.Drawing.Point(7, 538);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(566, 281);
+            this.groupBox10.Size = new System.Drawing.Size(566, 256);
             this.groupBox10.TabIndex = 6;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Total Amount Due:";
@@ -1650,7 +1650,7 @@ namespace bigapple
             this.CalculateDataOKBTN.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateDataOKBTN.ForeColor = System.Drawing.Color.White;
             this.CalculateDataOKBTN.Image = ((System.Drawing.Image)(resources.GetObject("CalculateDataOKBTN.Image")));
-            this.CalculateDataOKBTN.Location = new System.Drawing.Point(29, 211);
+            this.CalculateDataOKBTN.Location = new System.Drawing.Point(29, 189);
             this.CalculateDataOKBTN.Name = "CalculateDataOKBTN";
             this.CalculateDataOKBTN.Size = new System.Drawing.Size(531, 58);
             this.CalculateDataOKBTN.TabIndex = 29;
@@ -1663,7 +1663,7 @@ namespace bigapple
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(10, 211);
+            this.SidePanel.Location = new System.Drawing.Point(10, 189);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(26, 58);
             this.SidePanel.TabIndex = 19;

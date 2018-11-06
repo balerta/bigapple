@@ -1,0 +1,41 @@
+----------------------------------------------------------------
+Big Apple Express Spa Application - Technical Specifications
+----------------------------------------------------------------
+Written C# Programming Language
+- Visual Studio 2017 
+
+Database - SQLite, its open source so its free to use. 
+	 Lightweight and portable. 
+
+----------------------------------------------------------------
+TODO / Enhancements
+----------------------------------------------------------------
+Phase 1: Daily Sales PDF Report 
+- Separate Amount of Non Senior and Senior then Total
+
+----------------------------------------------------------------
+Phase 1: Daily Sales Excel Report 
+- Query by Date 
+- Separate, Amount of Non Senior and Senior then Total
+
+----------------------------------------------------------------
+Phase 1: Therapist PDF Report
+- Separate, Amount of Non Senior and Senior then Total
+
+----------------------------------------------------------------
+Phase 1: Therapist List - Entries for Therapist can be updated 
+thru a configuration file. 
+
+----------------------------------------------------------------
+Phase 2: Void Data - Needs to be designed, new interface.
+Example: 
+On a table.
+1. Choose data to be voided
+2. Right click choose void or there's a button to void that data
+3. All voided data would not be included in the reports 
+   Daily Sales (Excel and PDF) and Therapist Sales (PDF)
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+

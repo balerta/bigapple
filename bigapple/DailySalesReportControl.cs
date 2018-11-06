@@ -1023,14 +1023,6 @@ namespace bigapple
                 worksheet.Cells[38, 2] = "299";
                 worksheet.Cells[39, 2] = "399";
 
-                worksheet.Cells[42, 1] = "10:00 AM - 12:59 PM";
-                worksheet.Cells[43, 1] = "01:00 PM - 04:59 PM";
-                worksheet.Cells[44, 1] = "05:00 PM - 09:00 PM";
-
-                worksheet.Cells[42, 2] = "0";
-                worksheet.Cells[43, 2] = "0";
-                worksheet.Cells[44, 2] = "0";
-
                 foreach (var clientRecord in loadClientRecord)
                 {
                     worksheet.Cells[1, x] = clientRecord.SeriesNumber;
@@ -1050,7 +1042,50 @@ namespace bigapple
                     worksheet.Cells[10, x] = clientRecord.UNMWQty2;
                     worksheet.Cells[10, xx] = clientRecord.UNMWAmount2;
 
+                    worksheet.Cells[13, x] = clientRecord.NYFPQty1;
+                    worksheet.Cells[13, xx] = clientRecord.NYFPAmount1;
+                    worksheet.Cells[14, x] = clientRecord.NYFPQty2;
+                    worksheet.Cells[14, xx] = clientRecord.NYFPAmount2;
+                    worksheet.Cells[15, x] = clientRecord.NYFPQty3;
+                    worksheet.Cells[15, xx] = clientRecord.NYFPAmount3;
+                    worksheet.Cells[16, x] = clientRecord.NYFPQty4;
+                    worksheet.Cells[16, xx] = clientRecord.NYFPAmount4;
 
+                    worksheet.Cells[19, x] = clientRecord.DRTNQty1;
+                    worksheet.Cells[19, xx] = clientRecord.DRTNAmount1;
+                    worksheet.Cells[20, x] = clientRecord.DRTNQty2;
+                    worksheet.Cells[20, xx] = clientRecord.DRTNAmount2;
+                    worksheet.Cells[21, x] = clientRecord.DRTNQty3;
+                    worksheet.Cells[21, xx] = clientRecord.DRTNAmount3;
+                    worksheet.Cells[22, x] = clientRecord.DRTNQty4;
+                    worksheet.Cells[22, xx] = clientRecord.DRTNAmount4;
+
+                    worksheet.Cells[25, x] = clientRecord.MDQty1;
+                    worksheet.Cells[25, xx] = clientRecord.MDAmount1;
+                    worksheet.Cells[26, x] = clientRecord.MDQty2;
+                    worksheet.Cells[26, xx] = clientRecord.MDAmount2;
+                    worksheet.Cells[27, x] = clientRecord.MDQty3;
+                    worksheet.Cells[27, xx] = clientRecord.MDAmount3;
+                    worksheet.Cells[28, x] = clientRecord.MDQty4;
+                    worksheet.Cells[28, xx] = clientRecord.MDAmount4;
+                    worksheet.Cells[29, x] = clientRecord.MDQty5;
+                    worksheet.Cells[29, xx] = clientRecord.MDAmount5;
+                    worksheet.Cells[30, x] = clientRecord.MDQty6;
+                    worksheet.Cells[30, xx] = clientRecord.MDAmount6;
+
+                    worksheet.Cells[33, x] = clientRecord.PRQty1;
+                    worksheet.Cells[33, xx] = clientRecord.PRAmount1;
+                    worksheet.Cells[34, x] = clientRecord.PRQty2;
+                    worksheet.Cells[34, xx] = clientRecord.PRAmount2;
+                    worksheet.Cells[35, x] = clientRecord.PRQty3;
+                    worksheet.Cells[35, xx] = clientRecord.PRAmount3;
+
+                    worksheet.Cells[38, x] = clientRecord.ATQty1;
+                    worksheet.Cells[38, xx] = clientRecord.ATAmount1;
+                    worksheet.Cells[39, x] = clientRecord.ATQty2;
+                    worksheet.Cells[39, xx] = clientRecord.ATAmount2;
+
+                    worksheet.Cells[40, xx] = clientRecord.Total;
 
                     x += 2;
                     xx += 2;
