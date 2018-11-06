@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.LeftPanel = new System.Windows.Forms.Panel();
+            this.VoidSalesBTN = new System.Windows.Forms.Button();
             this.TSRBtn = new System.Windows.Forms.Button();
             this.DSRBtn = new System.Windows.Forms.Button();
             this.CRBtn = new System.Windows.Forms.Button();
@@ -41,11 +42,8 @@
             this.dailySalesReportControl1 = new bigapple.DailySalesReportControl();
             this.clientReceiptControl1 = new bigapple.ClientReceiptControl();
             this.therapistReport1 = new bigapple.TherapistReport();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.voidSaleControl1 = new bigapple.VoidSaleControl();
             this.LeftPanel.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftPanel
@@ -53,6 +51,7 @@
             this.LeftPanel.AutoSize = true;
             this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.LeftPanel.CausesValidation = false;
+            this.LeftPanel.Controls.Add(this.VoidSalesBTN);
             this.LeftPanel.Controls.Add(this.TSRBtn);
             this.LeftPanel.Controls.Add(this.DSRBtn);
             this.LeftPanel.Controls.Add(this.CRBtn);
@@ -63,6 +62,22 @@
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(299, 861);
             this.LeftPanel.TabIndex = 0;
+            // 
+            // VoidSalesBTN
+            // 
+            this.VoidSalesBTN.FlatAppearance.BorderSize = 0;
+            this.VoidSalesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VoidSalesBTN.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VoidSalesBTN.ForeColor = System.Drawing.Color.White;
+            this.VoidSalesBTN.Image = ((System.Drawing.Image)(resources.GetObject("VoidSalesBTN.Image")));
+            this.VoidSalesBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.VoidSalesBTN.Location = new System.Drawing.Point(12, 490);
+            this.VoidSalesBTN.Name = "VoidSalesBTN";
+            this.VoidSalesBTN.Size = new System.Drawing.Size(284, 65);
+            this.VoidSalesBTN.TabIndex = 6;
+            this.VoidSalesBTN.Text = "Void Sale";
+            this.VoidSalesBTN.UseVisualStyleBackColor = true;
+            this.VoidSalesBTN.Click += new System.EventHandler(this.VoidSalesBTN_Click);
             // 
             // TSRBtn
             // 
@@ -175,28 +190,14 @@
             this.therapistReport1.Size = new System.Drawing.Size(678, 251);
             this.therapistReport1.TabIndex = 4;
             // 
-            // statusStrip1
+            // voidSaleControl1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(299, 839);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1285, 22);
-            this.statusStrip1.TabIndex = 5;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(250, 16);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.voidSaleControl1.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.voidSaleControl1.Location = new System.Drawing.Point(299, 25);
+            this.voidSaleControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.voidSaleControl1.Name = "voidSaleControl1";
+            this.voidSaleControl1.Size = new System.Drawing.Size(1296, 830);
+            this.voidSaleControl1.TabIndex = 6;
             // 
             // Menu
             // 
@@ -204,7 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.voidSaleControl1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.dailySalesReportControl1);
@@ -216,8 +217,6 @@
             this.Text = "Big Apple Express Spa";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.LeftPanel.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,9 +235,8 @@
         private DailySalesReportControl dailySalesReportControl1;
         private System.Windows.Forms.Timer timer1;
         private TherapistReport therapistReport1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Button VoidSalesBTN;
+        private VoidSaleControl voidSaleControl1;
     }
 }
 

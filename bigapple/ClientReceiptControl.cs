@@ -416,8 +416,9 @@ namespace bigapple
                 NetOfVAT = NetOfVATLBL.Text,
                 VAT = VatLBL.Text,
                 SeniorCitizenDiscount = SeniorCDiscountLBL.Text,
-                TotalAmountDue = TotalAmountDLBL.Text
-        };
+                TotalAmountDue = TotalAmountDLBL.Text,
+                Void = "FALSE"
+            };
 
             DatabaseClass.SaveClientRecord(client);
             MessageBox.Show("Client Name '" + NameOfClientTXT.Text + "' with Series Number '" + SeriesNumberLBL.Text + "' was successfully saved.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);

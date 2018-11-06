@@ -99,6 +99,12 @@
     <Compile Include="TherapistReport.Designer.cs">
       <DependentUpon>TherapistReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="VoidSaleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VoidSaleControl.Designer.cs">
+      <DependentUpon>VoidSaleControl.cs</DependentUpon>
+    </Compile>
     <Content Include="red-apple_icon.ico" />
     <EmbeddedResource Include="ClientReceiptControl.resx">
       <DependentUpon>ClientReceiptControl.cs</DependentUpon>
@@ -119,6 +125,9 @@
     </Content>
     <EmbeddedResource Include="TherapistReport.resx">
       <DependentUpon>TherapistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoidSaleControl.resx">
+      <DependentUpon>VoidSaleControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

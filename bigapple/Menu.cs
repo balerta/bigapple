@@ -21,6 +21,7 @@ namespace bigapple
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
             therapistReport1.Visible = false;
+            voidSaleControl1.Visible = false;
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace bigapple
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
             therapistReport1.Visible = false;
+            voidSaleControl1.Visible = false;
         }
 
         private void CRBtn_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace bigapple
             clientReceiptControl1.Visible = true;
             dailySalesReportControl1.Visible = false;
             therapistReport1.Visible = false;
+            voidSaleControl1.Visible = false;
         }
 
         private void DSRBtn_Click(object sender, EventArgs e)
@@ -48,6 +51,7 @@ namespace bigapple
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = true;
             therapistReport1.Visible = false;
+            voidSaleControl1.Visible = false;
         }
 
         private void TSRBtn_Click(object sender, EventArgs e)
@@ -57,6 +61,7 @@ namespace bigapple
             clientReceiptControl1.Visible = false;
             dailySalesReportControl1.Visible = false;
             therapistReport1.Visible = true;
+            voidSaleControl1.Visible = false;
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -64,5 +69,15 @@ namespace bigapple
             
         }
 
+        private void VoidSalesBTN_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = VoidSalesBTN.Height;
+            SidePanel.Top = VoidSalesBTN.Top;
+            clientReceiptControl1.Visible = false;
+            dailySalesReportControl1.Visible = false;
+            therapistReport1.Visible = false;
+            voidSaleControl1.Visible = true;
+            voidSaleControl1.LoadVoidModeRecord();
+        }
     }
 }

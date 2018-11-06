@@ -68,6 +68,7 @@ namespace bigapplelib
         public string VAT { get; set; }
         public string SeniorCitizenDiscount { get; set; }
         public string TotalAmountDue { get; set; }
+        public string Void { get; set; }
 
         public string ClientRecord
         {
@@ -81,7 +82,7 @@ namespace bigapplelib
                     $"{ MDQty1 } { MDAmount1 } { MDQty2 } { MDAmount2 } { MDQty3 } { MDAmount3 } { MDQty4 } { MDAmount4 } { MDQty5 } { MDAmount5 } { MDQty6 } { MDAmount6 }" +
                     $"{ PRQty1 } { PRAmount1 } { PRQty2 } { PRAmount2 } { PRQty3 } { PRAmount3 } " +
                     $"{ ATQty1 } { ATAmount1 } { ATQty2 } { ATAmount2 } " +
-                    $"{ Total } { NetOfVAT } { VAT } { SeniorCitizenDiscount } { TotalAmountDue }";
+                    $"{ Total } { NetOfVAT } { VAT } { SeniorCitizenDiscount } { TotalAmountDue } { Void }";
             }
         }
     }
