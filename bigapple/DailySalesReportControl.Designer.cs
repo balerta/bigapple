@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailySalesReportControl));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPDF = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Date";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(294, 46);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 26);
+            this.dateTimePicker2.TabIndex = 12;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.ToDateValidation);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 46);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
+            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.FromDateValidation);
             // 
             // label3
             // 
@@ -153,22 +169,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(19, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
-            this.dateTimePicker1.TabIndex = 11;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.FromDateValidation);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(294, 46);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(265, 26);
-            this.dateTimePicker2.TabIndex = 12;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.ToDateValidation);
             // 
             // DailySalesReportControl
             // 

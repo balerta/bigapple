@@ -26,12 +26,6 @@ namespace bigapple
             InitializeComponent();
         }
 
-        public void RefreshDailySalesReport()
-        {
-            dateTimePicker1.Value = DateTime.Now;
-            dateTimePicker2.Value = DateTime.Now;
-        }
-
         // // // // // 
         // Quantity
         // // // // //
@@ -550,20 +544,22 @@ namespace bigapple
         {
             if (dateTimePicker1.Value > dateTimePicker2.Value)
             {
-                MessageBox.Show("Date To should not be less than Date From", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dateTimePicker2.Value = DateTime.Today;
+                MessageBox.Show("Date To should not be less than Date From", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            
         }
 
         private void FromDateValidation(object sender, EventArgs e)
         {
             if (dateTimePicker1.Value > dateTimePicker2.Value)
             {
-                MessageBox.Show("Date From should not be greater than Date To", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dateTimePicker1.Value = DateTime.Today;
+                MessageBox.Show("Date From should not be greater than Date To", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            
         }
 
         private string DateMessage()
@@ -914,7 +910,6 @@ namespace bigapple
                 document.Close();
 
                 MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                RefreshDailySalesReport();
             }
         }
 
@@ -947,7 +942,7 @@ namespace bigapple
                     MessageBox.Show(lastFullPath + " already exist. Renaming to " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-                loadClientRecord = DatabaseClass.LoadClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+                
 
 
                 Excel.Application application;
@@ -958,9 +953,7 @@ namespace bigapple
                 workbook = application.Workbooks.Add();
                 worksheet = (Excel.Worksheet)workbook.Worksheets.get_Item(1);
 
-                int x = 3;
-                int xx = 4;
-
+                worksheet.Cells[2, 2] = "Price";
                 worksheet.Cells[3, 1] = "Manhattan exp:";
                 worksheet.Cells[4, 1] = "NYC Exp full body 30 mins";
                 worksheet.Cells[5, 1] = "Manhattan full body 60 mins";
@@ -1030,80 +1023,99 @@ namespace bigapple
                 worksheet.Cells[38, 2] = "299";
                 worksheet.Cells[39, 2] = "399";
 
-                foreach (var clientRecord in loadClientRecord)
+                int x = 3;
+                int xx = 4;
+
+                DateTime from = dateTimePicker1.Value;
+                DateTime to = dateTimePicker2.Value.AddDays(1);
+
+                for (DateTime date = from; date <= to; date = date.AddDays(1))
                 {
-                    worksheet.Cells[1, x] = clientRecord.SeriesNumber;
+
+                    worksheet.Cells[1, x] = date.ToString("MM/dd/yyyy");
                     worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
                     worksheet.Cells[2, x] = "Qty";
                     worksheet.Cells[2, xx] = "Amount";
 
-                    worksheet.Cells[4, x] = clientRecord.MEQty1;
-                    worksheet.Cells[4, xx] = clientRecord.MEAmount1;
-                    worksheet.Cells[5, x] = clientRecord.MEQty2;
-                    worksheet.Cells[5, xx] = clientRecord.MEAmount2;
-                    worksheet.Cells[6, x] = clientRecord.MEQty3;
-                    worksheet.Cells[6, xx] = clientRecord.MEAmount3;
-
-                    worksheet.Cells[9, x] = clientRecord.UNMWQty1;
-                    worksheet.Cells[9, xx] = clientRecord.UNMWAmount1;
-                    worksheet.Cells[10, x] = clientRecord.UNMWQty2;
-                    worksheet.Cells[10, xx] = clientRecord.UNMWAmount2;
-
-                    worksheet.Cells[13, x] = clientRecord.NYFPQty1;
-                    worksheet.Cells[13, xx] = clientRecord.NYFPAmount1;
-                    worksheet.Cells[14, x] = clientRecord.NYFPQty2;
-                    worksheet.Cells[14, xx] = clientRecord.NYFPAmount2;
-                    worksheet.Cells[15, x] = clientRecord.NYFPQty3;
-                    worksheet.Cells[15, xx] = clientRecord.NYFPAmount3;
-                    worksheet.Cells[16, x] = clientRecord.NYFPQty4;
-                    worksheet.Cells[16, xx] = clientRecord.NYFPAmount4;
-
-                    worksheet.Cells[19, x] = clientRecord.DRTNQty1;
-                    worksheet.Cells[19, xx] = clientRecord.DRTNAmount1;
-                    worksheet.Cells[20, x] = clientRecord.DRTNQty2;
-                    worksheet.Cells[20, xx] = clientRecord.DRTNAmount2;
-                    worksheet.Cells[21, x] = clientRecord.DRTNQty3;
-                    worksheet.Cells[21, xx] = clientRecord.DRTNAmount3;
-                    worksheet.Cells[22, x] = clientRecord.DRTNQty4;
-                    worksheet.Cells[22, xx] = clientRecord.DRTNAmount4;
-
-                    worksheet.Cells[25, x] = clientRecord.MDQty1;
-                    worksheet.Cells[25, xx] = clientRecord.MDAmount1;
-                    worksheet.Cells[26, x] = clientRecord.MDQty2;
-                    worksheet.Cells[26, xx] = clientRecord.MDAmount2;
-                    worksheet.Cells[27, x] = clientRecord.MDQty3;
-                    worksheet.Cells[27, xx] = clientRecord.MDAmount3;
-                    worksheet.Cells[28, x] = clientRecord.MDQty4;
-                    worksheet.Cells[28, xx] = clientRecord.MDAmount4;
-                    worksheet.Cells[29, x] = clientRecord.MDQty5;
-                    worksheet.Cells[29, xx] = clientRecord.MDAmount5;
-                    worksheet.Cells[30, x] = clientRecord.MDQty6;
-                    worksheet.Cells[30, xx] = clientRecord.MDAmount6;
-
-                    worksheet.Cells[33, x] = clientRecord.PRQty1;
-                    worksheet.Cells[33, xx] = clientRecord.PRAmount1;
-                    worksheet.Cells[34, x] = clientRecord.PRQty2;
-                    worksheet.Cells[34, xx] = clientRecord.PRAmount2;
-                    worksheet.Cells[35, x] = clientRecord.PRQty3;
-                    worksheet.Cells[35, xx] = clientRecord.PRAmount3;
-
-                    worksheet.Cells[38, x] = clientRecord.ATQty1;
-                    worksheet.Cells[38, xx] = clientRecord.ATAmount1;
-                    worksheet.Cells[39, x] = clientRecord.ATQty2;
-                    worksheet.Cells[39, xx] = clientRecord.ATAmount2;
-
-                    worksheet.Cells[40, xx] = clientRecord.Total;
+                    
 
                     x += 2;
                     xx += 2;
                 }
+
+                //foreach (var clientRecord in loadClientRecord)
+                //{
+                //    worksheet.Cells[1, x] = clientRecord.SeriesNumber;
+                //    worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
+                //    worksheet.Cells[2, x] = "Qty";
+                //    worksheet.Cells[2, xx] = "Amount";
+
+                //worksheet.Cells[4, x] = clientRecord.MEQty1;
+                //worksheet.Cells[4, xx] = clientRecord.MEAmount1;
+                //worksheet.Cells[5, x] = clientRecord.MEQty2;
+                //worksheet.Cells[5, xx] = clientRecord.MEAmount2;
+                //worksheet.Cells[6, x] = clientRecord.MEQty3;
+                //worksheet.Cells[6, xx] = clientRecord.MEAmount3;
+
+                //worksheet.Cells[9, x] = clientRecord.UNMWQty1;
+                //worksheet.Cells[9, xx] = clientRecord.UNMWAmount1;
+                //worksheet.Cells[10, x] = clientRecord.UNMWQty2;
+                //worksheet.Cells[10, xx] = clientRecord.UNMWAmount2;
+
+                //worksheet.Cells[13, x] = clientRecord.NYFPQty1;
+                //worksheet.Cells[13, xx] = clientRecord.NYFPAmount1;
+                //worksheet.Cells[14, x] = clientRecord.NYFPQty2;
+                //worksheet.Cells[14, xx] = clientRecord.NYFPAmount2;
+                //worksheet.Cells[15, x] = clientRecord.NYFPQty3;
+                //worksheet.Cells[15, xx] = clientRecord.NYFPAmount3;
+                //worksheet.Cells[16, x] = clientRecord.NYFPQty4;
+                //worksheet.Cells[16, xx] = clientRecord.NYFPAmount4;
+
+                //worksheet.Cells[19, x] = clientRecord.DRTNQty1;
+                //worksheet.Cells[19, xx] = clientRecord.DRTNAmount1;
+                //worksheet.Cells[20, x] = clientRecord.DRTNQty2;
+                //worksheet.Cells[20, xx] = clientRecord.DRTNAmount2;
+                //worksheet.Cells[21, x] = clientRecord.DRTNQty3;
+                //worksheet.Cells[21, xx] = clientRecord.DRTNAmount3;
+                //worksheet.Cells[22, x] = clientRecord.DRTNQty4;
+                //worksheet.Cells[22, xx] = clientRecord.DRTNAmount4;
+
+                //worksheet.Cells[25, x] = clientRecord.MDQty1;
+                //worksheet.Cells[25, xx] = clientRecord.MDAmount1;
+                //worksheet.Cells[26, x] = clientRecord.MDQty2;
+                //worksheet.Cells[26, xx] = clientRecord.MDAmount2;
+                //worksheet.Cells[27, x] = clientRecord.MDQty3;
+                //worksheet.Cells[27, xx] = clientRecord.MDAmount3;
+                //worksheet.Cells[28, x] = clientRecord.MDQty4;
+                //worksheet.Cells[28, xx] = clientRecord.MDAmount4;
+                //worksheet.Cells[29, x] = clientRecord.MDQty5;
+                //worksheet.Cells[29, xx] = clientRecord.MDAmount5;
+                //worksheet.Cells[30, x] = clientRecord.MDQty6;
+                //worksheet.Cells[30, xx] = clientRecord.MDAmount6;
+
+                //worksheet.Cells[33, x] = clientRecord.PRQty1;
+                //worksheet.Cells[33, xx] = clientRecord.PRAmount1;
+                //worksheet.Cells[34, x] = clientRecord.PRQty2;
+                //worksheet.Cells[34, xx] = clientRecord.PRAmount2;
+                //worksheet.Cells[35, x] = clientRecord.PRQty3;
+                //worksheet.Cells[35, xx] = clientRecord.PRAmount3;
+
+                //worksheet.Cells[38, x] = clientRecord.ATQty1;
+                //worksheet.Cells[38, xx] = clientRecord.ATAmount1;
+                //worksheet.Cells[39, x] = clientRecord.ATQty2;
+                //worksheet.Cells[39, xx] = clientRecord.ATAmount2;
+
+                //worksheet.Cells[40, xx] = clientRecord.Total;
+
+                //    x += 2;
+                //    xx += 2;
+                //}
 
                 workbook.SaveAs(newFullPath);
                 workbook.Close();
                 application.Quit();
 
                 MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                RefreshDailySalesReport();
             }
         }
     }

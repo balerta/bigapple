@@ -37,13 +37,6 @@ namespace bigapple
             }
         }
 
-        public void RefreshTherapistReport()
-        {
-            TherapistListCB.Text = "";
-            dateTimePicker1.Value = DateTime.Now;
-            dateTimePicker2.Value = DateTime.Now;
-        }
-
         // // // // // 
         // Quantity
         // // // // //
@@ -949,7 +942,6 @@ namespace bigapple
                 document.Close();
 
                 MessageBox.Show("Therapist Sales Report created in " + newFullPath, "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                RefreshTherapistReport();
             }
         }
     }
