@@ -1796,13 +1796,6 @@ namespace bigapple
             // TherapistListCB
             // 
             this.TherapistListCB.FormattingEnabled = true;
-            this.TherapistListCB.Items.AddRange(new object[] {
-            "Beth",
-            "Jannette",
-            "Nilda",
-            "Jennifer",
-            "MJ",
-            "Fe"});
             this.TherapistListCB.Location = new System.Drawing.Point(143, 72);
             this.TherapistListCB.Name = "TherapistListCB";
             this.TherapistListCB.Size = new System.Drawing.Size(430, 26);
@@ -1836,9 +1829,9 @@ namespace bigapple
             this.TimeLBL.Location = new System.Drawing.Point(629, 78);
             this.TimeLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimeLBL.Name = "TimeLBL";
-            this.TimeLBL.Size = new System.Drawing.Size(64, 18);
+            this.TimeLBL.Size = new System.Drawing.Size(40, 18);
             this.TimeLBL.TabIndex = 31;
-            this.TimeLBL.Text = "12:00 AM";
+            this.TimeLBL.Text = "00:00";
             // 
             // DateLBL
             // 

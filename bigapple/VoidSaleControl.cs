@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bigapplelib;
-
 namespace bigapple
 {
     public partial class VoidSaleControl : UserControl
@@ -29,12 +28,14 @@ namespace bigapple
             lblDate.Text = "";
             lblTime.Text = "";
             lblTotalAmountDue.Text = "";
+            btnVoidSale.Enabled = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                btnVoidSale.Enabled = true;
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 lblSeriesNumber.Text = row.Cells[0].Value.ToString();
                 lblName.Text = row.Cells[1].Value.ToString();
@@ -43,6 +44,14 @@ namespace bigapple
                 lblTime.Text = row.Cells[4].Value.ToString();
                 lblTotalAmountDue.Text = row.Cells[5].Value.ToString();
             }
+        }
+
+        private void btnVoidSale_Click(object sender, EventArgs e)
+        {
+            InputForm inputForm = new InputForm();
+            inputForm.LabelText = lblSeriesNumber.Text;
+            inputForm.ShowDialog(this);
+            LoadVoidModeRecord();
         }
     }
 }

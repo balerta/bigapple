@@ -106,13 +106,6 @@
             // TherapistListCB
             // 
             this.TherapistListCB.FormattingEnabled = true;
-            this.TherapistListCB.Items.AddRange(new object[] {
-            "Beth",
-            "Jannette",
-            "Nilda",
-            "Jennifer",
-            "MJ",
-            "Fe"});
             this.TherapistListCB.Location = new System.Drawing.Point(145, 22);
             this.TherapistListCB.Name = "TherapistListCB";
             this.TherapistListCB.Size = new System.Drawing.Size(408, 26);

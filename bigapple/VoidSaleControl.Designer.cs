@@ -75,6 +75,7 @@
             // btnVoidSale
             // 
             this.btnVoidSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnVoidSale.Enabled = false;
             this.btnVoidSale.FlatAppearance.BorderSize = 0;
             this.btnVoidSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoidSale.ForeColor = System.Drawing.Color.White;
@@ -87,6 +88,7 @@
             this.btnVoidSale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoidSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoidSale.UseVisualStyleBackColor = false;
+            this.btnVoidSale.Click += new System.EventHandler(this.btnVoidSale_Click);
             // 
             // panel1
             // 

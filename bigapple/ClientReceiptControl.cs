@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bigapplelib;
+using System.IO;
 
 namespace bigapple
 {
@@ -37,6 +38,7 @@ namespace bigapple
         public ClientReceiptControl()
         {
             InitializeComponent();
+            RefreshCBList();
             MEAmount1 = 0;
             MEAmount2 = 0;
             MEAmount3 = 0;
@@ -62,6 +64,18 @@ namespace bigapple
         private void ClientReceiptControl_Load(object sender, EventArgs e)
         {
             RefreshClient();
+        }
+
+        public void RefreshCBList()
+        {
+            StreamReader reader = new StreamReader(@".\Therapist.txt");
+            string x = reader.ReadToEnd();
+            string[] y = x.Split('\n');
+            foreach (string data in y)
+            {
+                data.Trim();
+                TherapistListCB.Items.Add(data);
+            }
         }
 
         private void RefreshClient()
@@ -196,7 +210,7 @@ namespace bigapple
 
         private void CRCTimer_Tick(object sender, EventArgs e)
         {
-            TimeLBL.Text = DateTime.Now.ToString("hh:mm tt");
+            TimeLBL.Text = DateTime.Now.ToString("HH:mm");
             DateLBL.Text = DateTime.Now.ToString("MM/dd/yyyy");
         }
 
@@ -344,6 +358,12 @@ namespace bigapple
             if (TherapistListCB.Text == "")
             {
                 MessageBox.Show("Please assign a therapist.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (TotalLBL.Text == "0")
+            {
+                MessageBox.Show("Please select at least one(1) service.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

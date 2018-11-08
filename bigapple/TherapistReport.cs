@@ -22,7 +22,28 @@ namespace bigapple
         public TherapistReport()
         {
             InitializeComponent();
+            RefreshCBList();
         }
+
+        public void RefreshCBList()
+        {
+            StreamReader reader = new StreamReader(@".\Therapist.txt");
+            string x = reader.ReadToEnd();
+            string[] y = x.Split('\n');
+            foreach (string data in y)
+            {
+                data.Trim();
+                TherapistListCB.Items.Add(data);
+            }
+        }
+
+        public void RefreshTherapistReport()
+        {
+            TherapistListCB.Text = "";
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+        }
+
         // // // // // 
         // Quantity
         // // // // //
@@ -594,25 +615,25 @@ namespace bigapple
 
         private string FirstShift()
         {
-            string message = DatabaseClass.NumberSeriesWithTherapist("10:00 AM", "12:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            string message = DatabaseClass.NumberSeriesWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             return message;
         }
 
         private string SecondShift()
         {
-            string message = DatabaseClass.NumberSeriesWithTherapist("01:00 PM", "04:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            string message = DatabaseClass.NumberSeriesWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             return message;
         }
 
         private string ThirdShift()
         {
-            string message = DatabaseClass.NumberSeriesWithTherapist("05:00 PM", "09:00 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            string message = DatabaseClass.NumberSeriesWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             return message;
         }
         private string FirstShiftTotal()
         {
             int total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("10:00 AM", "12:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
                 total += Int32.Parse(tSales.Total);
@@ -623,7 +644,7 @@ namespace bigapple
         private string SecondShiftTotal()
         {
             int total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("01:00 PM", "04:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
                 total += Int32.Parse(tSales.Total);
@@ -634,7 +655,7 @@ namespace bigapple
         private string ThirdShiftTotal()
         {
             int total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("05:01 PM", "09:00 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
                 total += Int32.Parse(tSales.Total);
@@ -911,15 +932,15 @@ namespace bigapple
                 table.AddCell(blank);
 
                 // Tabulation
-                table.AddCell(new PdfPCell(new Phrase("10:00 AM - 12:59 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("09:00 - 12:00", font)));
                 table.AddCell(new PdfPCell(new Phrase("No. of Series: " + FirstShift(), font)));
                 table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Total: " + FirstShiftTotal(), font)));
-                table.AddCell(new PdfPCell(new Phrase("01:00 PM - 04:59 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("12:01 - 17:00", font)));
                 table.AddCell(new PdfPCell(new Phrase("No. of Series: " + SecondShift(), font)));
                 table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Total: " + SecondShiftTotal(), font)));
-                table.AddCell(new PdfPCell(new Phrase("05:00 PM - 09:00 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("17:01 - 23:59", font)));
                 table.AddCell(new PdfPCell(new Phrase("No. of Series: " + ThirdShift(), font)));
                 table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Total: " + ThirdShiftTotal(), font)));
@@ -928,6 +949,7 @@ namespace bigapple
                 document.Close();
 
                 MessageBox.Show("Therapist Sales Report created in " + newFullPath, "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshTherapistReport();
             }
         }
     }

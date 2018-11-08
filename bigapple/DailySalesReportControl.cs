@@ -26,6 +26,12 @@ namespace bigapple
             InitializeComponent();
         }
 
+        public void RefreshDailySalesReport()
+        {
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+        }
+
         // // // // // 
         // Quantity
         // // // // //
@@ -576,25 +582,25 @@ namespace bigapple
 
         private string FirstShift()
         {
-            string message = DatabaseClass.NumberSeries("10:00 AM", "12:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            string message = DatabaseClass.NumberSeries("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             return message;
         }
 
         private string SecondShift()
         {
-            string message = DatabaseClass.NumberSeries("01:00 PM", "04:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            string message = DatabaseClass.NumberSeries("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             return message;
         }
 
         private string ThirdShift()
         {
-            string message = DatabaseClass.NumberSeries("05:00 PM", "09:00 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            string message = DatabaseClass.NumberSeries("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             return message;
         }
         private string FirstShiftTotal()
         {
             int total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModels("10:00 AM", "12:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            totalSales = DatabaseClass.TotalSalesClientModels("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
                 total += Int32.Parse(tSales.Total);
@@ -605,7 +611,7 @@ namespace bigapple
         private string SecondShiftTotal()
         {
             int total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModels("01:00 PM", "04:59 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            totalSales = DatabaseClass.TotalSalesClientModels("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
                 total += Int32.Parse(tSales.Total);
@@ -616,7 +622,7 @@ namespace bigapple
         private string ThirdShiftTotal()
         {
             int total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModels("05:01 PM", "09:00 PM", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            totalSales = DatabaseClass.TotalSalesClientModels("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
                 total += Int32.Parse(tSales.Total);
@@ -891,15 +897,15 @@ namespace bigapple
                 table.AddCell(blank);
 
                 // Tabulation
-                table.AddCell(new PdfPCell(new Phrase("10:00 AM - 12:59 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("09:00 - 12:00", font)));
                 table.AddCell(new PdfPCell(new Phrase("No. of Series: " + FirstShift(), font)));
                 table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Total: " + FirstShiftTotal(), font)));
-                table.AddCell(new PdfPCell(new Phrase("01:00 PM - 04:59 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("12:01 - 17:00", font)));
                 table.AddCell(new PdfPCell(new Phrase("No. of Series: " + SecondShift(), font)));
                 table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Total: " + SecondShiftTotal(), font)));
-                table.AddCell(new PdfPCell(new Phrase("05:00 PM - 09:00 PM", font)));
+                table.AddCell(new PdfPCell(new Phrase("17:01 - 23:59", font)));
                 table.AddCell(new PdfPCell(new Phrase("No. of Series: " + ThirdShift(), font)));
                 table.AddCell(new PdfPCell(new Phrase("", font)));
                 table.AddCell(new PdfPCell(new Phrase("Total: " + ThirdShiftTotal(), font)));
@@ -908,6 +914,7 @@ namespace bigapple
                 document.Close();
 
                 MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshDailySalesReport();
             }
         }
 
@@ -1096,6 +1103,7 @@ namespace bigapple
                 application.Quit();
 
                 MessageBox.Show("Daily Sales Report created in " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshDailySalesReport();
             }
         }
     }

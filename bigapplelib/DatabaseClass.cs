@@ -46,7 +46,8 @@ namespace bigapplelib
                     "DRTNQty1,DRTNAmount1,DRTNQty2,DRTNAmount2,DRTNQty3,DRTNAmount3,DRTNQty4,DRTNAmount4," +
                     "MDQty1,MDAmount1,MDQty2,MDAmount2,MDQty3,MDAmount3,MDQty4,MDAmount4,MDQty5,MDAmount5,MDQty6,MDAmount6," +
                     "PRQty1,PRAmount1,PRQty2,PRAmount2,PRQty3,PRAmount3," +
-                    "ATQty1,ATAmount1,ATQty2,ATAmount2 FROM ClientTable WHERE DATE BETWEEN '" + fromdate + "' AND '" + todate + "' AND TherapistAssigned = '" + therapist + "' AND Void = 'FALSE'", new DynamicParameters());
+                    "ATQty1,ATAmount1,ATQty2,ATAmount2 FROM ClientTable " +
+                    "WHERE DATE BETWEEN '" + fromdate + "' AND '" + todate + "' AND TherapistAssigned = '" + therapist + "' AND Void = 'FALSE'", new DynamicParameters());
                 return output.ToList();
             }
         }
@@ -55,7 +56,7 @@ namespace bigapplelib
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = connection.Query("SELECT * FROM ClientTable WHERE Void = 'FALSE'").ToList();
+                var output = connection.Query("SELECT * FROM ClientTable").ToList();
                 var x = output.Count() + 1;
                 return x.ToString();
             }
@@ -133,7 +134,8 @@ namespace bigapplelib
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = connection.Query<VoidModel>("SELECT SeriesNumber, NameOfClient, TherapistAssigned, Date, Time, TotalAmountDue, Void FROM ClientTable ORDER BY SeriesNumber DESC", new DynamicParameters());
+                var output = connection.Query<VoidModel>("SELECT SeriesNumber, NameOfClient, TherapistAssigned, Date, Time, TotalAmountDue, Void FROM ClientTable " +
+                    "WHERE Void = 'FALSE' ORDER BY SeriesNumber DESC", new DynamicParameters());
                 return output.ToList();
             }
         }
@@ -161,6 +163,14 @@ namespace bigapplelib
                     "@PRQty1,@PRAmount1,@PRQty2,@PRAmount2,@PRQty3,@PRAmount3," +
                     "@ATQty1,@ATAmount1,@ATQty2,@ATAmount2," +
                     "@Total,@NetOfVAT,@VAT,@SeniorCitizenDiscount,@TotalAmountDue,@Void)", clientRecordModel);
+            }
+        }
+
+        public static void UpdateVoidSaleRecord(VoidModel voidModel)
+        {
+            using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
+            {
+                connection.Execute("UPDATE ClientTable SET Void = @Void WHERE SeriesNumber = @SeriesNumber", voidModel);
             }
         }
 
