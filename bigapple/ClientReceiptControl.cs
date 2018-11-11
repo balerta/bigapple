@@ -372,7 +372,7 @@ namespace bigapple
                 // Client Info
                 SeriesNumber = SeriesNumberLBL.Text,
                 NameOfClient = NameOfClientTXT.Text,
-                TherapistAssigned = TherapistListCB.Text,
+                TherapistAssigned = TherapistListCB.Text.Trim(),
                 Date = DateLBL.Text,
                 Time = TimeLBL.Text,
                 SeniorCitizen = SCYesRB.Checked == true ? SCYesRB.Checked.ToString() : SCYesRB.Checked.ToString(),

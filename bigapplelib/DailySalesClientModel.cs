@@ -56,6 +56,7 @@ namespace bigapplelib
         public string ATAmount1 { get; set; }
         public string ATQty2 { get; set; }
         public string ATAmount2 { get; set; }
+        public string SeniorCitizen { get; set; }
 
         public string DailySalesClientRecord
         {
@@ -67,7 +68,7 @@ namespace bigapplelib
                     $"{ DRTNQty1 } { DRTNAmount1 } { DRTNQty2 } { DRTNAmount2 } { DRTNQty3 } { DRTNAmount3 } { DRTNQty4 } { DRTNAmount4 } " +
                     $"{ MDQty1 } { MDAmount1 } { MDQty2 } { MDAmount2 } { MDQty3 } { MDAmount3 } { MDQty4 } { MDAmount4 } { MDQty5 } { MDAmount5 } { MDQty6 } { MDAmount6 }" +
                     $"{ PRQty1 } { PRAmount1 } { PRQty2 } { PRAmount2 } { PRQty3 } { PRAmount3 } " +
-                    $"{ ATQty1 } { ATAmount1 } { ATQty2 } { ATAmount2 } ";
+                    $"{ ATQty1 } { ATAmount1 } { ATQty2 } { ATAmount2 } { SeniorCitizen }";
             }
         }
     }

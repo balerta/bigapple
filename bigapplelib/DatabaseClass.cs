@@ -31,7 +31,7 @@ namespace bigapplelib
                     "DRTNQty1,DRTNAmount1,DRTNQty2,DRTNAmount2,DRTNQty3,DRTNAmount3,DRTNQty4,DRTNAmount4," +
                     "MDQty1,MDAmount1,MDQty2,MDAmount2,MDQty3,MDAmount3,MDQty4,MDAmount4,MDQty5,MDAmount5,MDQty6,MDAmount6," +
                     "PRQty1,PRAmount1,PRQty2,PRAmount2,PRQty3,PRAmount3," +
-                    "ATQty1,ATAmount1,ATQty2,ATAmount2 FROM ClientTable WHERE DATE BETWEEN '" + fromdate + "' AND '" + todate + "' AND Void = 'FALSE'", new DynamicParameters());
+                    "ATQty1,ATAmount1,ATQty2,ATAmount2,SeniorCitizen FROM ClientTable WHERE DATE BETWEEN '" + fromdate + "' AND '" + todate + "' AND Void = 'FALSE'", new DynamicParameters());
                 return output.ToList();
             }
         }
@@ -46,7 +46,7 @@ namespace bigapplelib
                     "DRTNQty1,DRTNAmount1,DRTNQty2,DRTNAmount2,DRTNQty3,DRTNAmount3,DRTNQty4,DRTNAmount4," +
                     "MDQty1,MDAmount1,MDQty2,MDAmount2,MDQty3,MDAmount3,MDQty4,MDAmount4,MDQty5,MDAmount5,MDQty6,MDAmount6," +
                     "PRQty1,PRAmount1,PRQty2,PRAmount2,PRQty3,PRAmount3," +
-                    "ATQty1,ATAmount1,ATQty2,ATAmount2 FROM ClientTable " +
+                    "ATQty1,ATAmount1,ATQty2,ATAmount2,SeniorCitizen FROM ClientTable " +
                     "WHERE DATE BETWEEN '" + fromdate + "' AND '" + todate + "' AND TherapistAssigned = '" + therapist + "' AND Void = 'FALSE'", new DynamicParameters());
                 return output.ToList();
             }
@@ -77,7 +77,7 @@ namespace bigapplelib
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = connection.Query<TotalSalesClientModel>("SELECT Total FROM ClientTable " +
+                var output = connection.Query<TotalSalesClientModel>("SELECT Total, TotalAmountDue FROM ClientTable " +
                     "WHERE (Date BETWEEN '" + fromdate + "' AND '" + todate + "') AND Void = 'FALSE'").ToList();
                 return output.ToList();
             }
@@ -87,7 +87,7 @@ namespace bigapplelib
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = connection.Query<TotalSalesClientModel>("SELECT Total FROM ClientTable " +
+                var output = connection.Query<TotalSalesClientModel>("SELECT Total, TotalAmountDue FROM ClientTable " +
                     "WHERE (Time BETWEEN '" + fromtime + "' AND '" + totime + "') AND (Date BETWEEN '" + fromdate + "' AND '" + todate + "') AND Void = 'FALSE'").ToList();
                 return output.ToList();
             }
@@ -123,7 +123,7 @@ namespace bigapplelib
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = connection.Query<TotalSalesClientModel>("SELECT Total FROM ClientTable " +
+                var output = connection.Query<TotalSalesClientModel>("SELECT Total, TotalAmountDue FROM ClientTable " +
                     "WHERE (Date BETWEEN '" + fromdate + "' AND '" + todate + "') " +
                     "AND (TherapistAssigned = '" + therapist + "') AND Void = 'FALSE'").ToList();
                 return output.ToList();

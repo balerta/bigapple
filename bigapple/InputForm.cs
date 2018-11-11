@@ -32,7 +32,14 @@ namespace bigapple
 
         private void btnVoidSale_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtPassword.Text == Environment.GetEnvironmentVariable("BIGAPPLE", EnvironmentVariableTarget.User))
+            if (Environment.GetEnvironmentVariable("BAES", EnvironmentVariableTarget.User) == null)
+            {
+                MessageBox.Show("Admin Password is not yet setup. Please setup an Admin Password to Void Sales and try again.", "Void Sale", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                return;
+            }
+
+            if (txtPassword.Text == Environment.GetEnvironmentVariable("BAES", EnvironmentVariableTarget.User))
             {
 
                 VoidModel voidModel = new VoidModel
@@ -50,5 +57,6 @@ namespace bigapple
                 MessageBox.Show("Incorrect Admin Password.", "Void Sale", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
     }
 }

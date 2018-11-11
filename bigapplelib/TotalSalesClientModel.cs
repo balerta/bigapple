@@ -10,11 +10,13 @@ namespace bigapplelib
     {
         public string Total { get; set; }
 
+        public string TotalAmountDue { get; set; }
+
         public string TotalSalesClientRecord
         {
             get
             {
-                return $"{ Total } ";
+                return $"{ Total } { TotalAmountDue }";
             }
         }
     }

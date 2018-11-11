@@ -303,16 +303,35 @@ namespace bigapple
             return total.ToString();
         }
 
+        private string ComputeDiscount(int compute)
+        {
+            double netvat = (double)compute / 1.12;
+            double vat = netvat * 0.12;
+            double scd = netvat * 0.20;
+            double discount = (netvat + vat) - scd;
+
+            float ComputeDiscount = float.Parse(Math.Round(discount, 2).ToString());
+
+            return ComputeDiscount.ToString();
+        }
+
         // // // // // 
         // Amount
         // // // // //
         private string MEAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MEAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MEAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MEAmount1));
+                }
             }
             
             return total.ToString();
@@ -320,253 +339,414 @@ namespace bigapple
 
         private string MEAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MEAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MEAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MEAmount2));
+                }
             }
             
             return total.ToString();
         }
         private string MEAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MEAmount3);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MEAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MEAmount3));
+                }
             }
             
             return total.ToString();
         }
         private string UNMWAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.UNMWAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.UNMWAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.UNMWAmount1));
+                }
             }
             
             return total.ToString();
         }
         private string UNMWAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.UNMWAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.UNMWAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.UNMWAmount2));
+                }
             }
             
             return total.ToString();
         }
         private string NYFPAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.NYFPAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.NYFPAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.NYFPAmount1));
+                }
             }
             
             return total.ToString();
         }
         private string NYFPAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.NYFPAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.NYFPAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.NYFPAmount2));
+                }
             }
             
             return total.ToString();
         }
         private string NYFPAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.NYFPAmount3);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.NYFPAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.NYFPAmount3));
+                }
             }
             
             return total.ToString();
         }
         private string NYFPAmount4()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.NYFPAmount4);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.NYFPAmount4)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.NYFPAmount4));
+                }
             }
             
             return total.ToString();
         }
         private string DRTNAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.DRTNAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.DRTNAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.DRTNAmount1));
+                }
             }
             
             return total.ToString();
         }
         private string DRTNAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.DRTNAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.DRTNAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.DRTNAmount2));
+                }
             }
             
             return total.ToString();
         }
         private string DRTNAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.DRTNAmount3);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.DRTNAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.DRTNAmount3));
+                }
             }
             
             return total.ToString();
         }
         private string DRTNAmount4()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.DRTNAmount4);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.DRTNAmount4)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.DRTNAmount4));
+                }
             }
             
             return total.ToString();
         }
         private string MDAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MDAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MDAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MDAmount1));
+                }
             }
             
             return total.ToString();
         }
         private string MDAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MDAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MDAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MDAmount2));
+                }
             }
             
             return total.ToString();
         }
         private string MDAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MDAmount3);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MDAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MDAmount3));
+                }
             }
             
             return total.ToString();
         }
         private string MDAmount4()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MDAmount4);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MDAmount4)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MDAmount4));
+                }
             }
             
             return total.ToString();
         }
         private string MDAmount5()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MDAmount5);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MDAmount5)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MDAmount5));
+                }
             }
             
             return total.ToString();
         }
         private string MDAmount6()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.MDAmount6);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.MDAmount6)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.MDAmount6));
+                }
             }
             
             return total.ToString();
         }
         private string PRAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.PRAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.PRAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.PRAmount1));
+                }
             }
             
             return total.ToString();
         }
         private string PRAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.PRAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.PRAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.PRAmount2));
+                }
             }
             
             return total.ToString();
         }
         private string PRAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.PRAmount3);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.PRAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.PRAmount3));
+                }
             }
             
             return total.ToString();
         }
         private string ATAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.ATAmount1);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.ATAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.ATAmount1));
+                }
             }
             
             return total.ToString();
         }
         private string ATAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tReport in therapistReport)
             {
-                total += Int32.Parse(tReport.ATAmount2);
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.ATAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.ATAmount2));
+                }
             }
             
             return total.ToString();
@@ -625,44 +805,44 @@ namespace bigapple
         }
         private string FirstShiftTotal()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
 
         private string SecondShiftTotal()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
 
         private string ThirdShiftTotal()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
 
         private string TotalAmount()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModelWithTherapist(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
@@ -678,7 +858,7 @@ namespace bigapple
             SaveFileDialog saveFile = new SaveFileDialog
             {
                 Title = "Save Therapist Sales Report as PDF",
-                FileName = "BigApple_TherapistSalesReport_" + TherapistListCB.Text + "_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
+                FileName = "BigApple_TherapistSalesReport_" + TherapistListCB.Text.Trim() + "_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
                 Filter = "PDF (*.pdf)|*.pdf",

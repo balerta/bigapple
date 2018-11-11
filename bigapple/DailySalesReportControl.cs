@@ -276,267 +276,434 @@ namespace bigapple
         // // // // //
         private string MEAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MEAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MEAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MEAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
-
         private string MEAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MEAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MEAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MEAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MEAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MEAmount3);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MEAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MEAmount3));
+                }
             }
-            
+
             return total.ToString();
         }
         private string UNMWAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.UNMWAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.UNMWAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.UNMWAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
         private string UNMWAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.UNMWAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.UNMWAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.UNMWAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
         private string NYFPAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.NYFPAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.NYFPAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.NYFPAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
         private string NYFPAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.NYFPAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.NYFPAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.NYFPAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
         private string NYFPAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.NYFPAmount3);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.NYFPAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.NYFPAmount3));
+                }
             }
-            
+
             return total.ToString();
         }
         private string NYFPAmount4()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.NYFPAmount4);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.NYFPAmount4)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.NYFPAmount4));
+                }
             }
-            
+
             return total.ToString();
         }
         private string DRTNAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.DRTNAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.DRTNAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.DRTNAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
         private string DRTNAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.DRTNAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.DRTNAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.DRTNAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
         private string DRTNAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.DRTNAmount3);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.DRTNAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.DRTNAmount3));
+                }
             }
-            
+
             return total.ToString();
         }
         private string DRTNAmount4()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.DRTNAmount4);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.DRTNAmount4)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.DRTNAmount4));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MDAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MDAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MDAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MDAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MDAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MDAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MDAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MDAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MDAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MDAmount3);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MDAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MDAmount3));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MDAmount4()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MDAmount4);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MDAmount4)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MDAmount4));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MDAmount5()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MDAmount5);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MDAmount5)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MDAmount5));
+                }
             }
-            
+
             return total.ToString();
         }
         private string MDAmount6()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.MDAmount6);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.MDAmount6)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.MDAmount6));
+                }
             }
-            
+
             return total.ToString();
         }
         private string PRAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.PRAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.PRAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.PRAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
         private string PRAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.PRAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.PRAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.PRAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
         private string PRAmount3()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.PRAmount3);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.PRAmount3)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.PRAmount3));
+                }
             }
-            
+
             return total.ToString();
         }
         private string ATAmount1()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.ATAmount1);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.ATAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.ATAmount1));
+                }
             }
-            
+
             return total.ToString();
         }
         private string ATAmount2()
         {
-            int total = 0;
+            decimal total = 0;
             dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var dSales in dailySales)
             {
-                total += Int32.Parse(dSales.ATAmount2);
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.ATAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.ATAmount2));
+                }
             }
-            
+
             return total.ToString();
         }
 
@@ -595,44 +762,44 @@ namespace bigapple
         }
         private string FirstShiftTotal()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModels("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
 
         private string SecondShiftTotal()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModels("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
 
         private string ThirdShiftTotal()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModels("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
 
         private string TotalAmount()
         {
-            int total = 0;
+            decimal total = 0;
             totalSales = DatabaseClass.TotalSalesClientModel(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
             foreach (var tSales in totalSales)
             {
-                total += Int32.Parse(tSales.Total);
+                total += Convert.ToDecimal(tSales.TotalAmountDue);
             }
             return total.ToString();
         }
@@ -960,6 +1127,7 @@ namespace bigapple
                 OverwritePrompt = false
 
             };
+
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 string fullPath = saveFile.FileName;
