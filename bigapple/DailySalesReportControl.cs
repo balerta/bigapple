@@ -913,6 +913,40 @@ namespace bigapple
             }
         }
 
+        private int MEQty1Report(string date1)
+        {
+            int rtotal = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(date1, date1);
+            foreach (var dSales in dailySales)
+            {
+                rtotal = Int32.Parse(dSales.MEQty1);
+            }
+            return rtotal;
+        }
+
+        private int MEAmount1Report(string date1)
+        {
+            int rtotal = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(date1, date1);
+            foreach (var dSales in dailySales)
+            {
+                rtotal = Int32.Parse(dSales.MEQty1);
+            }
+            return rtotal;
+        }
+
+        private string ComputeDiscount(int compute)
+        {
+            double netvat = (double)compute / 1.12;
+            double vat = netvat * 0.12;
+            double scd = netvat * 0.20;
+            double discount = (netvat + vat) - scd;
+            
+            float ComputeDiscount = float.Parse(Math.Round(discount, 2).ToString());
+
+            return ComputeDiscount.ToString();
+        }
+
         private void BtnExcel_Click(object sender, EventArgs e)
         {
             int count = 1;
@@ -941,9 +975,6 @@ namespace bigapple
                     newFullPath = Path.Combine(path, tempFileName + extension);
                     MessageBox.Show(lastFullPath + " already exist. Renaming to " + newFullPath, "Daily Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
-                
-
 
                 Excel.Application application;
                 Excel.Worksheet worksheet;
@@ -1022,94 +1053,227 @@ namespace bigapple
 
                 worksheet.Cells[38, 2] = "299";
                 worksheet.Cells[39, 2] = "399";
+                
 
                 int x = 3;
                 int xx = 4;
 
-                DateTime from = dateTimePicker1.Value;
-                DateTime to = dateTimePicker2.Value.AddDays(1);
+                DateTime datefrom = dateTimePicker1.Value;
+                DateTime dateto = dateTimePicker2.Value.AddDays(1);
+                var dates = new List<string>();
 
-                for (DateTime date = from; date <= to; date = date.AddDays(1))
+                for (DateTime date = datefrom; date <= dateto; date = date.AddDays(1))
                 {
+                    string d = date.ToString("MM/dd/yyyy");
+                    dates.Add(d);
+                }
 
-                    worksheet.Cells[1, x] = date.ToString("MM/dd/yyyy");
+                foreach (var date in dates)
+                {
+                    worksheet.Cells[1, x] = date;
                     worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
                     worksheet.Cells[2, x] = "Qty";
                     worksheet.Cells[2, xx] = "Amount";
 
+                    int qty1 = 0;
+                    int qty2 = 0;
+                    int qty3 = 0;
+                    int qty4 = 0;
+                    int qty5 = 0;
+                    int qty6 = 0;
+                    int qty7 = 0;
+                    int qty8 = 0;
+                    int qty9 = 0;
+                    int qty10 = 0;
+                    int qty11 = 0;
+                    int qty12 = 0;
+                    int qty13 = 0;
+                    int qty14 = 0;
+                    int qty15 = 0;
+                    int qty16 = 0;
+                    int qty17 = 0;
+                    int qty18 = 0;
+                    int qty19 = 0;
+                    int qty20 = 0;
+                    int qty21 = 0;
+                    int qty22 = 0;
+                    int qty23 = 0;
+                    int qty24 = 0;
+
+                    decimal amt1 = 0;
+                    decimal amt2 = 0;
+                    decimal amt3 = 0;
+                    decimal amt4 = 0;
+                    decimal amt5 = 0;
+                    decimal amt6 = 0;
+                    decimal amt7 = 0;
+                    decimal amt8 = 0;
+                    decimal amt9 = 0;
+                    decimal amt10 = 0;
+                    decimal amt11 = 0;
+                    decimal amt12 = 0;
+                    decimal amt13 = 0;
+                    decimal amt14 = 0;
+                    decimal amt15 = 0;
+                    decimal amt16 = 0;
+                    decimal amt17 = 0;
+                    decimal amt18 = 0;
+                    decimal amt19 = 0;
+                    decimal amt20 = 0;
+                    decimal amt21 = 0;
+                    decimal amt22 = 0;
+                    decimal amt23 = 0;
+                    decimal amt24 = 0;
+
+                    decimal total = 0;
                     
+                    foreach (var clientRecord in DatabaseClass.LoadClientRecord(date, date))
+                    {
+                        qty1 += Convert.ToInt32(clientRecord.MEQty1);
+                        qty2 += Convert.ToInt32(clientRecord.MEQty2);
+                        qty3 += Convert.ToInt32(clientRecord.MEQty3);
+                        qty4 += Convert.ToInt32(clientRecord.UNMWQty1);
+                        qty5 += Convert.ToInt32(clientRecord.UNMWQty2);
+                        qty6 += Convert.ToInt32(clientRecord.NYFPQty1);
+                        qty7 += Convert.ToInt32(clientRecord.NYFPQty2);
+                        qty8 += Convert.ToInt32(clientRecord.NYFPQty3);
+                        qty9 += Convert.ToInt32(clientRecord.NYFPQty4);
+                        qty10 += Convert.ToInt32(clientRecord.DRTNQty1);
+                        qty11 += Convert.ToInt32(clientRecord.DRTNQty2);
+                        qty12 += Convert.ToInt32(clientRecord.DRTNQty3);
+                        qty13 += Convert.ToInt32(clientRecord.DRTNQty4);
+                        qty14 += Convert.ToInt32(clientRecord.MDQty1);
+                        qty15 += Convert.ToInt32(clientRecord.MDQty2);
+                        qty16 += Convert.ToInt32(clientRecord.MDQty3);
+                        qty17 += Convert.ToInt32(clientRecord.MDQty4);
+                        qty18 += Convert.ToInt32(clientRecord.MDQty5);
+                        qty19 += Convert.ToInt32(clientRecord.MDQty6);
+                        qty20 += Convert.ToInt32(clientRecord.PRQty1);
+                        qty21 += Convert.ToInt32(clientRecord.PRQty2);
+                        qty22 += Convert.ToInt32(clientRecord.PRQty3);
+                        qty23 += Convert.ToInt32(clientRecord.ATQty1);
+                        qty24 += Convert.ToInt32(clientRecord.ATQty2);
+
+                        if (clientRecord.SeniorCitizen == "True")
+                        {
+                            amt1 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MEAmount1)));
+                            amt2 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MEAmount2)));
+                            amt3 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MEAmount3)));
+                            amt4 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.UNMWAmount1)));
+                            amt5 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.UNMWAmount2)));
+                            amt6 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.NYFPAmount1)));
+                            amt7 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.NYFPAmount2)));
+                            amt8 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.NYFPAmount3)));
+                            amt9 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.NYFPAmount4)));
+                            amt10 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.DRTNAmount1)));
+                            amt11 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.DRTNAmount2)));
+                            amt12 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.DRTNAmount3)));
+                            amt13 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.DRTNAmount4)));
+                            amt14 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MDAmount1)));
+                            amt15 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MDAmount2)));
+                            amt16 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MDAmount3)));
+                            amt17 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MDAmount4)));
+                            amt18 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MDAmount5)));
+                            amt19 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.MDAmount6)));
+                            amt20 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.PRAmount1)));
+                            amt21 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.PRAmount2)));
+                            amt22 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.PRAmount3)));
+                            amt23 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.ATAmount1)));
+                            amt24 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.ATAmount2)));
+                            total += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.Total)));
+                        }
+                        else
+                        {
+                            amt1 += Convert.ToInt32(clientRecord.MEAmount1);
+                            amt2 += Convert.ToInt32(clientRecord.MEAmount2);
+                            amt3 += Convert.ToInt32(clientRecord.MEAmount3);
+                            amt4 += Convert.ToInt32(clientRecord.UNMWAmount1);
+                            amt5 += Convert.ToInt32(clientRecord.UNMWAmount2);
+                            amt6 += Convert.ToInt32(clientRecord.NYFPAmount1);
+                            amt7 += Convert.ToInt32(clientRecord.NYFPAmount2);
+                            amt8 += Convert.ToInt32(clientRecord.NYFPAmount3);
+                            amt9 += Convert.ToInt32(clientRecord.NYFPAmount4);
+                            amt10 += Convert.ToInt32(clientRecord.DRTNAmount1);
+                            amt11 += Convert.ToInt32(clientRecord.DRTNAmount2);
+                            amt12 += Convert.ToInt32(clientRecord.DRTNAmount3);
+                            amt13 += Convert.ToInt32(clientRecord.DRTNAmount4);
+                            amt14 += Convert.ToInt32(clientRecord.MDAmount1);
+                            amt15 += Convert.ToInt32(clientRecord.MDAmount2);
+                            amt16 += Convert.ToInt32(clientRecord.MDAmount3);
+                            amt17 += Convert.ToInt32(clientRecord.MDAmount4);
+                            amt18 += Convert.ToInt32(clientRecord.MDAmount5);
+                            amt19 += Convert.ToInt32(clientRecord.MDAmount6);
+                            amt20 += Convert.ToInt32(clientRecord.PRAmount1);
+                            amt21 += Convert.ToInt32(clientRecord.PRAmount2);
+                            amt22 += Convert.ToInt32(clientRecord.PRAmount3);
+                            amt23 += Convert.ToInt32(clientRecord.ATAmount1);
+                            amt24 += Convert.ToInt32(clientRecord.ATAmount2);
+                            total += Convert.ToInt32(clientRecord.Total);
+                        }
+
+                        //Generating Excel report starts here
+
+                        worksheet.Cells[4, x] = qty1.ToString();
+                        worksheet.Cells[4, xx] = amt1.ToString();
+                        worksheet.Cells[5, x] = qty2.ToString();
+                        worksheet.Cells[5, xx] = amt2.ToString();
+                        worksheet.Cells[6, x] = qty3.ToString();
+                        worksheet.Cells[6, xx] = amt3.ToString();
+
+                        worksheet.Cells[9, x] = qty4.ToString();
+                        worksheet.Cells[9, xx] = amt4.ToString();
+                        worksheet.Cells[10, x] = qty5.ToString();
+                        worksheet.Cells[10, xx] = amt5.ToString();
+
+                        worksheet.Cells[13, x] = qty6.ToString();
+                        worksheet.Cells[13, xx] = amt6.ToString();
+                        worksheet.Cells[14, x] = qty7.ToString();
+                        worksheet.Cells[14, xx] = amt7.ToString();
+                        worksheet.Cells[15, x] = qty8.ToString();
+                        worksheet.Cells[15, xx] = amt8.ToString();
+                        worksheet.Cells[16, x] = qty9.ToString();
+                        worksheet.Cells[16, xx] = amt9.ToString();
+
+                        worksheet.Cells[19, x] = qty10.ToString();
+                        worksheet.Cells[19, xx] = amt10.ToString();
+                        worksheet.Cells[20, x] = qty11.ToString();
+                        worksheet.Cells[20, xx] = amt11.ToString();
+                        worksheet.Cells[21, x] = qty12.ToString();
+                        worksheet.Cells[21, xx] = amt12.ToString();
+                        worksheet.Cells[22, x] = qty13.ToString();
+                        worksheet.Cells[22, xx] = amt13.ToString();
+
+                        worksheet.Cells[25, x] = qty14.ToString();
+                        worksheet.Cells[25, xx] = amt14.ToString();
+                        worksheet.Cells[26, x] = qty15.ToString();
+                        worksheet.Cells[26, xx] = amt15.ToString();
+                        worksheet.Cells[27, x] = qty16.ToString();
+                        worksheet.Cells[27, xx] = amt16.ToString();
+                        worksheet.Cells[28, x] = qty17.ToString();
+                        worksheet.Cells[28, xx] = amt17.ToString();
+                        worksheet.Cells[29, x] = qty18.ToString();
+                        worksheet.Cells[29, xx] = amt18.ToString();
+                        worksheet.Cells[30, x] = qty19.ToString();
+                        worksheet.Cells[30, xx] = amt19.ToString();
+
+                        worksheet.Cells[33, x] = qty20.ToString();
+                        worksheet.Cells[33, xx] = amt20.ToString();
+                        worksheet.Cells[34, x] = qty21.ToString();
+                        worksheet.Cells[34, xx] = amt21.ToString();
+                        worksheet.Cells[35, x] = qty22.ToString();
+                        worksheet.Cells[35, xx] = amt22.ToString();
+
+                        worksheet.Cells[38, x] = qty23.ToString();
+                        worksheet.Cells[38, xx] = amt23.ToString();
+                        worksheet.Cells[39, x] = qty24.ToString();
+                        worksheet.Cells[39, xx] = amt24.ToString();
+
+                        worksheet.Cells[40, xx] = total.ToString();
+                    }
 
                     x += 2;
                     xx += 2;
                 }
-
-                //foreach (var clientRecord in loadClientRecord)
-                //{
-                //    worksheet.Cells[1, x] = clientRecord.SeriesNumber;
-                //    worksheet.Range[worksheet.Cells[1, x], worksheet.Cells[1, xx]].Merge();
-                //    worksheet.Cells[2, x] = "Qty";
-                //    worksheet.Cells[2, xx] = "Amount";
-
-                //worksheet.Cells[4, x] = clientRecord.MEQty1;
-                //worksheet.Cells[4, xx] = clientRecord.MEAmount1;
-                //worksheet.Cells[5, x] = clientRecord.MEQty2;
-                //worksheet.Cells[5, xx] = clientRecord.MEAmount2;
-                //worksheet.Cells[6, x] = clientRecord.MEQty3;
-                //worksheet.Cells[6, xx] = clientRecord.MEAmount3;
-
-                //worksheet.Cells[9, x] = clientRecord.UNMWQty1;
-                //worksheet.Cells[9, xx] = clientRecord.UNMWAmount1;
-                //worksheet.Cells[10, x] = clientRecord.UNMWQty2;
-                //worksheet.Cells[10, xx] = clientRecord.UNMWAmount2;
-
-                //worksheet.Cells[13, x] = clientRecord.NYFPQty1;
-                //worksheet.Cells[13, xx] = clientRecord.NYFPAmount1;
-                //worksheet.Cells[14, x] = clientRecord.NYFPQty2;
-                //worksheet.Cells[14, xx] = clientRecord.NYFPAmount2;
-                //worksheet.Cells[15, x] = clientRecord.NYFPQty3;
-                //worksheet.Cells[15, xx] = clientRecord.NYFPAmount3;
-                //worksheet.Cells[16, x] = clientRecord.NYFPQty4;
-                //worksheet.Cells[16, xx] = clientRecord.NYFPAmount4;
-
-                //worksheet.Cells[19, x] = clientRecord.DRTNQty1;
-                //worksheet.Cells[19, xx] = clientRecord.DRTNAmount1;
-                //worksheet.Cells[20, x] = clientRecord.DRTNQty2;
-                //worksheet.Cells[20, xx] = clientRecord.DRTNAmount2;
-                //worksheet.Cells[21, x] = clientRecord.DRTNQty3;
-                //worksheet.Cells[21, xx] = clientRecord.DRTNAmount3;
-                //worksheet.Cells[22, x] = clientRecord.DRTNQty4;
-                //worksheet.Cells[22, xx] = clientRecord.DRTNAmount4;
-
-                //worksheet.Cells[25, x] = clientRecord.MDQty1;
-                //worksheet.Cells[25, xx] = clientRecord.MDAmount1;
-                //worksheet.Cells[26, x] = clientRecord.MDQty2;
-                //worksheet.Cells[26, xx] = clientRecord.MDAmount2;
-                //worksheet.Cells[27, x] = clientRecord.MDQty3;
-                //worksheet.Cells[27, xx] = clientRecord.MDAmount3;
-                //worksheet.Cells[28, x] = clientRecord.MDQty4;
-                //worksheet.Cells[28, xx] = clientRecord.MDAmount4;
-                //worksheet.Cells[29, x] = clientRecord.MDQty5;
-                //worksheet.Cells[29, xx] = clientRecord.MDAmount5;
-                //worksheet.Cells[30, x] = clientRecord.MDQty6;
-                //worksheet.Cells[30, xx] = clientRecord.MDAmount6;
-
-                //worksheet.Cells[33, x] = clientRecord.PRQty1;
-                //worksheet.Cells[33, xx] = clientRecord.PRAmount1;
-                //worksheet.Cells[34, x] = clientRecord.PRQty2;
-                //worksheet.Cells[34, xx] = clientRecord.PRAmount2;
-                //worksheet.Cells[35, x] = clientRecord.PRQty3;
-                //worksheet.Cells[35, xx] = clientRecord.PRAmount3;
-
-                //worksheet.Cells[38, x] = clientRecord.ATQty1;
-                //worksheet.Cells[38, xx] = clientRecord.ATAmount1;
-                //worksheet.Cells[39, x] = clientRecord.ATQty2;
-                //worksheet.Cells[39, xx] = clientRecord.ATAmount2;
-
-                //worksheet.Cells[40, xx] = clientRecord.Total;
-
-                //    x += 2;
-                //    xx += 2;
-                //}
 
                 workbook.SaveAs(newFullPath);
                 workbook.Close();
