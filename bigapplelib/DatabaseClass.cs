@@ -130,12 +130,22 @@ namespace bigapplelib
             }
         }
 
-        public static List<VoidModel> LoadVoidModelRecord()
+        public static List<VoidModel> LoadNonVoidModelRecord()
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
                 var output = connection.Query<VoidModel>("SELECT SeriesNumber, NameOfClient, TherapistAssigned, Date, Time, TotalAmountDue, Void FROM ClientTable " +
                     "WHERE Void = 'FALSE' ORDER BY SeriesNumber DESC", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
+        public static List<VoidModel> LoadVoidModelRecord()
+        {
+            using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = connection.Query<VoidModel>("SELECT SeriesNumber, NameOfClient, TherapistAssigned, Date, Time, TotalAmountDue, Void FROM ClientTable " +
+                    "WHERE Void = 'TRUE' ORDER BY SeriesNumber DESC", new DynamicParameters());
                 return output.ToList();
             }
         }

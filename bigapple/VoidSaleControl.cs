@@ -15,7 +15,19 @@ namespace bigapple
         public VoidSaleControl()
         {
             InitializeComponent();
-            LoadVoidModeRecord();
+        }
+
+        public void LoadNonVoidModeRecord()
+        {
+            dataGridView1.DataSource = DatabaseClass.LoadNonVoidModelRecord();
+            dataGridView1.ClearSelection();
+            lblSeriesNumber.Text = "";
+            lblName.Text = "";
+            lblTherapistAssigned.Text = "";
+            lblDate.Text = "";
+            lblTime.Text = "";
+            lblTotalAmountDue.Text = "";
+            btnVoidSale.Enabled = false;
         }
 
         public void LoadVoidModeRecord()
@@ -35,7 +47,6 @@ namespace bigapple
         {
             if (e.RowIndex >= 0)
             {
-                btnVoidSale.Enabled = true;
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 lblSeriesNumber.Text = row.Cells[0].Value.ToString();
                 lblName.Text = row.Cells[1].Value.ToString();
@@ -43,6 +54,10 @@ namespace bigapple
                 lblDate.Text = row.Cells[3].Value.ToString();
                 lblTime.Text = row.Cells[4].Value.ToString();
                 lblTotalAmountDue.Text = row.Cells[5].Value.ToString();
+                if (radioButton2.Checked == true)
+                {
+                    btnVoidSale.Enabled = true;
+                }
             }
         }
 
@@ -51,6 +66,27 @@ namespace bigapple
             InputForm inputForm = new InputForm();
             inputForm.LabelText = lblSeriesNumber.Text;
             inputForm.ShowDialog(this);
+
+            if (radioButton1.Checked == true)
+            {
+                LoadVoidModeRecord();
+            }
+
+            if (radioButton2.Checked == true)
+            {
+                LoadNonVoidModeRecord();
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            btnVoidSale.Enabled = true;
+            LoadNonVoidModeRecord();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            btnVoidSale.Enabled = false;
             LoadVoidModeRecord();
         }
     }

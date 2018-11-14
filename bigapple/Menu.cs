@@ -77,7 +77,7 @@ namespace bigapple
             dailySalesReportControl1.Visible = false;
             therapistReport1.Visible = false;
             voidSaleControl1.Visible = true;
-            voidSaleControl1.LoadVoidModeRecord();
+            voidSaleControl1.LoadNonVoidModeRecord();
         }
     }
 }

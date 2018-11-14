@@ -1227,7 +1227,7 @@ namespace bigapple
                 int xx = 4;
 
                 DateTime datefrom = dateTimePicker1.Value;
-                DateTime dateto = dateTimePicker2.Value.AddDays(1);
+                DateTime dateto = dateTimePicker2.Value;
                 var dates = new List<string>();
 
                 for (DateTime date = datefrom; date <= dateto; date = date.AddDays(1))
