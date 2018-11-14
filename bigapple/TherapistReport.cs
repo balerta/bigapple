@@ -43,7 +43,7 @@ namespace bigapple
         private string MEQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MEQty1);
@@ -54,7 +54,7 @@ namespace bigapple
         private string MEQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MEQty2);
@@ -64,7 +64,7 @@ namespace bigapple
         private string MEQty3()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MEQty3);
@@ -74,7 +74,7 @@ namespace bigapple
         private string UNMWQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.UNMWQty1);
@@ -85,7 +85,7 @@ namespace bigapple
         private string UNMWQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.UNMWQty2);
@@ -96,7 +96,7 @@ namespace bigapple
         private string NYFPQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.NYFPQty1);
@@ -107,7 +107,7 @@ namespace bigapple
         private string NYFPQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.NYFPQty2);
@@ -118,7 +118,7 @@ namespace bigapple
         private string NYFPQty3()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.NYFPQty3);
@@ -129,7 +129,7 @@ namespace bigapple
         private string NYFPQty4()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.NYFPQty4);
@@ -140,7 +140,7 @@ namespace bigapple
         private string DRTNQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.DRTNQty1);
@@ -151,7 +151,7 @@ namespace bigapple
         private string DRTNQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.DRTNQty2);
@@ -162,7 +162,7 @@ namespace bigapple
         private string DRTNQty3()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.DRTNQty3);
@@ -173,7 +173,7 @@ namespace bigapple
         private string DRTNQty4()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.DRTNQty4);
@@ -184,7 +184,7 @@ namespace bigapple
         private string MDQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MDQty1);
@@ -195,7 +195,7 @@ namespace bigapple
         private string MDQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MDQty2);
@@ -206,7 +206,7 @@ namespace bigapple
         private string MDQty3()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MDQty3);
@@ -217,7 +217,7 @@ namespace bigapple
         private string MDQty4()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MDQty4);
@@ -228,7 +228,7 @@ namespace bigapple
         private string MDQty5()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MDQty5);
@@ -239,7 +239,7 @@ namespace bigapple
         private string MDQty6()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.MDQty6);
@@ -250,7 +250,7 @@ namespace bigapple
         private string PRQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.PRQty1);
@@ -261,7 +261,7 @@ namespace bigapple
         private string PRQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.PRQty2);
@@ -272,7 +272,7 @@ namespace bigapple
         private string PRQty3()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.PRQty3);
@@ -283,7 +283,7 @@ namespace bigapple
         private string ATQty1()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.ATQty1);
@@ -294,7 +294,7 @@ namespace bigapple
         private string ATQty2()
         {
             int total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 total += Int32.Parse(tReport.ATQty2);
@@ -321,7 +321,7 @@ namespace bigapple
         private string MEAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -340,7 +340,7 @@ namespace bigapple
         private string MEAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -358,7 +358,7 @@ namespace bigapple
         private string MEAmount3()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -376,7 +376,7 @@ namespace bigapple
         private string UNMWAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -394,7 +394,7 @@ namespace bigapple
         private string UNMWAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -412,7 +412,7 @@ namespace bigapple
         private string NYFPAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -430,7 +430,7 @@ namespace bigapple
         private string NYFPAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -448,7 +448,7 @@ namespace bigapple
         private string NYFPAmount3()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -466,7 +466,7 @@ namespace bigapple
         private string NYFPAmount4()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -484,7 +484,7 @@ namespace bigapple
         private string DRTNAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -502,7 +502,7 @@ namespace bigapple
         private string DRTNAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -520,7 +520,7 @@ namespace bigapple
         private string DRTNAmount3()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -538,7 +538,7 @@ namespace bigapple
         private string DRTNAmount4()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -556,7 +556,7 @@ namespace bigapple
         private string MDAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -574,7 +574,7 @@ namespace bigapple
         private string MDAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -592,7 +592,7 @@ namespace bigapple
         private string MDAmount3()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -610,7 +610,7 @@ namespace bigapple
         private string MDAmount4()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -628,7 +628,7 @@ namespace bigapple
         private string MDAmount5()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -646,7 +646,7 @@ namespace bigapple
         private string MDAmount6()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -664,7 +664,7 @@ namespace bigapple
         private string PRAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -682,7 +682,7 @@ namespace bigapple
         private string PRAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -700,7 +700,7 @@ namespace bigapple
         private string PRAmount3()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -718,7 +718,7 @@ namespace bigapple
         private string ATAmount1()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -736,7 +736,7 @@ namespace bigapple
         private string ATAmount2()
         {
             decimal total = 0;
-            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tReport in therapistReport)
             {
                 if (tReport.SeniorCitizen == "True")
@@ -788,25 +788,25 @@ namespace bigapple
 
         private string FirstShift()
         {
-            string message = DatabaseClass.NumberSeriesWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            string message = DatabaseClass.NumberSeriesWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             return message;
         }
 
         private string SecondShift()
         {
-            string message = DatabaseClass.NumberSeriesWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            string message = DatabaseClass.NumberSeriesWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             return message;
         }
 
         private string ThirdShift()
         {
-            string message = DatabaseClass.NumberSeriesWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            string message = DatabaseClass.NumberSeriesWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             return message;
         }
         private string FirstShiftTotal()
         {
             decimal total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("09:00", "12:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tSales in totalSales)
             {
                 total += Convert.ToDecimal(tSales.TotalAmountDue);
@@ -817,7 +817,7 @@ namespace bigapple
         private string SecondShiftTotal()
         {
             decimal total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("12:01", "17:00", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tSales in totalSales)
             {
                 total += Convert.ToDecimal(tSales.TotalAmountDue);
@@ -828,7 +828,7 @@ namespace bigapple
         private string ThirdShiftTotal()
         {
             decimal total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelsWithTherapist("17:01", "23:59", dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tSales in totalSales)
             {
                 total += Convert.ToDecimal(tSales.TotalAmountDue);
@@ -839,7 +839,7 @@ namespace bigapple
         private string TotalAmount()
         {
             decimal total = 0;
-            totalSales = DatabaseClass.TotalSalesClientModelWithTherapist(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text);
+            totalSales = DatabaseClass.TotalSalesClientModelWithTherapist(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
             foreach (var tSales in totalSales)
             {
                 total += Convert.ToDecimal(tSales.TotalAmountDue);
@@ -850,7 +850,7 @@ namespace bigapple
         private void BtnPDF_Click(object sender, EventArgs e)
         {
             int count = 1;
-            if (TherapistListCB.Text == "")
+            if (TherapistListCB.Text.Trim() == "")
             {
                 MessageBox.Show("Please select a Therapist to generate a report.", "Therapist Sales Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -885,7 +885,7 @@ namespace bigapple
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, false);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 9);
                 document.Open();
-                PdfPCell header = new PdfPCell(new Phrase("Big Apple Therapist Sales Report for " + TherapistListCB.Text + " - " + DateMessage(), font))
+                PdfPCell header = new PdfPCell(new Phrase("Big Apple Therapist Sales Report for " + TherapistListCB.Text.Trim() + " - " + DateMessage(), font))
                 {
                     Colspan = 4,
                     HorizontalAlignment = 1,
