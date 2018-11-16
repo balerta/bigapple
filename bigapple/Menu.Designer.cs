@@ -211,10 +211,10 @@
             this.Controls.Add(this.dailySalesReportControl1);
             this.Controls.Add(this.clientReceiptControl1);
             this.Controls.Add(this.therapistReport1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = bigapple.Properties.Resources.Icon1;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Big Apple Express Spa";
+            this.Text = "Ika\'s Wellness Spa";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.LeftPanel.ResumeLayout(false);
             this.ResumeLayout(false);

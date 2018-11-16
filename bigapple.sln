@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bigapple", "bigapple\bigapp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bigapplelib", "bigapplelib\bigapplelib.csproj", "{BB4D8416-5283-4D65-A6A7-86466A632732}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BigAppleSetup", "BigAppleSetup\BigAppleSetup.vdproj", "{F439A2EF-79BB-44C5-BAC3-835250900066}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "wellness_spa_setup", "wellness_spa_setup\wellness_spa_setup.vdproj", "{232AD9E8-5EBE-40CC-A98E-6F6401F4BB5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +23,8 @@ Global
 		{BB4D8416-5283-4D65-A6A7-86466A632732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB4D8416-5283-4D65-A6A7-86466A632732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB4D8416-5283-4D65-A6A7-86466A632732}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F439A2EF-79BB-44C5-BAC3-835250900066}.Debug|Any CPU.ActiveCfg = Debug
-		{F439A2EF-79BB-44C5-BAC3-835250900066}.Release|Any CPU.ActiveCfg = Release
+		{232AD9E8-5EBE-40CC-A98E-6F6401F4BB5A}.Debug|Any CPU.ActiveCfg = Debug
+		{232AD9E8-5EBE-40CC-A98E-6F6401F4BB5A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

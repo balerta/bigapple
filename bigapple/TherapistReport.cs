@@ -858,7 +858,7 @@ namespace bigapple
             SaveFileDialog saveFile = new SaveFileDialog
             {
                 Title = "Save Therapist Sales Report as PDF",
-                FileName = "BigApple_TherapistSalesReport_" + TherapistListCB.Text.Trim() + "_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
+                FileName = "TherapistSalesReport_" + TherapistListCB.Text.Trim() + "_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
                 Filter = "PDF (*.pdf)|*.pdf",
@@ -885,7 +885,7 @@ namespace bigapple
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, false);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 9);
                 document.Open();
-                PdfPCell header = new PdfPCell(new Phrase("Big Apple Therapist Sales Report for " + TherapistListCB.Text.Trim() + " - " + DateMessage(), font))
+                PdfPCell header = new PdfPCell(new Phrase("Ika's Wellness Spa Therapist Sales Report for " + TherapistListCB.Text.Trim() + " - " + DateMessage(), font))
                 {
                     Colspan = 4,
                     HorizontalAlignment = 1,

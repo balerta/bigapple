@@ -810,7 +810,7 @@ namespace bigapple
             SaveFileDialog saveFile = new SaveFileDialog
             {
                 Title = "Save Daily Sales Report as PDF",
-                FileName = "BigApple_DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
+                FileName = "DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
                 Filter = "PDF (*.pdf)|*.pdf",
@@ -838,7 +838,7 @@ namespace bigapple
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1252, false);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 9);
                 document.Open();
-                PdfPCell header = new PdfPCell(new Phrase("Big Apple Daily Sales Report - " + DateMessage(), font))
+                PdfPCell header = new PdfPCell(new Phrase("Ika's Wellness Spa Daily Sales Report - " + DateMessage(), font))
                 {
                     Colspan = 4,
                     HorizontalAlignment = 1,
@@ -1120,7 +1120,7 @@ namespace bigapple
             SaveFileDialog saveFile = new SaveFileDialog
             {
                 Title = "Save Daily Sales Report as Excel",
-                FileName = "BigApple_DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
+                FileName = "DailySalesReport_" + dateTimePicker1.Value.Date.ToString("MMddyyyy"),
                 DefaultExt = "pdf",
                 AddExtension = true,
                 Filter = "Excel (*.xlsx)|*.xlsx",
@@ -1226,8 +1226,9 @@ namespace bigapple
                 int x = 3;
                 int xx = 4;
 
-                DateTime datefrom = dateTimePicker1.Value;
-                DateTime dateto = dateTimePicker2.Value;
+                DateTime datefrom = dateTimePicker1.Value.Date;
+                DateTime dateto = dateTimePicker2.Value.Date;
+
                 var dates = new List<string>();
 
                 for (DateTime date = datefrom; date <= dateto; date = date.AddDays(1))

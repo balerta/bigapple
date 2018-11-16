@@ -140,7 +140,7 @@
             this.MinimizeBox = false;
             this.Name = "InputForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Big Apple Express Spa - Enter Password";
+            this.Text = "Ika\'s Wellness Spa - Enter Password";
             this.ResumeLayout(false);
             this.PerformLayout();
 
