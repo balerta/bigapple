@@ -33,6 +33,10 @@ namespace bigapplelib
         public string NYFPAmount3 { get; set; }
         public string NYFPQty4 { get; set; }
         public string NYFPAmount4 { get; set; }
+        public string JAIAmount1 { get; set; }
+        public string JAIQty1 { get; set; }
+        public string JAIAmount2 { get; set; }
+        public string JAIQty2 { get; set; }
         public string DRTNQty1 { get; set; }
         public string DRTNAmount1 { get; set; }
         public string DRTNQty2 { get; set; }
@@ -78,6 +82,7 @@ namespace bigapplelib
                     $"{ MEQty1 } { MEAmount1 } { MEQty2 } { MEAmount2 } { MEQty3 } { MEAmount3 } " +
                     $"{ UNMWQty1 } { UNMWAmount1 } { UNMWQty2 } { UNMWAmount2 } " +
                     $"{ NYFPQty1 } { NYFPAmount1 } { NYFPQty2 } { NYFPAmount2 } { NYFPQty3 } { NYFPAmount3 } { NYFPQty4 } { NYFPAmount4 } " +
+                    $"{ JAIQty1 } { JAIAmount1 } { JAIQty2 } { JAIAmount2 } " +
                     $"{ DRTNQty1 } { DRTNAmount1 } { DRTNQty2 } { DRTNAmount2 } { DRTNQty3 } { DRTNAmount3 } { DRTNQty4 } { DRTNAmount4 } " +
                     $"{ MDQty1 } { MDAmount1 } { MDQty2 } { MDAmount2 } { MDQty3 } { MDAmount3 } { MDQty4 } { MDAmount4 } { MDQty5 } { MDAmount5 } { MDQty6 } { MDAmount6 }" +
                     $"{ PRQty1 } { PRAmount1 } { PRQty2 } { PRAmount2 } { PRQty3 } { PRAmount3 } " +

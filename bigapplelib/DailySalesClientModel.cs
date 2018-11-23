@@ -26,6 +26,10 @@ namespace bigapplelib
         public string NYFPAmount3 { get; set; }
         public string NYFPQty4 { get; set; }
         public string NYFPAmount4 { get; set; }
+        public string JAIQty1 { get; set; }
+        public string JAIAmount1 { get; set; }
+        public string JAIQty2 { get; set; }
+        public string JAIAmount2 { get; set; }
         public string DRTNQty1 { get; set; }
         public string DRTNAmount1 { get; set; }
         public string DRTNQty2 { get; set; }

@@ -120,6 +120,27 @@ namespace bigapple
             }
             return total.ToString();
         }
+        private string JAIQty1()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.JAIQty1);
+            }
+            return total.ToString();
+        }
+        private string JAIQty2()
+        {
+            int total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                total += Int32.Parse(dSales.JAIQty2);
+            }
+            return total.ToString();
+        }
+
         private string DRTNQty1()
         {
             int total = 0;
@@ -431,6 +452,42 @@ namespace bigapple
                 else
                 {
                     total += Convert.ToDecimal(Int32.Parse(dSales.NYFPAmount4));
+                }
+            }
+
+            return total.ToString();
+        }
+        private string JAIAmount1()
+        {
+            decimal total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.JAIAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.JAIAmount1));
+                }
+            }
+
+            return total.ToString();
+        }
+        private string JAIAmount2()
+        {
+            decimal total = 0;
+            dailySales = DatabaseClass.LoadDailySalesClientRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"));
+            foreach (var dSales in dailySales)
+            {
+                if (dSales.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(dSales.JAIAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(dSales.JAIAmount2));
                 }
             }
 
@@ -866,6 +923,13 @@ namespace bigapple
                     BackgroundColor = BaseColor.LIGHT_GRAY
                 };
 
+                PdfPCell justaddit = new PdfPCell(new Phrase("Just Add it:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
                 PdfPCell duration = new PdfPCell(new Phrase("Duration:", font))
                 {
                     Colspan = 4,
@@ -909,35 +973,30 @@ namespace bigapple
                 // Manhattan
                 table.AddCell(manhattan);
                 // ME1
-                table.AddCell(new PdfPCell(new Phrase("NYC Exp full body 30 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("195", font)));
+                table.AddCell(new PdfPCell(new Phrase("NYC Exp full body", font)));
+                table.AddCell(new PdfPCell(new Phrase("250", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty1(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount1(), font)));
                 // ME2
-                table.AddCell(new PdfPCell(new Phrase("Manhattan full body 60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("299", font)));
+                table.AddCell(new PdfPCell(new Phrase("Manhattan full body", font)));
+                table.AddCell(new PdfPCell(new Phrase("350", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount2(), font)));
                 // ME3
-                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus 60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("499", font)));
-                table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
-                table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
-                // ME3
-                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus 60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus", font)));
+                table.AddCell(new PdfPCell(new Phrase("450", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
                 // UN Message to the world
                 table.AddCell(unmessage);
                 // UNMW1 
                 table.AddCell(new PdfPCell(new Phrase("Balinese full body massage 75 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase("595", font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWQty1(), font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWAmount1(), font)));
                 // UNMW2
                 table.AddCell(new PdfPCell(new Phrase("Brazilian deep tissue 75 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("599", font)));
+                table.AddCell(new PdfPCell(new Phrase("695", font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWAmount2(), font)));
                 // NY Foot paradise
@@ -949,19 +1008,31 @@ namespace bigapple
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount1(), font)));
                 // NYFP2
                 table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 30 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("399", font)));
+                table.AddCell(new PdfPCell(new Phrase("495", font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount2(), font)));
                 // NYFP3
-                table.AddCell(new PdfPCell(new Phrase("Addtl: NY Foot soak", font)));
-                table.AddCell(new PdfPCell(new Phrase("50", font)));
+                table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 30 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("399", font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount3(), font)));
                 // NYFP4
-                table.AddCell(new PdfPCell(new Phrase("Addtl: NY Foot scrub", font)));
-                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 60 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("595", font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPQty4(), font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount4(), font)));
+                // Just add it
+                table.AddCell(justaddit);
+                // JAI1
+                table.AddCell(new PdfPCell(new Phrase("New Yorker's Foot Soak", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIAmount1(), font)));
+                // JAI2
+                table.AddCell(new PdfPCell(new Phrase("New Yorker's Foot Soak", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIAmount2(), font)));
                 // Duration
                 table.AddCell(duration);
                 // DRTN1
@@ -1154,73 +1225,80 @@ namespace bigapple
 
                 worksheet.Cells[2, 2] = "Price";
                 worksheet.Cells[3, 1] = "Manhattan exp:";
-                worksheet.Cells[4, 1] = "NYC Exp full body 30 mins";
-                worksheet.Cells[5, 1] = "Manhattan full body 60 mins";
-                worksheet.Cells[6, 1] = "Manhattan skin plus 60 mins";
+                worksheet.Cells[4, 1] = "NYC Exp full body";
+                worksheet.Cells[5, 1] = "Manhattan full body";
+                worksheet.Cells[6, 1] = "Manhattan skin plus";
 
-                worksheet.Cells[4, 2] = "195";
-                worksheet.Cells[5, 2] = "299";
-                worksheet.Cells[6, 2] = "499";
+                worksheet.Cells[4, 2] = "250";
+                worksheet.Cells[5, 2] = "350";
+                worksheet.Cells[6, 2] = "450";
 
                 worksheet.Cells[8, 1] = "UN Massages of the world:";
                 worksheet.Cells[9, 1] = "Balinese full body massage 75 mins";
                 worksheet.Cells[10, 1] = "Brazilian deep tissue 75 mins";
 
-                worksheet.Cells[9, 2] = "499";
-                worksheet.Cells[10, 2] = "599";
+                worksheet.Cells[9, 2] = "595";
+                worksheet.Cells[10, 2] = "695";
 
                 worksheet.Cells[12, 1] = "NY Foot paradise:";
                 worksheet.Cells[13, 1] = "Oriental foot relax 30 mins";
-                worksheet.Cells[14, 1] = "Bangkok foot theraoy 30 mins";
-                worksheet.Cells[15, 1] = "Addtl: NY Foot soak";
-                worksheet.Cells[16, 1] = "Addtl: NY Foot scrub";
+                worksheet.Cells[14, 1] = "Oriental foot relax 60 mins";
+                worksheet.Cells[15, 1] = "Bangkok foot therapy 30 mins";
+                worksheet.Cells[16, 1] = "Bangkok foot therapy 60 mins";
 
                 worksheet.Cells[13, 2] = "299";
-                worksheet.Cells[14, 2] = "399";
-                worksheet.Cells[15, 2] = "50";
-                worksheet.Cells[16, 2] = "100";
+                worksheet.Cells[14, 2] = "495";
+                worksheet.Cells[15, 2] = "399";
+                worksheet.Cells[16, 2] = "595";
 
-                worksheet.Cells[18, 1] = "Duration:";
-                worksheet.Cells[19, 1] = "5 mins";
-                worksheet.Cells[20, 1] = "15 mins";
-                worksheet.Cells[21, 1] = "30 mins";
-                worksheet.Cells[22, 1] = "60 mins";
+                worksheet.Cells[18, 1] = "Just Add it:";
+                worksheet.Cells[19, 1] = "New Yorker's Foot Soak";
+                worksheet.Cells[20, 1] = "New Yorker's Foot Scrub";
 
-                worksheet.Cells[19, 2] = "299";
-                worksheet.Cells[20, 2] = "399";
-                worksheet.Cells[21, 2] = "50";
-                worksheet.Cells[22, 2] = "100";
+                worksheet.Cells[19, 2] = "100";
+                worksheet.Cells[20, 2] = "100";
 
-                worksheet.Cells[24, 1] = "Medium:";
-                worksheet.Cells[25, 1] = "Dry oil";
-                worksheet.Cells[26, 1] = "Unscented";
-                worksheet.Cells[27, 1] = "Aromatherapy oil";
-                worksheet.Cells[28, 1] = "Glutawhite lotion";
-                worksheet.Cells[29, 1] = "Total moisture";
-                worksheet.Cells[30, 1] = "Nutralce lotion";
+                worksheet.Cells[22, 1] = "Duration:";
+                worksheet.Cells[23, 1] = "5 mins";
+                worksheet.Cells[24, 1] = "15 mins";
+                worksheet.Cells[25, 1] = "30 mins";
+                worksheet.Cells[26, 1] = "60 mins";
 
-                worksheet.Cells[25, 2] = "299";
+                worksheet.Cells[23, 2] = "49";
+                worksheet.Cells[24, 2] = "149";
+                worksheet.Cells[25, 2] = "249";
                 worksheet.Cells[26, 2] = "399";
-                worksheet.Cells[27, 2] = "50";
-                worksheet.Cells[28, 2] = "100";
-                worksheet.Cells[29, 2] = "50";
-                worksheet.Cells[30, 2] = "100";
 
-                worksheet.Cells[32, 1] = "Pressure:";
-                worksheet.Cells[33, 1] = "Gentle";
-                worksheet.Cells[34, 1] = "Regular";
-                worksheet.Cells[35, 1] = "Strong";
+                worksheet.Cells[28, 1] = "Medium:";
+                worksheet.Cells[29, 1] = "Dry oil";
+                worksheet.Cells[30, 1] = "Unscented";
+                worksheet.Cells[31, 1] = "Aromatherapy oil";
+                worksheet.Cells[32, 1] = "Glutawhite lotion";
+                worksheet.Cells[33, 1] = "Total moisture";
+                worksheet.Cells[34, 1] = "Nutralce lotion";
 
-                worksheet.Cells[33, 2] = "299";
-                worksheet.Cells[34, 2] = "399";
-                worksheet.Cells[35, 2] = "50";
+                worksheet.Cells[29, 2] = "0";
+                worksheet.Cells[30, 2] = "0";
+                worksheet.Cells[31, 2] = "50";
+                worksheet.Cells[32, 2] = "100";
+                worksheet.Cells[33, 2] = "100";
+                worksheet.Cells[34, 2] = "100";
 
-                worksheet.Cells[37, 1] = "Additional time:";
-                worksheet.Cells[38, 1] = "10 mins";
-                worksheet.Cells[39, 1] = "30 mins";
+                worksheet.Cells[36, 1] = "Pressure:";
+                worksheet.Cells[37, 1] = "Gentle";
+                worksheet.Cells[38, 1] = "Regular";
+                worksheet.Cells[39, 1] = "Strong";
 
-                worksheet.Cells[38, 2] = "299";
-                worksheet.Cells[39, 2] = "399";
+                worksheet.Cells[37, 2] = "0";
+                worksheet.Cells[38, 2] = "0";
+                worksheet.Cells[39, 2] = "100";
+
+                worksheet.Cells[41, 1] = "Additional time:";
+                worksheet.Cells[42, 1] = "10 mins";
+                worksheet.Cells[43, 1] = "30 mins";
+
+                worksheet.Cells[42, 2] = "100";
+                worksheet.Cells[43, 2] = "200";
                 
 
                 int x = 3;
@@ -1268,6 +1346,8 @@ namespace bigapple
                     int qty22 = 0;
                     int qty23 = 0;
                     int qty24 = 0;
+                    int qty25 = 0;
+                    int qty26 = 0;
 
                     decimal amt1 = 0;
                     decimal amt2 = 0;
@@ -1293,6 +1373,8 @@ namespace bigapple
                     decimal amt22 = 0;
                     decimal amt23 = 0;
                     decimal amt24 = 0;
+                    decimal amt25 = 0;
+                    decimal amt26 = 0;
 
                     decimal total = 0;
                     
@@ -1322,6 +1404,8 @@ namespace bigapple
                         qty22 += Convert.ToInt32(clientRecord.PRQty3);
                         qty23 += Convert.ToInt32(clientRecord.ATQty1);
                         qty24 += Convert.ToInt32(clientRecord.ATQty2);
+                        qty25 += Convert.ToInt32(clientRecord.JAIQty1);
+                        qty26 += Convert.ToInt32(clientRecord.JAIQty2);
 
                         if (clientRecord.SeniorCitizen == "True")
                         {
@@ -1349,6 +1433,8 @@ namespace bigapple
                             amt22 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.PRAmount3)));
                             amt23 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.ATAmount1)));
                             amt24 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.ATAmount2)));
+                            amt25 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.JAIAmount1)));
+                            amt26 += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.JAIAmount2)));
                             total += Convert.ToDecimal(ComputeDiscount(Convert.ToInt32(clientRecord.Total)));
                         }
                         else
@@ -1377,6 +1463,8 @@ namespace bigapple
                             amt22 += Convert.ToInt32(clientRecord.PRAmount3);
                             amt23 += Convert.ToInt32(clientRecord.ATAmount1);
                             amt24 += Convert.ToInt32(clientRecord.ATAmount2);
+                            amt25 += Convert.ToInt32(clientRecord.JAIAmount1);
+                            amt26 += Convert.ToInt32(clientRecord.JAIAmount2);
                             total += Convert.ToInt32(clientRecord.Total);
                         }
 
@@ -1403,41 +1491,46 @@ namespace bigapple
                         worksheet.Cells[16, x] = qty9.ToString();
                         worksheet.Cells[16, xx] = amt9.ToString();
 
-                        worksheet.Cells[19, x] = qty10.ToString();
-                        worksheet.Cells[19, xx] = amt10.ToString();
-                        worksheet.Cells[20, x] = qty11.ToString();
-                        worksheet.Cells[20, xx] = amt11.ToString();
-                        worksheet.Cells[21, x] = qty12.ToString();
-                        worksheet.Cells[21, xx] = amt12.ToString();
-                        worksheet.Cells[22, x] = qty13.ToString();
-                        worksheet.Cells[22, xx] = amt13.ToString();
+                        worksheet.Cells[19, x] = qty25.ToString();
+                        worksheet.Cells[19, xx] = amt25.ToString();
+                        worksheet.Cells[20, x] = qty26.ToString();
+                        worksheet.Cells[20, xx] = amt26.ToString();
 
-                        worksheet.Cells[25, x] = qty14.ToString();
-                        worksheet.Cells[25, xx] = amt14.ToString();
-                        worksheet.Cells[26, x] = qty15.ToString();
-                        worksheet.Cells[26, xx] = amt15.ToString();
-                        worksheet.Cells[27, x] = qty16.ToString();
-                        worksheet.Cells[27, xx] = amt16.ToString();
-                        worksheet.Cells[28, x] = qty17.ToString();
-                        worksheet.Cells[28, xx] = amt17.ToString();
-                        worksheet.Cells[29, x] = qty18.ToString();
-                        worksheet.Cells[29, xx] = amt18.ToString();
-                        worksheet.Cells[30, x] = qty19.ToString();
-                        worksheet.Cells[30, xx] = amt19.ToString();
+                        worksheet.Cells[23, x] = qty10.ToString();
+                        worksheet.Cells[23, xx] = amt10.ToString();
+                        worksheet.Cells[24, x] = qty11.ToString();
+                        worksheet.Cells[24, xx] = amt11.ToString();
+                        worksheet.Cells[25, x] = qty12.ToString();
+                        worksheet.Cells[25, xx] = amt12.ToString();
+                        worksheet.Cells[26, x] = qty13.ToString();
+                        worksheet.Cells[26, xx] = amt13.ToString();
 
-                        worksheet.Cells[33, x] = qty20.ToString();
-                        worksheet.Cells[33, xx] = amt20.ToString();
-                        worksheet.Cells[34, x] = qty21.ToString();
-                        worksheet.Cells[34, xx] = amt21.ToString();
-                        worksheet.Cells[35, x] = qty22.ToString();
-                        worksheet.Cells[35, xx] = amt22.ToString();
+                        worksheet.Cells[29, x] = qty14.ToString();
+                        worksheet.Cells[29, xx] = amt14.ToString();
+                        worksheet.Cells[30, x] = qty15.ToString();
+                        worksheet.Cells[30, xx] = amt15.ToString();
+                        worksheet.Cells[31, x] = qty16.ToString();
+                        worksheet.Cells[31, xx] = amt16.ToString();
+                        worksheet.Cells[32, x] = qty17.ToString();
+                        worksheet.Cells[32, xx] = amt17.ToString();
+                        worksheet.Cells[33, x] = qty18.ToString();
+                        worksheet.Cells[33, xx] = amt18.ToString();
+                        worksheet.Cells[34, x] = qty19.ToString();
+                        worksheet.Cells[34, xx] = amt19.ToString();
 
-                        worksheet.Cells[38, x] = qty23.ToString();
-                        worksheet.Cells[38, xx] = amt23.ToString();
-                        worksheet.Cells[39, x] = qty24.ToString();
-                        worksheet.Cells[39, xx] = amt24.ToString();
+                        worksheet.Cells[37, x] = qty20.ToString();
+                        worksheet.Cells[37, xx] = amt20.ToString();
+                        worksheet.Cells[38, x] = qty21.ToString();
+                        worksheet.Cells[38, xx] = amt21.ToString();
+                        worksheet.Cells[39, x] = qty22.ToString();
+                        worksheet.Cells[39, xx] = amt22.ToString();
 
-                        worksheet.Cells[40, xx] = total.ToString();
+                        worksheet.Cells[42, x] = qty23.ToString();
+                        worksheet.Cells[42, xx] = amt23.ToString();
+                        worksheet.Cells[43, x] = qty24.ToString();
+                        worksheet.Cells[43, xx] = amt24.ToString();
+
+                        worksheet.Cells[44, xx] = total.ToString();
                     }
 
                     x += 2;

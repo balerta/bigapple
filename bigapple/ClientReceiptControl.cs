@@ -23,6 +23,8 @@ namespace bigapple
         public int NYFDAmount2;
         public int NYFDAmount3;
         public int NYFDAmount4;
+        public int JAIAmount1;
+        public int JAIAmount2;
         public int DRTNAmount1;
         public int DRTNAmount2;
         public int DRTNAmount3;
@@ -48,6 +50,8 @@ namespace bigapple
             NYFDAmount2 = 0;
             NYFDAmount3 = 0;
             NYFDAmount4 = 0;
+            JAIAmount1 = 0;
+            JAIAmount2 = 0;
             DRTNAmount1 = 0;
             DRTNAmount2 = 0;
             DRTNAmount3 = 0;
@@ -96,6 +100,8 @@ namespace bigapple
             NYFDQtyMaskedTextBox2.Text = "0";
             NYFDQtyMaskedTextBox3.Text = "0";
             NYFDQtyMaskedTextBox4.Text = "0";
+            JAIQtyMaskedTextBox1.Text = "0";
+            JAIQtyMaskedTextBox2.Text = "0";
             DRTNQtyMaskedTextBox1.Text = "0";
             DRTNQtyMaskedTextBox2.Text = "0";
             DRTNQtyMaskedTextBox3.Text = "0";
@@ -151,6 +157,7 @@ namespace bigapple
             int tad;
             tad = MEAmount1 + MEAmount2 + MEAmount3 + UNMWAmount1 + UNMWAmount2 +
                 NYFDAmount1 + NYFDAmount2 + NYFDAmount3 + NYFDAmount4 +
+                JAIAmount1 + JAIAmount2 +
                 DRTNAmount1 + DRTNAmount2 + DRTNAmount3 + DRTNAmount4 +
                 MDAmount3 + MDAmount4 + MDAmount5 + MDAmount6 +
                 PRAmount3 + ATAmount1 + ATAmount2;
@@ -177,6 +184,7 @@ namespace bigapple
             int tad;
             tad = MEAmount1 + MEAmount2 + MEAmount3 + UNMWAmount1 + UNMWAmount2 +
                 NYFDAmount1 + NYFDAmount2 + NYFDAmount3 + NYFDAmount4 +
+                JAIAmount1 + JAIAmount2 +
                 DRTNAmount1 + DRTNAmount2 + DRTNAmount3 + DRTNAmount4 +
                 MDAmount3 + MDAmount4 + MDAmount5 + MDAmount6 +
                 PRAmount3 + ATAmount1 + ATAmount2;
@@ -397,6 +405,11 @@ namespace bigapple
                 NYFPAmount3 = NYFDAmount3LBL.Text,
                 NYFPQty4 = NYFDQtyMaskedTextBox4.Text,
                 NYFPAmount4 = NYFDAmount4LBL.Text,
+                // JAI
+                JAIQty1 = JAIQtyMaskedTextBox1.Text,
+                JAIAmount1 = JAIAmount1LBL.Text,
+                JAIQty2 = JAIQtyMaskedTextBox2.Text,
+                JAIAmount2 = JAIAmount2LBL.Text,
                 // Duration
                 DRTNQty1 = DRTNQtyMaskedTextBox1.Text,
                 DRTNAmount1 = DRTNAmount1LBL.Text,
@@ -443,6 +456,18 @@ namespace bigapple
             DatabaseClass.SaveClientRecord(client);
             MessageBox.Show("Client Name '" + NameOfClientTXT.Text + "' with Series Number '" + SeriesNumberLBL.Text + "' was successfully saved.", "Client Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshClient();
+        }
+
+        private void JAIQtyMaskedTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            JAIAmount1 = Calculate_Amount(JAIAmount1, JAIQtyMaskedTextBox1, JAIPrice1LBL, JAIAmount1LBL);
+            AmountCollectible();
+        }
+
+        private void JAIQtyMaskedTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            JAIAmount2 = Calculate_Amount(JAIAmount2, JAIQtyMaskedTextBox2, JAIPrice2LBL, JAIAmount2LBL);
+            AmountCollectible();
         }
     }
 }

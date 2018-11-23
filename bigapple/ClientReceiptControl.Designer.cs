@@ -173,6 +173,15 @@ namespace bigapple
             this.DateLBL = new System.Windows.Forms.Label();
             this.SeriesNumberLBL = new System.Windows.Forms.Label();
             this.CRCTimer = new System.Windows.Forms.Timer(this.components);
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.JAIQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.JAIQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.JAIAmount2LBL = new System.Windows.Forms.Label();
+            this.JAIAmount1LBL = new System.Windows.Forms.Label();
+            this.JAIPrice2LBL = new System.Windows.Forms.Label();
+            this.JAIPrice1LBL = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -185,6 +194,7 @@ namespace bigapple
             this.groupBox6.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -413,7 +423,7 @@ namespace bigapple
             this.NYFDPrice4LBL.Name = "NYFDPrice4LBL";
             this.NYFDPrice4LBL.Size = new System.Drawing.Size(29, 18);
             this.NYFDPrice4LBL.TabIndex = 19;
-            this.NYFDPrice4LBL.Text = "100";
+            this.NYFDPrice4LBL.Text = "595";
             // 
             // NYFDPrice3LBL
             // 
@@ -421,9 +431,9 @@ namespace bigapple
             this.NYFDPrice3LBL.Location = new System.Drawing.Point(311, 86);
             this.NYFDPrice3LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NYFDPrice3LBL.Name = "NYFDPrice3LBL";
-            this.NYFDPrice3LBL.Size = new System.Drawing.Size(22, 18);
+            this.NYFDPrice3LBL.Size = new System.Drawing.Size(29, 18);
             this.NYFDPrice3LBL.TabIndex = 18;
-            this.NYFDPrice3LBL.Text = "50";
+            this.NYFDPrice3LBL.Text = "399";
             // 
             // label40
             // 
@@ -431,9 +441,9 @@ namespace bigapple
             this.label40.Location = new System.Drawing.Point(7, 118);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(164, 18);
+            this.label40.Size = new System.Drawing.Size(189, 18);
             this.label40.TabIndex = 17;
-            this.label40.Text = "Additional: NY Foot Scrub";
+            this.label40.Text = "Bangkok foot therapy 60 mins";
             // 
             // label39
             // 
@@ -441,9 +451,9 @@ namespace bigapple
             this.label39.Location = new System.Drawing.Point(7, 86);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(159, 18);
+            this.label39.Size = new System.Drawing.Size(189, 18);
             this.label39.TabIndex = 16;
-            this.label39.Text = "Additional: NY Foot Soak";
+            this.label39.Text = "Bangkok foot therapy 30 mins";
             // 
             // NYFDPrice2LBL
             // 
@@ -453,7 +463,7 @@ namespace bigapple
             this.NYFDPrice2LBL.Name = "NYFDPrice2LBL";
             this.NYFDPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.NYFDPrice2LBL.TabIndex = 15;
-            this.NYFDPrice2LBL.Text = "399";
+            this.NYFDPrice2LBL.Text = "495";
             // 
             // NYFDPrice1LBL
             // 
@@ -471,9 +481,9 @@ namespace bigapple
             this.label12.Location = new System.Drawing.Point(7, 54);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(185, 18);
+            this.label12.Size = new System.Drawing.Size(172, 18);
             this.label12.TabIndex = 10;
-            this.label12.Text = "Brazilian deep tissue 75 mins";
+            this.label12.Text = "Oriental foot relax 60 mins";
             // 
             // label15
             // 
@@ -481,9 +491,9 @@ namespace bigapple
             this.label15.Location = new System.Drawing.Point(7, 22);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(225, 18);
+            this.label15.Size = new System.Drawing.Size(172, 18);
             this.label15.TabIndex = 9;
-            this.label15.Text = "Balinese full body massage 75 mins";
+            this.label15.Text = "Oriental foot relax 30 mins";
             // 
             // groupBox3
             // 
@@ -562,7 +572,7 @@ namespace bigapple
             this.UNMWPrice2LBL.Name = "UNMWPrice2LBL";
             this.UNMWPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.UNMWPrice2LBL.TabIndex = 14;
-            this.UNMWPrice2LBL.Text = "599";
+            this.UNMWPrice2LBL.Text = "695";
             // 
             // UNMWPrice1LBL
             // 
@@ -572,7 +582,7 @@ namespace bigapple
             this.UNMWPrice1LBL.Name = "UNMWPrice1LBL";
             this.UNMWPrice1LBL.Size = new System.Drawing.Size(29, 18);
             this.UNMWPrice1LBL.TabIndex = 13;
-            this.UNMWPrice1LBL.Text = "499";
+            this.UNMWPrice1LBL.Text = "595";
             // 
             // label13
             // 
@@ -701,7 +711,7 @@ namespace bigapple
             this.MEPrice3LBL.Name = "MEPrice3LBL";
             this.MEPrice3LBL.Size = new System.Drawing.Size(29, 18);
             this.MEPrice3LBL.TabIndex = 14;
-            this.MEPrice3LBL.Text = "499";
+            this.MEPrice3LBL.Text = "450";
             // 
             // MEPrice2LBL
             // 
@@ -711,7 +721,7 @@ namespace bigapple
             this.MEPrice2LBL.Name = "MEPrice2LBL";
             this.MEPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.MEPrice2LBL.TabIndex = 13;
-            this.MEPrice2LBL.Text = "299";
+            this.MEPrice2LBL.Text = "350";
             // 
             // MEPrice1LBL
             // 
@@ -721,7 +731,7 @@ namespace bigapple
             this.MEPrice1LBL.Name = "MEPrice1LBL";
             this.MEPrice1LBL.Size = new System.Drawing.Size(29, 18);
             this.MEPrice1LBL.TabIndex = 12;
-            this.MEPrice1LBL.Text = "195";
+            this.MEPrice1LBL.Text = "250";
             // 
             // label11
             // 
@@ -775,6 +785,7 @@ namespace bigapple
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.groupBox12);
             this.groupBox5.Controls.Add(this.label32);
             this.groupBox5.Controls.Add(this.label33);
             this.groupBox5.Controls.Add(this.groupBox9);
@@ -784,7 +795,7 @@ namespace bigapple
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Location = new System.Drawing.Point(589, 130);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(566, 620);
+            this.groupBox5.Size = new System.Drawing.Size(566, 709);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Personalized:";
@@ -819,7 +830,7 @@ namespace bigapple
             this.groupBox9.Controls.Add(this.ATPrice1LBL);
             this.groupBox9.Controls.Add(this.label30);
             this.groupBox9.Controls.Add(this.label31);
-            this.groupBox9.Location = new System.Drawing.Point(10, 527);
+            this.groupBox9.Location = new System.Drawing.Point(10, 615);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(550, 84);
             this.groupBox9.TabIndex = 16;
@@ -932,7 +943,7 @@ namespace bigapple
             this.groupBox8.Controls.Add(this.label26);
             this.groupBox8.Controls.Add(this.label28);
             this.groupBox8.Controls.Add(this.label29);
-            this.groupBox8.Location = new System.Drawing.Point(10, 408);
+            this.groupBox8.Location = new System.Drawing.Point(10, 496);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(550, 113);
             this.groupBox8.TabIndex = 15;
@@ -1111,7 +1122,7 @@ namespace bigapple
             this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.label23);
-            this.groupBox7.Location = new System.Drawing.Point(10, 183);
+            this.groupBox7.Location = new System.Drawing.Point(10, 271);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(550, 219);
             this.groupBox7.TabIndex = 14;
@@ -1410,7 +1421,7 @@ namespace bigapple
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Location = new System.Drawing.Point(10, 34);
+            this.groupBox6.Location = new System.Drawing.Point(10, 122);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(550, 145);
             this.groupBox6.TabIndex = 13;
@@ -1859,6 +1870,115 @@ namespace bigapple
             this.CRCTimer.Interval = 1000;
             this.CRCTimer.Tick += new System.EventHandler(this.CRCTimer_Tick);
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.JAIQtyMaskedTextBox1);
+            this.groupBox12.Controls.Add(this.JAIQtyMaskedTextBox2);
+            this.groupBox12.Controls.Add(this.JAIAmount2LBL);
+            this.groupBox12.Controls.Add(this.JAIAmount1LBL);
+            this.groupBox12.Controls.Add(this.JAIPrice2LBL);
+            this.groupBox12.Controls.Add(this.JAIPrice1LBL);
+            this.groupBox12.Controls.Add(this.label42);
+            this.groupBox12.Controls.Add(this.label43);
+            this.groupBox12.Location = new System.Drawing.Point(10, 32);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(550, 84);
+            this.groupBox12.TabIndex = 17;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Just Add it:";
+            // 
+            // JAIQtyMaskedTextBox1
+            // 
+            this.JAIQtyMaskedTextBox1.BeepOnError = true;
+            this.JAIQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.JAIQtyMaskedTextBox1.Location = new System.Drawing.Point(378, 23);
+            this.JAIQtyMaskedTextBox1.Mask = "000";
+            this.JAIQtyMaskedTextBox1.Name = "JAIQtyMaskedTextBox1";
+            this.JAIQtyMaskedTextBox1.PromptChar = ' ';
+            this.JAIQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.JAIQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.JAIQtyMaskedTextBox1.TabIndex = 8;
+            this.JAIQtyMaskedTextBox1.Text = "0";
+            this.JAIQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.JAIQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.JAIQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.JAIQtyMaskedTextBox1_TextChanged);
+            // 
+            // JAIQtyMaskedTextBox2
+            // 
+            this.JAIQtyMaskedTextBox2.BeepOnError = true;
+            this.JAIQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.JAIQtyMaskedTextBox2.Location = new System.Drawing.Point(378, 55);
+            this.JAIQtyMaskedTextBox2.Mask = "000";
+            this.JAIQtyMaskedTextBox2.Name = "JAIQtyMaskedTextBox2";
+            this.JAIQtyMaskedTextBox2.PromptChar = ' ';
+            this.JAIQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.JAIQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.JAIQtyMaskedTextBox2.TabIndex = 9;
+            this.JAIQtyMaskedTextBox2.Text = "0";
+            this.JAIQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.JAIQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.JAIQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.JAIQtyMaskedTextBox2_TextChanged);
+            // 
+            // JAIAmount2LBL
+            // 
+            this.JAIAmount2LBL.AutoSize = true;
+            this.JAIAmount2LBL.Location = new System.Drawing.Point(482, 59);
+            this.JAIAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIAmount2LBL.Name = "JAIAmount2LBL";
+            this.JAIAmount2LBL.Size = new System.Drawing.Size(15, 18);
+            this.JAIAmount2LBL.TabIndex = 24;
+            this.JAIAmount2LBL.Text = "0";
+            // 
+            // JAIAmount1LBL
+            // 
+            this.JAIAmount1LBL.AutoSize = true;
+            this.JAIAmount1LBL.Location = new System.Drawing.Point(482, 27);
+            this.JAIAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIAmount1LBL.Name = "JAIAmount1LBL";
+            this.JAIAmount1LBL.Size = new System.Drawing.Size(15, 18);
+            this.JAIAmount1LBL.TabIndex = 23;
+            this.JAIAmount1LBL.Text = "0";
+            // 
+            // JAIPrice2LBL
+            // 
+            this.JAIPrice2LBL.AutoSize = true;
+            this.JAIPrice2LBL.Location = new System.Drawing.Point(311, 59);
+            this.JAIPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIPrice2LBL.Name = "JAIPrice2LBL";
+            this.JAIPrice2LBL.Size = new System.Drawing.Size(29, 18);
+            this.JAIPrice2LBL.TabIndex = 14;
+            this.JAIPrice2LBL.Text = "100";
+            // 
+            // JAIPrice1LBL
+            // 
+            this.JAIPrice1LBL.AutoSize = true;
+            this.JAIPrice1LBL.Location = new System.Drawing.Point(311, 27);
+            this.JAIPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIPrice1LBL.Name = "JAIPrice1LBL";
+            this.JAIPrice1LBL.Size = new System.Drawing.Size(29, 18);
+            this.JAIPrice1LBL.TabIndex = 13;
+            this.JAIPrice1LBL.Text = "100";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(8, 59);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(156, 18);
+            this.label42.TabIndex = 10;
+            this.label42.Text = "New Yorker\'s Foot Scrub";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(8, 27);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(151, 18);
+            this.label43.TabIndex = 9;
+            this.label43.Text = "New Yorker\'s Foot Soak";
+            // 
             // ClientReceiptControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1871,7 +1991,7 @@ namespace bigapple
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientReceiptControl";
-            this.Size = new System.Drawing.Size(1174, 827);
+            this.Size = new System.Drawing.Size(1174, 856);
             this.Load += new System.EventHandler(this.ClientReceiptControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1896,6 +2016,8 @@ namespace bigapple
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2043,5 +2165,14 @@ namespace bigapple
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label SeniorCDiscountLBL;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.MaskedTextBox JAIQtyMaskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox JAIQtyMaskedTextBox2;
+        private System.Windows.Forms.Label JAIAmount2LBL;
+        private System.Windows.Forms.Label JAIAmount1LBL;
+        private System.Windows.Forms.Label JAIPrice2LBL;
+        private System.Windows.Forms.Label JAIPrice1LBL;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
     }
 }

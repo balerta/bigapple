@@ -137,6 +137,28 @@ namespace bigapple
             
             return total.ToString();
         }
+        private string JAIQty1()
+        {
+            int total = 0;
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
+            foreach (var tReport in therapistReport)
+            {
+                total += Int32.Parse(tReport.JAIQty1);
+            }
+
+            return total.ToString();
+        }
+        private string JAIQty2()
+        {
+            int total = 0;
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
+            foreach (var tReport in therapistReport)
+            {
+                total += Int32.Parse(tReport.JAIQty2);
+            }
+
+            return total.ToString();
+        }
         private string DRTNQty1()
         {
             int total = 0;
@@ -479,6 +501,42 @@ namespace bigapple
                 }
             }
             
+            return total.ToString();
+        }
+        private string JAIAmount1()
+        {
+            decimal total = 0;
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
+            foreach (var tReport in therapistReport)
+            {
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.JAIAmount1)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.JAIAmount1));
+                }
+            }
+
+            return total.ToString();
+        }
+        private string JAIAmount2()
+        {
+            decimal total = 0;
+            therapistReport = DatabaseClass.LoadTherapistRecord(dateTimePicker1.Value.Date.ToString("MM/dd/yyyy"), dateTimePicker2.Value.Date.ToString("MM/dd/yyyy"), TherapistListCB.Text.Trim());
+            foreach (var tReport in therapistReport)
+            {
+                if (tReport.SeniorCitizen == "True")
+                {
+                    total += Convert.ToDecimal(ComputeDiscount(Int32.Parse(tReport.JAIAmount2)));
+                }
+                else
+                {
+                    total += Convert.ToDecimal(Int32.Parse(tReport.JAIAmount2));
+                }
+            }
+
             return total.ToString();
         }
         private string DRTNAmount1()
@@ -913,6 +971,13 @@ namespace bigapple
                     BackgroundColor = BaseColor.LIGHT_GRAY
                 };
 
+                PdfPCell justaddit = new PdfPCell(new Phrase("Just Add it:", font))
+                {
+                    Colspan = 4,
+                    HorizontalAlignment = 0,
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
+
                 PdfPCell duration = new PdfPCell(new Phrase("Duration:", font))
                 {
                     Colspan = 4,
@@ -956,35 +1021,30 @@ namespace bigapple
                 // Manhattan
                 table.AddCell(manhattan);
                 // ME1
-                table.AddCell(new PdfPCell(new Phrase("NYC Exp full body 30 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("195", font)));
+                table.AddCell(new PdfPCell(new Phrase("NYC Exp full body", font)));
+                table.AddCell(new PdfPCell(new Phrase("250", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty1(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount1(), font)));
                 // ME2
-                table.AddCell(new PdfPCell(new Phrase("Manhattan full body 60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("299", font)));
+                table.AddCell(new PdfPCell(new Phrase("Manhattan full body", font)));
+                table.AddCell(new PdfPCell(new Phrase("350", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount2(), font)));
                 // ME3
-                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus 60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("499", font)));
-                table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
-                table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
-                // ME3
-                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus 60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase("Manhattan skin plus", font)));
+                table.AddCell(new PdfPCell(new Phrase("450", font)));
                 table.AddCell(new PdfPCell(new Phrase(MEQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(MEAmount3(), font)));
                 // UN Message to the world
                 table.AddCell(unmessage);
                 // UNMW1 
                 table.AddCell(new PdfPCell(new Phrase("Balinese full body massage 75 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("499", font)));
+                table.AddCell(new PdfPCell(new Phrase("595", font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWQty1(), font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWAmount1(), font)));
                 // UNMW2
                 table.AddCell(new PdfPCell(new Phrase("Brazilian deep tissue 75 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("599", font)));
+                table.AddCell(new PdfPCell(new Phrase("695", font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(UNMWAmount2(), font)));
                 // NY Foot paradise
@@ -996,19 +1056,31 @@ namespace bigapple
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount1(), font)));
                 // NYFP2
                 table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 30 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("399", font)));
+                table.AddCell(new PdfPCell(new Phrase("495", font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount2(), font)));
                 // NYFP3
-                table.AddCell(new PdfPCell(new Phrase("Addtl: NY Foot soak", font)));
-                table.AddCell(new PdfPCell(new Phrase("50", font)));
+                table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 30 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("399", font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount3(), font)));
                 // NYFP4
-                table.AddCell(new PdfPCell(new Phrase("Addtl: NY Foot scrub", font)));
-                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase("Bangkok foot therapy 60 mins", font)));
+                table.AddCell(new PdfPCell(new Phrase("595", font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPQty4(), font)));
                 table.AddCell(new PdfPCell(new Phrase(NYFPAmount4(), font)));
+                // Just add it
+                table.AddCell(justaddit);
+                // JAI1
+                table.AddCell(new PdfPCell(new Phrase("New Yorker's Foot Soak", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIQty1(), font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIAmount1(), font)));
+                // JAI2
+                table.AddCell(new PdfPCell(new Phrase("New Yorker's Foot Soak", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIQty2(), font)));
+                table.AddCell(new PdfPCell(new Phrase(JAIAmount2(), font)));
                 // Duration
                 table.AddCell(duration);
                 // DRTN1
