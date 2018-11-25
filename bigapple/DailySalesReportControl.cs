@@ -1037,22 +1037,22 @@ namespace bigapple
                 table.AddCell(duration);
                 // DRTN1
                 table.AddCell(new PdfPCell(new Phrase("5 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("49", font)));
+                table.AddCell(new PdfPCell(new Phrase("50", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty1(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount1(), font)));
                 // DRTN2
                 table.AddCell(new PdfPCell(new Phrase("15 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("149", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount2(), font)));
                 // DRTN3
                 table.AddCell(new PdfPCell(new Phrase("30 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("249", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount3(), font)));
                 // DRTN4
                 table.AddCell(new PdfPCell(new Phrase("60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("399", font)));
+                table.AddCell(new PdfPCell(new Phrase("100", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty4(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount4(), font)));
                 // Medium
@@ -1264,10 +1264,10 @@ namespace bigapple
                 worksheet.Cells[25, 1] = "30 mins";
                 worksheet.Cells[26, 1] = "60 mins";
 
-                worksheet.Cells[23, 2] = "49";
-                worksheet.Cells[24, 2] = "149";
-                worksheet.Cells[25, 2] = "249";
-                worksheet.Cells[26, 2] = "399";
+                worksheet.Cells[23, 2] = "50";
+                worksheet.Cells[24, 2] = "100";
+                worksheet.Cells[25, 2] = "100";
+                worksheet.Cells[26, 2] = "100";
 
                 worksheet.Cells[28, 1] = "Medium:";
                 worksheet.Cells[29, 1] = "Dry oil";

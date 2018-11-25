@@ -293,7 +293,7 @@ namespace bigapple
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Location = new System.Drawing.Point(6, 242);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(554, 154);
+            this.groupBox4.Size = new System.Drawing.Size(554, 149);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "NY Foot Paradise:";
@@ -507,7 +507,7 @@ namespace bigapple
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Location = new System.Drawing.Point(6, 152);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(554, 84);
+            this.groupBox3.Size = new System.Drawing.Size(554, 88);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "UN Massages of the World:";
@@ -620,7 +620,7 @@ namespace bigapple
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(6, 32);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(554, 114);
+            this.groupBox2.Size = new System.Drawing.Size(554, 116);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Manhattan Experience:";
@@ -789,7 +789,7 @@ namespace bigapple
             this.groupBox5.Controls.Add(this.groupBox8);
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Location = new System.Drawing.Point(579, 248);
+            this.groupBox5.Location = new System.Drawing.Point(579, 230);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(576, 601);
             this.groupBox5.TabIndex = 12;
@@ -811,7 +811,7 @@ namespace bigapple
             this.groupBox12.Controls.Add(this.label43);
             this.groupBox12.Location = new System.Drawing.Point(579, 130);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(576, 112);
+            this.groupBox12.Size = new System.Drawing.Size(576, 98);
             this.groupBox12.TabIndex = 17;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Just Add it:";
@@ -820,7 +820,7 @@ namespace bigapple
             // 
             this.JAIQtyMaskedTextBox1.BeepOnError = true;
             this.JAIQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.JAIQtyMaskedTextBox1.Location = new System.Drawing.Point(383, 47);
+            this.JAIQtyMaskedTextBox1.Location = new System.Drawing.Point(383, 32);
             this.JAIQtyMaskedTextBox1.Mask = "000";
             this.JAIQtyMaskedTextBox1.Name = "JAIQtyMaskedTextBox1";
             this.JAIQtyMaskedTextBox1.PromptChar = ' ';
@@ -836,7 +836,7 @@ namespace bigapple
             // 
             this.JAIQtyMaskedTextBox2.BeepOnError = true;
             this.JAIQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
-            this.JAIQtyMaskedTextBox2.Location = new System.Drawing.Point(383, 79);
+            this.JAIQtyMaskedTextBox2.Location = new System.Drawing.Point(383, 64);
             this.JAIQtyMaskedTextBox2.Mask = "000";
             this.JAIQtyMaskedTextBox2.Name = "JAIQtyMaskedTextBox2";
             this.JAIQtyMaskedTextBox2.PromptChar = ' ';
@@ -851,7 +851,7 @@ namespace bigapple
             // JAIAmount2LBL
             // 
             this.JAIAmount2LBL.AutoSize = true;
-            this.JAIAmount2LBL.Location = new System.Drawing.Point(488, 83);
+            this.JAIAmount2LBL.Location = new System.Drawing.Point(488, 68);
             this.JAIAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.JAIAmount2LBL.Name = "JAIAmount2LBL";
             this.JAIAmount2LBL.Size = new System.Drawing.Size(15, 18);
@@ -861,7 +861,7 @@ namespace bigapple
             // JAIAmount1LBL
             // 
             this.JAIAmount1LBL.AutoSize = true;
-            this.JAIAmount1LBL.Location = new System.Drawing.Point(488, 53);
+            this.JAIAmount1LBL.Location = new System.Drawing.Point(488, 38);
             this.JAIAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.JAIAmount1LBL.Name = "JAIAmount1LBL";
             this.JAIAmount1LBL.Size = new System.Drawing.Size(15, 18);
@@ -871,7 +871,7 @@ namespace bigapple
             // JAIPrice2LBL
             // 
             this.JAIPrice2LBL.AutoSize = true;
-            this.JAIPrice2LBL.Location = new System.Drawing.Point(320, 83);
+            this.JAIPrice2LBL.Location = new System.Drawing.Point(320, 68);
             this.JAIPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.JAIPrice2LBL.Name = "JAIPrice2LBL";
             this.JAIPrice2LBL.Size = new System.Drawing.Size(29, 18);
@@ -881,7 +881,7 @@ namespace bigapple
             // JAIPrice1LBL
             // 
             this.JAIPrice1LBL.AutoSize = true;
-            this.JAIPrice1LBL.Location = new System.Drawing.Point(320, 50);
+            this.JAIPrice1LBL.Location = new System.Drawing.Point(320, 35);
             this.JAIPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.JAIPrice1LBL.Name = "JAIPrice1LBL";
             this.JAIPrice1LBL.Size = new System.Drawing.Size(29, 18);
@@ -891,7 +891,7 @@ namespace bigapple
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(8, 82);
+            this.label42.Location = new System.Drawing.Point(8, 67);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(156, 18);
@@ -901,7 +901,7 @@ namespace bigapple
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(8, 50);
+            this.label43.Location = new System.Drawing.Point(8, 35);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(151, 18);
@@ -911,7 +911,7 @@ namespace bigapple
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(320, 22);
+            this.label32.Location = new System.Drawing.Point(317, 11);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(43, 18);
@@ -921,7 +921,7 @@ namespace bigapple
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(380, 22);
+            this.label33.Location = new System.Drawing.Point(377, 11);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(65, 18);
@@ -940,7 +940,7 @@ namespace bigapple
             this.groupBox9.Controls.Add(this.label31);
             this.groupBox9.Location = new System.Drawing.Point(11, 509);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(560, 84);
+            this.groupBox9.Size = new System.Drawing.Size(560, 86);
             this.groupBox9.TabIndex = 16;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Additional Time:";
@@ -1197,7 +1197,7 @@ namespace bigapple
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(464, 22);
+            this.label34.Location = new System.Drawing.Point(461, 11);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(62, 18);
@@ -1531,7 +1531,7 @@ namespace bigapple
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Location = new System.Drawing.Point(11, 16);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(560, 145);
+            this.groupBox6.Size = new System.Drawing.Size(560, 147);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Duration:";
@@ -1991,7 +1991,7 @@ namespace bigapple
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientReceiptControl";
-            this.Size = new System.Drawing.Size(1174, 856);
+            this.Size = new System.Drawing.Size(1174, 870);
             this.Load += new System.EventHandler(this.ClientReceiptControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
