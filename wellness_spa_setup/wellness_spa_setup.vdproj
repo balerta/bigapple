@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_14F61ACAA9B5389CAA1D400D26C161BB"
-        "OwnerKey" = "8:_DFE536A48C9349FB8D526FB8B62F8ACF"
+        "OwnerKey" = "8:_83CF1C109AF0668AA8CBEBC8A1D84B92"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_14F61ACAA9B5389CAA1D400D26C161BB"
-        "OwnerKey" = "8:_83CF1C109AF0668AA8CBEBC8A1D84B92"
+        "OwnerKey" = "8:_DFE536A48C9349FB8D526FB8B62F8ACF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,13 +112,13 @@
         "Entry"
         {
         "MsmKey" = "8:_98D003D91D2D3D23CBFB01626A9A9B74"
-        "OwnerKey" = "8:_DFE536A48C9349FB8D526FB8B62F8ACF"
+        "OwnerKey" = "8:_83CF1C109AF0668AA8CBEBC8A1D84B92"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_98D003D91D2D3D23CBFB01626A9A9B74"
-        "OwnerKey" = "8:_83CF1C109AF0668AA8CBEBC8A1D84B92"
+        "OwnerKey" = "8:_DFE536A48C9349FB8D526FB8B62F8ACF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -160,25 +160,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_14F61ACAA9B5389CAA1D400D26C161BB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_98D003D91D2D3D23CBFB01626A9A9B74"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DFE536A48C9349FB8D526FB8B62F8ACF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EC287DF381354090A5631A1F8966301D"
+        "OwnerKey" = "8:_781E4F5FECE5426090D6D1780BF5C19C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -190,13 +172,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C9637F7F6BFA416893F53189ACE4A2C6"
+        "OwnerKey" = "8:_EC287DF381354090A5631A1F8966301D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_83CF1C109AF0668AA8CBEBC8A1D84B92"
+        "OwnerKey" = "8:_DFE536A48C9349FB8D526FB8B62F8ACF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C9637F7F6BFA416893F53189ACE4A2C6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -208,7 +196,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_781E4F5FECE5426090D6D1780BF5C19C"
+        "OwnerKey" = "8:_83CF1C109AF0668AA8CBEBC8A1D84B92"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_98D003D91D2D3D23CBFB01626A9A9B74"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_14F61ACAA9B5389CAA1D400D26C161BB"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -236,6 +236,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -260,6 +268,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -357,6 +373,11 @@
             "AssemblyAsmDisplayName" = "8:Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_14F61ACAA9B5389CAA1D400D26C161BB"
+                    {
+                    "Name" = "8:Dapper.DLL"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Dapper.DLL"
             "TargetName" = "8:"
@@ -443,6 +464,11 @@
             "AssemblyAsmDisplayName" = "8:itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_3DE9B1F258B3C11225DB40AF05544CE8"
+                    {
+                    "Name" = "8:itextsharp.DLL"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:itextsharp.DLL"
             "TargetName" = "8:"
@@ -549,6 +575,11 @@
             "AssemblyAsmDisplayName" = "8:wellness_spa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_781E4F5FECE5426090D6D1780BF5C19C"
+                    {
+                    "Name" = "8:wellness_spa.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\bigapple\\bin\\Debug\\wellness_spa.exe"
             "TargetName" = "8:"
@@ -575,6 +606,11 @@
             "AssemblyAsmDisplayName" = "8:bigapplelib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_83CF1C109AF0668AA8CBEBC8A1D84B92"
+                    {
+                    "Name" = "8:bigapplelib.DLL"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:bigapplelib.DLL"
             "TargetName" = "8:"
@@ -621,6 +657,11 @@
             "AssemblyAsmDisplayName" = "8:System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_98D003D91D2D3D23CBFB01626A9A9B74"
+                    {
+                    "Name" = "8:System.Data.SQLite.DLL"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Data.SQLite.DLL"
             "TargetName" = "8:"
@@ -667,6 +708,11 @@
             "AssemblyAsmDisplayName" = "8:System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_C9637F7F6BFA416893F53189ACE4A2C6"
+                    {
+                    "Name" = "8:System.Data.SQLite.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\bigapple\\bin\\Debug\\System.Data.SQLite.dll"
             "TargetName" = "8:"
@@ -693,6 +739,11 @@
             "AssemblyAsmDisplayName" = "8:bigapplelib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_DFE536A48C9349FB8D526FB8B62F8ACF"
+                    {
+                    "Name" = "8:bigapplelib.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\bigapple\\bin\\Debug\\bigapplelib.dll"
             "TargetName" = "8:"
@@ -739,6 +790,11 @@
             "AssemblyAsmDisplayName" = "8:Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_EC287DF381354090A5631A1F8966301D"
+                    {
+                    "Name" = "8:Dapper.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\bigapple\\bin\\Debug\\Dapper.dll"
             "TargetName" = "8:"
@@ -765,6 +821,11 @@
             "AssemblyAsmDisplayName" = "8:itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_ECAA9C4CF3654A42B72E9B54494043D1"
+                    {
+                    "Name" = "8:itextsharp.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\bigapple\\bin\\Debug\\itextsharp.dll"
             "TargetName" = "8:"
@@ -862,15 +923,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Ika Wellness Spa"
-        "ProductCode" = "8:{7A06E5DC-6CF8-4437-95FC-2992ACF7A991}"
-        "PackageCode" = "8:{67DA1725-96AE-455D-BA57-315721543BFD}"
+        "ProductCode" = "8:{FA3C2B2C-F360-411C-B6D4-B68B112E831A}"
+        "PackageCode" = "8:{8EA5700A-F258-4CC8-9640-9117AFB42B3A}"
         "UpgradeCode" = "8:{A70DE1EE-53DB-42D1-805B-6ECDC68578E4}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:TechCater"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
