@@ -83,17 +83,6 @@ namespace bigapple
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.JAIQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.JAIQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.JAIAmount2LBL = new System.Windows.Forms.Label();
-            this.JAIAmount1LBL = new System.Windows.Forms.Label();
-            this.JAIPrice2LBL = new System.Windows.Forms.Label();
-            this.JAIPrice1LBL = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.ATQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.ATAmount2LBL = new System.Windows.Forms.Label();
@@ -116,7 +105,6 @@ namespace bigapple
             this.label26 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.MDQtyMaskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.MDQtyMaskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
@@ -159,6 +147,18 @@ namespace bigapple
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.JAIQtyMaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.JAIQtyMaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.JAIAmount2LBL = new System.Windows.Forms.Label();
+            this.JAIAmount1LBL = new System.Windows.Forms.Label();
+            this.JAIPrice2LBL = new System.Windows.Forms.Label();
+            this.JAIPrice1LBL = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.TotalLBL = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -188,11 +188,11 @@ namespace bigapple
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.SuspendLayout();
@@ -796,138 +796,6 @@ namespace bigapple
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "My Manhattan Relaxation Personalized:";
             // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.label32);
-            this.groupBox12.Controls.Add(this.label33);
-            this.groupBox12.Controls.Add(this.JAIQtyMaskedTextBox1);
-            this.groupBox12.Controls.Add(this.label34);
-            this.groupBox12.Controls.Add(this.JAIQtyMaskedTextBox2);
-            this.groupBox12.Controls.Add(this.JAIAmount2LBL);
-            this.groupBox12.Controls.Add(this.JAIAmount1LBL);
-            this.groupBox12.Controls.Add(this.JAIPrice2LBL);
-            this.groupBox12.Controls.Add(this.JAIPrice1LBL);
-            this.groupBox12.Controls.Add(this.label42);
-            this.groupBox12.Controls.Add(this.label43);
-            this.groupBox12.Location = new System.Drawing.Point(579, 130);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(576, 98);
-            this.groupBox12.TabIndex = 17;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Just Add it:";
-            // 
-            // JAIQtyMaskedTextBox1
-            // 
-            this.JAIQtyMaskedTextBox1.BeepOnError = true;
-            this.JAIQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.JAIQtyMaskedTextBox1.Location = new System.Drawing.Point(383, 32);
-            this.JAIQtyMaskedTextBox1.Mask = "000";
-            this.JAIQtyMaskedTextBox1.Name = "JAIQtyMaskedTextBox1";
-            this.JAIQtyMaskedTextBox1.PromptChar = ' ';
-            this.JAIQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.JAIQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
-            this.JAIQtyMaskedTextBox1.TabIndex = 8;
-            this.JAIQtyMaskedTextBox1.Text = "0";
-            this.JAIQtyMaskedTextBox1.ValidatingType = typeof(int);
-            this.JAIQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
-            this.JAIQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.JAIQtyMaskedTextBox1_TextChanged);
-            // 
-            // JAIQtyMaskedTextBox2
-            // 
-            this.JAIQtyMaskedTextBox2.BeepOnError = true;
-            this.JAIQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
-            this.JAIQtyMaskedTextBox2.Location = new System.Drawing.Point(383, 64);
-            this.JAIQtyMaskedTextBox2.Mask = "000";
-            this.JAIQtyMaskedTextBox2.Name = "JAIQtyMaskedTextBox2";
-            this.JAIQtyMaskedTextBox2.PromptChar = ' ';
-            this.JAIQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.JAIQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
-            this.JAIQtyMaskedTextBox2.TabIndex = 9;
-            this.JAIQtyMaskedTextBox2.Text = "0";
-            this.JAIQtyMaskedTextBox2.ValidatingType = typeof(int);
-            this.JAIQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
-            this.JAIQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.JAIQtyMaskedTextBox2_TextChanged);
-            // 
-            // JAIAmount2LBL
-            // 
-            this.JAIAmount2LBL.AutoSize = true;
-            this.JAIAmount2LBL.Location = new System.Drawing.Point(488, 68);
-            this.JAIAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.JAIAmount2LBL.Name = "JAIAmount2LBL";
-            this.JAIAmount2LBL.Size = new System.Drawing.Size(15, 18);
-            this.JAIAmount2LBL.TabIndex = 24;
-            this.JAIAmount2LBL.Text = "0";
-            // 
-            // JAIAmount1LBL
-            // 
-            this.JAIAmount1LBL.AutoSize = true;
-            this.JAIAmount1LBL.Location = new System.Drawing.Point(488, 38);
-            this.JAIAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.JAIAmount1LBL.Name = "JAIAmount1LBL";
-            this.JAIAmount1LBL.Size = new System.Drawing.Size(15, 18);
-            this.JAIAmount1LBL.TabIndex = 23;
-            this.JAIAmount1LBL.Text = "0";
-            // 
-            // JAIPrice2LBL
-            // 
-            this.JAIPrice2LBL.AutoSize = true;
-            this.JAIPrice2LBL.Location = new System.Drawing.Point(320, 68);
-            this.JAIPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.JAIPrice2LBL.Name = "JAIPrice2LBL";
-            this.JAIPrice2LBL.Size = new System.Drawing.Size(29, 18);
-            this.JAIPrice2LBL.TabIndex = 14;
-            this.JAIPrice2LBL.Text = "100";
-            // 
-            // JAIPrice1LBL
-            // 
-            this.JAIPrice1LBL.AutoSize = true;
-            this.JAIPrice1LBL.Location = new System.Drawing.Point(320, 35);
-            this.JAIPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.JAIPrice1LBL.Name = "JAIPrice1LBL";
-            this.JAIPrice1LBL.Size = new System.Drawing.Size(29, 18);
-            this.JAIPrice1LBL.TabIndex = 13;
-            this.JAIPrice1LBL.Text = "100";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(8, 67);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(156, 18);
-            this.label42.TabIndex = 10;
-            this.label42.Text = "New Yorker\'s Foot Scrub";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(8, 35);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(151, 18);
-            this.label43.TabIndex = 9;
-            this.label43.Text = "New Yorker\'s Foot Soak";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(317, 11);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(43, 18);
-            this.label32.TabIndex = 14;
-            this.label32.Text = "Price:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(377, 11);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(65, 18);
-            this.label33.TabIndex = 13;
-            this.label33.Text = "Quantity:";
-            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.ATQtyMaskedTextBox1);
@@ -1193,16 +1061,6 @@ namespace bigapple
             this.label29.Size = new System.Drawing.Size(50, 18);
             this.label29.TabIndex = 11;
             this.label29.Text = "Gentle";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(461, 11);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(62, 18);
-            this.label34.TabIndex = 12;
-            this.label34.Text = "Amount:";
             // 
             // groupBox7
             // 
@@ -1648,7 +1506,7 @@ namespace bigapple
             this.DRTNPrice4LBL.Name = "DRTNPrice4LBL";
             this.DRTNPrice4LBL.Size = new System.Drawing.Size(29, 18);
             this.DRTNPrice4LBL.TabIndex = 23;
-            this.DRTNPrice4LBL.Text = "100";
+            this.DRTNPrice4LBL.Text = "495";
             // 
             // DRTNPrice3LBL
             // 
@@ -1658,7 +1516,7 @@ namespace bigapple
             this.DRTNPrice3LBL.Name = "DRTNPrice3LBL";
             this.DRTNPrice3LBL.Size = new System.Drawing.Size(29, 18);
             this.DRTNPrice3LBL.TabIndex = 22;
-            this.DRTNPrice3LBL.Text = "100";
+            this.DRTNPrice3LBL.Text = "295";
             // 
             // DRTNPrice2LBL
             // 
@@ -1668,7 +1526,7 @@ namespace bigapple
             this.DRTNPrice2LBL.Name = "DRTNPrice2LBL";
             this.DRTNPrice2LBL.Size = new System.Drawing.Size(29, 18);
             this.DRTNPrice2LBL.TabIndex = 21;
-            this.DRTNPrice2LBL.Text = "100";
+            this.DRTNPrice2LBL.Text = "150";
             // 
             // DRTNPrice1LBL
             // 
@@ -1719,6 +1577,148 @@ namespace bigapple
             this.label16.Size = new System.Drawing.Size(129, 18);
             this.label16.TabIndex = 11;
             this.label16.Text = "5 Minutes(dry only)";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.label32);
+            this.groupBox12.Controls.Add(this.label33);
+            this.groupBox12.Controls.Add(this.JAIQtyMaskedTextBox1);
+            this.groupBox12.Controls.Add(this.label34);
+            this.groupBox12.Controls.Add(this.JAIQtyMaskedTextBox2);
+            this.groupBox12.Controls.Add(this.JAIAmount2LBL);
+            this.groupBox12.Controls.Add(this.JAIAmount1LBL);
+            this.groupBox12.Controls.Add(this.JAIPrice2LBL);
+            this.groupBox12.Controls.Add(this.JAIPrice1LBL);
+            this.groupBox12.Controls.Add(this.label42);
+            this.groupBox12.Controls.Add(this.label43);
+            this.groupBox12.Location = new System.Drawing.Point(579, 130);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(576, 98);
+            this.groupBox12.TabIndex = 17;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Just Add it:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(317, 11);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(43, 18);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Price:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(377, 11);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(65, 18);
+            this.label33.TabIndex = 13;
+            this.label33.Text = "Quantity:";
+            // 
+            // JAIQtyMaskedTextBox1
+            // 
+            this.JAIQtyMaskedTextBox1.BeepOnError = true;
+            this.JAIQtyMaskedTextBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.JAIQtyMaskedTextBox1.Location = new System.Drawing.Point(383, 32);
+            this.JAIQtyMaskedTextBox1.Mask = "000";
+            this.JAIQtyMaskedTextBox1.Name = "JAIQtyMaskedTextBox1";
+            this.JAIQtyMaskedTextBox1.PromptChar = ' ';
+            this.JAIQtyMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.JAIQtyMaskedTextBox1.Size = new System.Drawing.Size(62, 26);
+            this.JAIQtyMaskedTextBox1.TabIndex = 8;
+            this.JAIQtyMaskedTextBox1.Text = "0";
+            this.JAIQtyMaskedTextBox1.ValidatingType = typeof(int);
+            this.JAIQtyMaskedTextBox1.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.JAIQtyMaskedTextBox1.TextChanged += new System.EventHandler(this.JAIQtyMaskedTextBox1_TextChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(461, 11);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(62, 18);
+            this.label34.TabIndex = 12;
+            this.label34.Text = "Amount:";
+            // 
+            // JAIQtyMaskedTextBox2
+            // 
+            this.JAIQtyMaskedTextBox2.BeepOnError = true;
+            this.JAIQtyMaskedTextBox2.ContextMenuStrip = this.contextMenuStrip1;
+            this.JAIQtyMaskedTextBox2.Location = new System.Drawing.Point(383, 64);
+            this.JAIQtyMaskedTextBox2.Mask = "000";
+            this.JAIQtyMaskedTextBox2.Name = "JAIQtyMaskedTextBox2";
+            this.JAIQtyMaskedTextBox2.PromptChar = ' ';
+            this.JAIQtyMaskedTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.JAIQtyMaskedTextBox2.Size = new System.Drawing.Size(62, 26);
+            this.JAIQtyMaskedTextBox2.TabIndex = 9;
+            this.JAIQtyMaskedTextBox2.Text = "0";
+            this.JAIQtyMaskedTextBox2.ValidatingType = typeof(int);
+            this.JAIQtyMaskedTextBox2.Click += new System.EventHandler(this.MaskedTextBox_GotFocus);
+            this.JAIQtyMaskedTextBox2.TextChanged += new System.EventHandler(this.JAIQtyMaskedTextBox2_TextChanged);
+            // 
+            // JAIAmount2LBL
+            // 
+            this.JAIAmount2LBL.AutoSize = true;
+            this.JAIAmount2LBL.Location = new System.Drawing.Point(488, 68);
+            this.JAIAmount2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIAmount2LBL.Name = "JAIAmount2LBL";
+            this.JAIAmount2LBL.Size = new System.Drawing.Size(15, 18);
+            this.JAIAmount2LBL.TabIndex = 24;
+            this.JAIAmount2LBL.Text = "0";
+            // 
+            // JAIAmount1LBL
+            // 
+            this.JAIAmount1LBL.AutoSize = true;
+            this.JAIAmount1LBL.Location = new System.Drawing.Point(488, 38);
+            this.JAIAmount1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIAmount1LBL.Name = "JAIAmount1LBL";
+            this.JAIAmount1LBL.Size = new System.Drawing.Size(15, 18);
+            this.JAIAmount1LBL.TabIndex = 23;
+            this.JAIAmount1LBL.Text = "0";
+            // 
+            // JAIPrice2LBL
+            // 
+            this.JAIPrice2LBL.AutoSize = true;
+            this.JAIPrice2LBL.Location = new System.Drawing.Point(320, 68);
+            this.JAIPrice2LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIPrice2LBL.Name = "JAIPrice2LBL";
+            this.JAIPrice2LBL.Size = new System.Drawing.Size(29, 18);
+            this.JAIPrice2LBL.TabIndex = 14;
+            this.JAIPrice2LBL.Text = "100";
+            // 
+            // JAIPrice1LBL
+            // 
+            this.JAIPrice1LBL.AutoSize = true;
+            this.JAIPrice1LBL.Location = new System.Drawing.Point(320, 35);
+            this.JAIPrice1LBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.JAIPrice1LBL.Name = "JAIPrice1LBL";
+            this.JAIPrice1LBL.Size = new System.Drawing.Size(29, 18);
+            this.JAIPrice1LBL.TabIndex = 13;
+            this.JAIPrice1LBL.Text = "100";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(8, 67);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(156, 18);
+            this.label42.TabIndex = 10;
+            this.label42.Text = "New Yorker\'s Foot Scrub";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(8, 35);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(151, 18);
+            this.label43.TabIndex = 9;
+            this.label43.Text = "New Yorker\'s Foot Soak";
             // 
             // groupBox10
             // 
@@ -2003,8 +2003,6 @@ namespace bigapple
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -2013,6 +2011,8 @@ namespace bigapple
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);

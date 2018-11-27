@@ -1090,17 +1090,17 @@ namespace bigapple
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount1(), font)));
                 // DRTN2
                 table.AddCell(new PdfPCell(new Phrase("15 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase("150", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty2(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount2(), font)));
                 // DRTN3
                 table.AddCell(new PdfPCell(new Phrase("30 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase("295", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty3(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount3(), font)));
                 // DRTN4
                 table.AddCell(new PdfPCell(new Phrase("60 mins", font)));
-                table.AddCell(new PdfPCell(new Phrase("100", font)));
+                table.AddCell(new PdfPCell(new Phrase("495", font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNQty4(), font)));
                 table.AddCell(new PdfPCell(new Phrase(DRTNAmount4(), font)));
                 // Medium
